@@ -1,0 +1,103 @@
+/**
+ * ##############
+ * # tasks.json #
+ * ##############
+ *
+ * Configuration that includes tasks setup which includes build, test and deployement goals
+ *
+ * @TODO 'keybinding.json'
+ * @TODO add paths '//PATH//..' into variable
+ *
+ * DOC : https://code.visualstudio.com/docs/editor/tasks
+ * DOC : https://code.visualstudio.com/docs/typescript/typescript-compiling
+ */
+{
+	"version": "2.0.0",
+	"options": {
+		"env": {
+		  "node_env": "dev",
+		}
+	 },
+	"tasks": [
+		{
+			"label": "clean",
+			"type": "shell",
+			"command": "rimraf",
+			"args": [
+				"${workspaceRoot}\\dist\\*"
+			],
+			"group": "build"
+		},
+		{
+			"label": "build",
+			"type": "typescript",
+			"tsconfig": "tsconfig.json",
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "watch",
+			"type": "typescript",
+			"tsconfig": "tsconfig.json",
+			"option": "watch",
+			"problemMatcher": [
+				"$tsc-watch"
+			],
+			"group": "build"
+		},
+		{
+			"label": "tests",
+			"type": "shell",
+			"command": "mocha",
+			"args": [
+				"-r",
+				"ts-node/register",
+				//[linux]to fix
+				"test/**/*.test.ts test/**/**/*.test.ts test/src/**/*.test.ts"
+			],
+			"windows": {
+				"command": "mocha",
+				"args": [
+					"-r",
+					"ts-node/register",
+					"test/**/*.test.ts"
+				],
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "dedicated"
+			},
+			"group": "test"
+		},
+		{
+			"label": "execute",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"${workspaceRoot}\\dist\\out-tsc\\index.js"
+			],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "dedicated"
+			},
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "start",
+			"dependsOrder": "sequence",
+			"dependsOn": ["clean","build","execute"],
+			"problemMatcher": [],			
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+		}
+	]
+}

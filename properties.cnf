@@ -1,0 +1,52 @@
+##
+# 'properties.cnf' property file
+# 
+# IMPORTANT : 'Base' version is not yet supporting configuration from file
+# 
+# TODO : add settings for the ID property size number of flysh class (100000000000)
+##
+
+[main]
+current.environment = dev
+
+##
+# Developement Environment
+##
+
+[main.dev]
+log.file.path = .\\logs\\
+log.file.name = dev_flysh.log
+
+[instance.dev]
+timeout = 10
+delayMax = 5
+malloc.size = 50
+parser.regex = "..."
+parser.crawler = 0
+http.ssl = 0
+
+##
+# Production Environment
+##
+
+[main.prod]
+log.file.path = .\\logs\\
+log.file.name = prod_flysh.log
+
+[instance.prod]
+timeout = 10
+delayMax = 5
+malloc.size = 50
+parser.regex = "..."
+parser.crawler = 0
+http.ssl = 1
+
+##
+# Test Environment
+##
+
+[main.test]
+log.file.path = .\logs\
+log.file.name = test_flysh.log
+dom.test.folder = .\test\dom\
+dom.test.inputsjson.filename = testInputs.json

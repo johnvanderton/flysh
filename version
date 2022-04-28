@@ -1,0 +1,69 @@
+=======================================
+= 'Base' version, spring release 2022 = 
+=======================================
+
+## Preamble
+
+    This first version will ensure a basically use in case of data extraction for both local and distant 'HTML' document.
+
+## Feature(s)
+
+    - Supports simple parsing from 'HTML' pagination table
+    - Supports fields filtering by regular expression
+    - The core is now able to override internal 'JQuery' logic
+    - The 'SPC' class 'timeout' parameter becomes optional with a default value set to 800ms
+
+## Limitation(s)
+    
+        - Undefined fields means that no sibling was presetted, the returned results will be like,
+            Map(1) { undefined => 'value' }, ...
+
+        - An 'SPC' class instance defined with a full filter selector without any sibling is only returning a raw result,
+            
+            ''' Typescript code example
+                let inputMessage = new InputMessage('.','/test/dataset/000.htm',true);
+                inputMessage.addSPC('table tr td');
+                let f = new Flysh(inputMessage);
+                f.run()
+                    .then(() => {
+                        console.log(f.getOutputMessage());
+                    );
+
+            ''' 'HTML' type document sample code
+                <table>
+                    <tr>
+                        <td>row_0_col_0_value</td>
+                        <td>row_0_col_1_value</td>
+                    </tr>
+                    <tr>
+                        <td>row_1_col_0_value</td>
+                        <td>row_1_col_1_value</td>
+                    </tr>
+                </table>
+
+            ''' Results
+                    { undefined => 'row_0_column_0_value' },
+                    { undefined => 'row_0_column_1_value' },
+                    { undefined => 'row_1_column_0_value' },
+                    { undefined => 'row_1_column_1_value' }
+
+        - In case of pagination table ('navpane') parsing, if the 'href' tag property doesn't have a full 'protocol/domain/pathto/page' the next exception might occur,
+
+                Cause : Invalid URL: '/path/to'
+                    at some code line 123
+                errorID: '1500003100'
+
+## Well-Known bug(s)
+    
+    - Inconsistencies might happen from Linux environment during project installation/configuration
+    - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
+
+## Next release improvement(s)
+    
+    The next release has foreseen functional improvements such as,
+
+        - Editable configuration file that overrides inner 'Flysh' constant values
+        - Adding the URI validation routine which support 'navpane' full address completion
+        - Logging from development/production environment
+        - JSDoc for API documentation
+        - Previously reported bugs

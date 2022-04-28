@@ -1,0 +1,35 @@
+ID,FILENAME,TYPE,SPC-NAVPANE Objects,Siblings Objects,DESCRIPTION,COMMENTS
+100,100.htm,Regular,[SPC1] 'table tr td',"[SIB1] 'column_1','','',''",Simple 'table' parsing with 'full-filter'. 'SCP' object with sibling definition,
+200,200.htm,Regular,[SPC1] 'table tr td',-,Simple 'table' parsing with 'full-filter'. No siblings definition (empty 'Sibling' object),Used as example from '*ClassLoader' helpers
+300,300.htm,Regular,[SPC1] 'table tr td',-,Simple 'table' parsing with 'full-filter'. No siblings definition (empty 'Sibling' object),Used as example from '*ClassLoader' helpers
+10001,10001.htm,Regular,[SPC1] 'table tr td',-,Simple 'table' parsing with 'full-filter'. No siblings definition (empty 'Sibling' object),
+10002,10002.htm,Regular,[SPC1] '#table_1_id tr td',-,"Simple 'table' parsing with 'full-filter'. First 'Parent' node not used (<th>) ",
+10003,10003.htm,Regular,[SPC1] '#table_1_id tr.tr_class_1 td',-,"Simple 'table' parsing with 'full-filter'. First 'Parent' node not used (<th>) ",
+10004,10004.htm,Regular,[SPC1] '#table_1_id tr.tr_class_1 td.td_class_1',-,"Simple 'table' parsing with 'full-filter'. First 'Parent' node not used (<th>) ",
+10005,10005.htm,Regular,"[SPC1] '#table_1_id tr.tr_class_1 td.td_class_1'
+[NAVPANE] 'span.nav_pagination_control_class a' (attr. = 'href')",-,Simple 'table' parsing with 'full-filter'. First 'Parent' node not used (<th>). Navpane parsing,
+30000,30000.htm,Complex,[SPC1] '#list_items_id div.item_class',"[SIB1] 'column_1','a','','regExBrand'
+[SIB2] 'column_2','span','item_description_rec_class','regExDescription'
+[SIB3] 'column_3','span','item_detail_rec_class','regExDescription'",Complex 'div' element parsing with semi filter. 'SCP' object with siblings definition," "
+30001,30001.htm,Complex,"[SPC1] '#list_items_id div.item_class'
+[NAVPANE] 'span.nav_pagination_control_class a' (attr. = 'href')","[SIB1] 'column_1','a','','regExBrand'
+[SIB2] 'column_2','span','item_description_rec_class','regExDescription'
+[SIB3] 'column_3','span','item_detail_rec_class','regExDescription'",Complex 'div' element parsing with semi filter. 'SCP' object with siblings definition,
+30002,30002.htm,Complex,[SPC1] '#list_items_class tr.item_row_class',"[SIB1] 'column_1','span','item_class',''
+[SIB2] 'column_2','span','span_subfield_1_class',''
+[SIB3] 'column_3','span','span_subfield_2_class',''
+[SIB4] 'column_4','span','span_subfield_3_class',''",Complex 'div' and 'ul' elements parsing with semi-filters.,
+30003,30003.htm,Complex,"[SPC1] '#list_items_id span.item_field_span_class'
+[SPC2] '#list_items_id ul.item_field_ul_class li'
+[SPC3] '#list_items_id div.item_field_div_class'","[SIB11] 'column_1','p','item_name.item_class',''
+[SIB21] 'column_2','','',''
+[SIB31] 'column_3','p','',''",Complex 'div' and 'ul' elements parsing with both semis and full-filters.,
+60001,60001.htm,Special,[SPC1] 'table tr',"[SIB1] 'column_1','td','td_class_1',''
+[SIB2] 'column_2','td','td_class_2',''
+[SIB3] 'column_3','td','td_class_3',''",DOM elements with misordered fields (class definition),
+60002,60002.htm,Special,[SPC1] 'table tr',"[SIB1] 'column_1','td','td_class_1',''
+[SIB2] 'column_2','td','td_class_2',''
+[SIB3] 'column_3','td','td_class_3',''",DOM elements with missing fields (class definition),
+60003,60003.htm,Special,[SPC1] 'table tr',"[SIB1] 'column_1','td','td_class_1',''
+[SIB2] 'column_2','td','td_class_2',''
+[SIB3] 'column_3','td','td_class_3',''",DOM elements with missing and misordered fields (class definition),
