@@ -46,7 +46,7 @@ describe('_________(Flysh Class "Dynamic Tests")_________', () => {
      describe('>>> Before parsing the current page document, do : ', () => {
 
         it('[001] Throws an exception because of invalid (URL), "fetchDOM()"', async () => {
-            const f = new Flysh(new InputMessage('','',false,800));
+            const f = new Flysh(new InputMessage('','',false,1100));
             let pageRecNotFaulted : PageRecords = new PageRecords('', false);
             let pageRecFaulted : PageRecords = new PageRecords('', true);
             let pglist = new Array<PageRecords>();
@@ -57,7 +57,7 @@ describe('_________(Flysh Class "Dynamic Tests")_________', () => {
         });
 
         it('[002] Throws an exception because of file not found (empty), invalid directory (ENOENT), "harvesting()"', async () => {
-            const f = new Flysh(new InputMessage('','',true,800));
+            const f = new Flysh(new InputMessage('','',true,1100));
             let pageRecNotFaulted : PageRecords = new PageRecords('', false);
             let pageRecFaulted : PageRecords = new PageRecords('', true);
             let pglist = new Array<PageRecords>();
@@ -68,7 +68,7 @@ describe('_________(Flysh Class "Dynamic Tests")_________', () => {
         });
 
         it('[003] Throws an exception because of invalid URL (empty), harvesting()', async () => {
-            const f = new Flysh(new InputMessage('','',false,800));
+            const f = new Flysh(new InputMessage('','',false,1100));
             let pageRecNotFaulted : PageRecords = new PageRecords('', false);
             let pageRecFaulted : PageRecords = new PageRecords('', true);
             let pglist = new Array<PageRecords>();
@@ -79,7 +79,7 @@ describe('_________(Flysh Class "Dynamic Tests")_________', () => {
         });
 
         it('[004], Expects harvesting() method to be fulfilled', async () => {
-            const f = new Flysh(new InputMessage('','',true,800));
+            const f = new Flysh(new InputMessage('','',true,1100));
             await expect(f['harvesting']("./test/dataset/100.htm")).to.be.fulfilled;
         });
     });
@@ -87,7 +87,7 @@ describe('_________(Flysh Class "Dynamic Tests")_________', () => {
     describe('>>> After parsing "MF, Multi Family" type page, do : ', () => {
 
         it('[001] Detects any fault while scraps merging, pageRecordsMerger()', () => {
-            const f = new Flysh(new InputMessage('','',false,800));
+            const f = new Flysh(new InputMessage('','',false,1100));
             let pageRecNotFaulted : PageRecords = new PageRecords('test', false); 
             let pageRecFaulted : PageRecords = new PageRecords('test', true);
             let pglist = new Array<PageRecords>();
@@ -98,7 +98,7 @@ describe('_________(Flysh Class "Dynamic Tests")_________', () => {
             });
 
         it('[002] Expects the URL page name from the first pushed "PageRecord" element, pageRecordsMerger()', () => {
-            const f = new Flysh(new InputMessage('','',false,800));
+            const f = new Flysh(new InputMessage('','',false,1100));
             let pageRecNotFaulted : PageRecords = new PageRecords('testPageNotFaulted', false); 
             let pageRecFaulted : PageRecords = new PageRecords('testPageFaulted', true);
             let pglist = new Array<PageRecords>();
@@ -123,12 +123,12 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
     describe('>>> Flysh Class "Initialization" Tests', () => {
 
         it('[001] Expects "flysh" class status "done" not true during instanciation', () => {
-            const f = new Flysh(new InputMessage('test','test',false,800));
+            const f = new Flysh(new InputMessage('test','test',false,1100));
             expect(f.isDone()).to.be.false;
         });
 
         it('[002] Expects empty "OutputMessage" object', () => {
-            const f = new Flysh(new InputMessage('test','test',false,800));
+            const f = new Flysh(new InputMessage('test','test',false,1100));
             let retObj = f.getOutputMessage();
             expect((<OutputMessage>retObj).pageRecordList).to.be.empty;
         });
@@ -137,12 +137,12 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
 
     describe('>>> Flysh Class "Exceptions" Tests', () => {
         it('[001] Expected flysh class "done" status not true during instanciation', () => {
-            const f = new Flysh(new InputMessage('test','test',false,800));
+            const f = new Flysh(new InputMessage('test','test',false,1100));
             expect(f.isDone()).to.be.false;
         });
 
         it('[002] Expected empty "OutputMessage"', () => {
-            const f = new Flysh(new InputMessage('test','test',false,800));
+            const f = new Flysh(new InputMessage('test','test',false,1100));
             let retObj = f.getOutputMessage();
             expect((<OutputMessage>retObj).pageRecordList).to.be.empty;
         });
@@ -160,7 +160,7 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
          */
          describe('>>> >>> Regular testing, field delimited with sibling(s) [Dataset "100.htm"]', () => {
 
-            let IM = new InputMessage('.','/test/dataset/100.htm',true,800);
+            let IM = new InputMessage('.','/test/dataset/100.htm',true,1100);
             IM.addSPC('table tr td').addSibling('column_1','','','');
             const f = new Flysh(IM);
 
@@ -182,7 +182,7 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
          */
         describe('>>> >>> Regular testing, field undelimited with no sibling(s) [Dataset "100.htm"]', () => {
 
-            let IM = new InputMessage('.','/test/dataset/100.htm',true,800);
+            let IM = new InputMessage('.','/test/dataset/100.htm',true,1100);
             IM.addSPC('table tr td');
             const f = new Flysh(IM);
 
@@ -204,7 +204,7 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
          */
          describe('>>> >>> [Dataset "10001.htm"]', () => {
 
-            let IM = new InputMessage('.','/test/dataset/10001.htm',true,800);
+            let IM = new InputMessage('.','/test/dataset/10001.htm',true,1100);
             IM.addSPC('table tr td')
                 .addSibling('column_1','','','')
                 .addSibling('column_2','','','')
@@ -237,7 +237,7 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
          */
         describe('>>> >>> [Dataset "10002.htm"]', () => {
 
-            let IM = new InputMessage('.','/test/dataset/10002.htm',true,800);
+            let IM = new InputMessage('.','/test/dataset/10002.htm',true,1100);
             IM.addSPC('#table_1_id tr td')
                 .addSibling('column_1','','','')
                 .addSibling('column_2','','','')
@@ -270,7 +270,7 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
          */
         describe('>>> >>> [Dataset "10003.htm"]', () => {
 
-            let IM = new InputMessage('.','/test/dataset/10003.htm',true,800)
+            let IM = new InputMessage('.','/test/dataset/10003.htm',true,1100)
             IM.addSPC('#table_1_id tr.tr_class_1 td')
                 .addSibling('column_1','','','')
                 .addSibling('column_2','','','')
@@ -303,7 +303,7 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
          */
         describe('>>> >>> [Dataset "10004.htm"]', () => {
 
-            let IM = new InputMessage('.','/test/dataset/10004.htm',true,800)
+            let IM = new InputMessage('.','/test/dataset/10004.htm',true,1100)
             IM.addSPC('#table_1_id tr.tr_class_1 td.td_class_1')
                 .addSibling('column_1','','','')
                 .addSibling('column_2','','','')
@@ -336,7 +336,7 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
          */
          describe('>>> >>> [Dataset "10005.htm"]', () => {
 
-            let IM = new InputMessage('.','/test/dataset/10005.htm',true,800);
+            let IM = new InputMessage('.','/test/dataset/10005.htm',true,1100);
             IM.addNavPane('span.nav_pagination_control_class a','href');
             IM.addSPC('#table_1_id tr.tr_class_1 td.td_class_1')
                 .addSibling('column_1','','','')
@@ -382,7 +382,7 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
          */
         describe('>>> >>> [Dataset "30000.htm"]', () => {
 
-            let IM = new InputMessage('.','/test/dataset/30000.htm',true,800);
+            let IM = new InputMessage('.','/test/dataset/30000.htm',true,1100);
             IM.addSPC('#list_items_id div.item_class')
                 .addSibling('column_1','a','','regExBrand')
                 .addSibling('column_2','span','item_description_rec_class','regExDescription')
@@ -421,7 +421,7 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
          */
         describe('>>> >>> [Dataset "30001.htm"]', () => {
 
-                let IM = new InputMessage('.','/test/dataset/30001.htm',true,800);
+                let IM = new InputMessage('.','/test/dataset/30001.htm',true,1100);
                 IM.addNavPane('span.nav_pagination_control_class a','href');
             IM.addSPC('#list_items_id div.item_class')
                 .addSibling('column_1','a','','regExBrand')
@@ -473,7 +473,7 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
          */
         describe('>>> >>> [Dataset "30002.htm"]', () => {
 
-            let IM = new InputMessage('.','/test/dataset/30002.htm',true,800);
+            let IM = new InputMessage('.','/test/dataset/30002.htm',true,1100);
             IM.addSPC('#list_items_class tr.item_row_class')
                 .addSibling('column_1','span','item_class','')
                 .addSibling('column_2','span','span_subfield_1_class','')
@@ -525,7 +525,7 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
          */
         describe('>>> >>> [Dataset "30003.htm"]', () => {
 
-            let IM = new InputMessage('.','/test/dataset/30003.htm',true,800); 
+            let IM = new InputMessage('.','/test/dataset/30003.htm',true,1100); 
 
             IM.addSPC('#list_items_id span.item_field_span_class').addSibling('column_1','p','item_name.item_class','');
             IM.addSPC('#list_items_id ul.item_field_ul_class li').addSibling('column_2','','','');
@@ -570,7 +570,7 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
          */
         describe('>>> >>> [Dataset "60001.htm"]', () => {
 
-            let IM = new InputMessage('.','/test/dataset/60001.htm',true,800);
+            let IM = new InputMessage('.','/test/dataset/60001.htm',true,1100);
             IM.addSPC('table tr')
                 .addSibling('column_1','td','td_class_1','')
                 .addSibling('column_2','td','td_class_2','')
@@ -603,7 +603,7 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
          */
         describe('>>> >>> [Dataset "60002.htm"]', () => {
 
-            let IM = new InputMessage('.','/test/dataset/60002.htm',true,800);
+            let IM = new InputMessage('.','/test/dataset/60002.htm',true,1100);
             IM.addSPC('table tr')
                 .addSibling('column_1','td','td_class_1','')
                 .addSibling('column_2','td','td_class_2','')
@@ -636,7 +636,7 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
          */
          describe('>>> >>> [Dataset "60003.htm"]', () => {
 
-            let IM = new InputMessage('.','/test/dataset/60003.htm',true,800);
+            let IM = new InputMessage('.','/test/dataset/60003.htm',true,1100);
             IM.addSPC('table tr')
                 .addSibling('column_1','td','td_class_1','')
                 .addSibling('column_2','td','td_class_2','')

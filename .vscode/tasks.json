@@ -1,17 +1,5 @@
-/**
- * ##############
- * # tasks.json #
- * ##############
- *
- * Configuration that includes tasks setup which includes build, test and deployement goals
- *
- * @TODO 'keybinding.json'
- * @TODO add paths '//PATH//..' into variable
- *
- * DOC : https://code.visualstudio.com/docs/editor/tasks
- * DOC : https://code.visualstudio.com/docs/typescript/typescript-compiling
- */
-{
+{	
+	"todos": "Add add paths '//PATH//..' into variable, tests taks filepath to fix in linux, 'keybinding.json'",
 	"version": "2.0.0",
 	"options": {
 		"env": {
@@ -29,9 +17,27 @@
 			"group": "build"
 		},
 		{
-			"label": "build",
+			"label": "build_esm",
+			"type": "typescript",
+			"tsconfig": "tsconfig.esm.json",
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "build_cjs",
 			"type": "typescript",
 			"tsconfig": "tsconfig.json",
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "build_types",
+			"type": "typescript",
+			"tsconfig": "tsconfig.types.json",
 			"problemMatcher": [
 				"$tsc"
 			],
@@ -48,13 +54,28 @@
 			"group": "build"
 		},
 		{
+			"label": "execute",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"${workspaceRoot}\\dist\\cjs\\example\\index.js"
+			],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "dedicated"
+			},
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
 			"label": "tests",
 			"type": "shell",
 			"command": "mocha",
 			"args": [
 				"-r",
 				"ts-node/register",
-				//[linux]to fix
 				"test/**/*.test.ts test/**/**/*.test.ts test/src/**/*.test.ts"
 			],
 			"windows": {
@@ -74,26 +95,10 @@
 			"group": "test"
 		},
 		{
-			"label": "execute",
-			"type": "shell",
-			"command": "node",
-			"args": [
-				"${workspaceRoot}\\dist\\out-tsc\\index.js"
-			],
-			"presentation": {
-				"echo": true,
-				"reveal": "always",
-				"focus": false,
-				"panel": "dedicated"
-			},
-			"problemMatcher": [],
-			"group": "build"
-		},
-		{
 			"label": "start",
 			"dependsOrder": "sequence",
-			"dependsOn": ["clean","build","execute"],
-			"problemMatcher": [],			
+			"dependsOn": ["clean","build_cjs","build_types","build_esm","execute"],
+			"problemMatcher": [],
 			"group": {
 				"kind": "build",
 				"isDefault": true

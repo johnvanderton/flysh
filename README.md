@@ -1,6 +1,6 @@
 # README
 
-    Document last update : 27/04/2022
+    Document last update : 09/05/2022
     Author : John Van Derton — john@cserv.be 
 
 ## What is it ?
@@ -195,8 +195,9 @@
 ### Framework dependencies
 
     This current version library has been implemented and tested on, 
-        - NodeJS >= v12.13.0
-        - 'ES6' EcmaScript 
+        - NodeJS >= v17.6.0
+        - EcmaScript 'ES2019' 
+        - TypeScript compiler >= 4.5.2
 
 ### Exceptions list
 
@@ -218,7 +219,6 @@
 ### Appendices
 
     The below files are parts of the project library,
-
         - '.vscode/launch.json' contains the script used when debugging
         - '.vscode/tasks.json' defines tasks such as 'clean', 'build' and 'tests'
         - 'properties.cnf' is the property file that help to set all the configurable values

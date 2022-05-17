@@ -1,17 +1,24 @@
-=======================================
-= 'Base' version, spring release 2022 = 
-=======================================
+=======================================================
+= 'Base' (hotfix version v0.1.8), Spring release 2022 = 
+=======================================================
 
 ## Preamble
 
-    This first version will ensure a basically use in case of data extraction for both local and distant 'HTML' document.
+    This version is reinforced by a 'hotfix' release which improves the project compatibility with other platforms including 'NPM'. Few new fixes have been added as well, please read the below sections for more information.
+
+## Hotfix version 0.1.8
+
+    - Updating the 'src/index.ts' modules export to include the 'PageRecords' class
+    - Updating default "timeout" to 1100ms from 'DEFAULT_INSTANCE_TIMEOUT_VALUE' constant value ('src/InputMessage.ts')
+    - Updating tests suite following timeout previous changes
+    - Minor changes
 
 ## Feature(s)
 
     - Supports simple parsing from 'HTML' pagination table
     - Supports fields filtering by regular expression
     - The core is now able to override internal 'JQuery' logic
-    - The 'SPC' class 'timeout' parameter becomes optional with a default value set to 800ms
+    - The 'SPC' class 'timeout' parameter becomes optional with a default value set to 1100ms
 
 ## Limitation(s)
     

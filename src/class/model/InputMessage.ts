@@ -400,7 +400,7 @@ export class InputMessage {
      * Private class constants
      */
     private readonly ID_GENERATED_FLOOR_FUNC_COMPLEXITY_VALUE = 100000000000;
-    private readonly DEFAULT_INSTANCE_TIMEOUT_VALUE = 800;
+    private readonly DEFAULT_INSTANCE_TIMEOUT_VALUE = 1100;
     private readonly DOM_VALIDATION_NAVPANE_MIN_OCCURS_VALUE = 0;
 
     /**

@@ -21,8 +21,8 @@ export class Base {
     private init() {
         this.classLoader = new ClassLoader();
         this.simpleCL = new SimpleClassLoader();
-        this.creader = new ConfigReader();
-        this.logger = new Log4TS();
+        //this.creader = new ConfigReader();
+        //this.logger = new Log4TS();
         //this.logger.log.info("initialization...");
     }
 

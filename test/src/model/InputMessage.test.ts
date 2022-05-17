@@ -32,9 +32,9 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
                 expect(im_001.timeout).equal(500);
             });
 
-            it('[002] Expecting "_timeout" property equals to the default "800" value', () => {
+            it('[002] Expecting "_timeout" property equals to the default "1100" value', () => {
                 const im_001 = new InputMessage('local','testpage',false);
-                expect(im_001.timeout).equal(800);
+                expect(im_001.timeout).equal(1100);
             });
 
         });

@@ -1,8 +1,17 @@
-import { Base } from "./class/Base";
-
 /**
- *  'index.ts' is invocated by the 'launch.json' and allows to run/debug the 'Flysh' class
+ * 'Flysh' modules classes export
+ * 
+ * @packageDocumentation
  */
 
-let base = new Base();
-base.run();
+/**
+ * Main 'Flysh' class
+ */
+export { Flysh } from "./class/Flysh";
+
+/**
+ * Model classes with exception
+ */
+export { FlyshException } from "./class/model/FlyshException";
+export { InputMessage } from "./class/model/InputMessage";
+export { OutputMessage, PageRecords } from "./class/model/OutputMessage";
