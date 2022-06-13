@@ -1,5 +1,5 @@
 {	
-	"todos": "Add add paths '//PATH//..' into variable, tests taks filepath to fix in linux, 'keybinding.json'",
+	"todos": "Add add paths '//PATH//..' into variable,...",
 	"version": "2.0.0",
 	"options": {
 		"env": {
@@ -88,7 +88,9 @@
 			"args": [
 				"-r",
 				"ts-node/register",
-				"test/**/*.test.ts test/**/**/*.test.ts test/src/**/*.test.ts"
+				"test/**/*.test.ts",
+				"test/**/**/*.test.ts",
+				"test/src/**/*.test.ts"
 			],
 			"windows": {
 				"command": "mocha",
