@@ -14,12 +14,6 @@
 			"args": [
 				"${workspaceRoot}/dist/*"
 			],
-			"windows": {
-				"command": "rimraf",
-				"args": [
-					"${workspaceRoot}\\dist\\*"
-				],
-			},
 			"group": "build"
 		},
 		{
@@ -66,12 +60,6 @@
 			"args": [
 				"${workspaceRoot}/dist/cjs/example/index.js"
 			],
-			"windows": {
-				"command": "node",
-				"args": [
-					"${workspaceRoot}\\dist\\cjs\\example\\index.js"
-				],
-			},
 			"presentation": {
 				"echo": true,
 				"reveal": "always",
