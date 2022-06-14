@@ -8,7 +8,7 @@
  * DOC : https://go.microsoft.com/fwlink/?linkid=830387
  */
 {
-    "version": "0.1",
+    "version": "0.2.0",
     "configurations": [
         {
             "type": "node",
@@ -17,10 +17,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\src\\index.ts",
-            "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ],
+            "program": "${workspaceFolder}/dist/cjs/example/index.js",
             "env":{
                 "NODE_ENV":"dev",
                 "PORT":"8080",
