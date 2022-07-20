@@ -1,5 +1,34 @@
+============================================================
+= 'Base' (Pre-release version v0.2.0), Summer release 2022 = 
+============================================================
+
+## Preamble
+
+    This version has some minor changes and mainly fixes bugs from scripts.
+
+## Pre-Release version 0.2.0
+
+    - Update the documentation from use cases (examples)
+    - Update the 'README.md' file
+    - Fix the 'launch.ts' script file
+    - Fix the 'mocha' command from 'tasks.json' file
+    - Fix the relative paths from 'tasks.json' file
+
+## Feature(s)
+
+    - Please refer to the previous log version
+
+## Limitation(s)
+
+    - Please refer to the previous log version
+
+## Well-Known bug(s)
+    
+    - Please refer to the previous log version
+    - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
+
 =======================================================
-= 'Base' (hotfix version v0.1.8), Spring release 2022 = 
+= 'Base' (Hotfix version v0.1.8), Spring release 2022 = 
 =======================================================
 
 ## Preamble
@@ -64,13 +93,3 @@
     
     - Inconsistencies might happen from Linux environment during project installation/configuration
     - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
-
-## Next release improvement(s)
-    
-    The next release has foreseen functional improvements such as,
-
-        - Editable configuration file that overrides inner 'Flysh' constant values
-        - Adding the URI validation routine which support 'navpane' full address completion
-        - Logging from development/production environment
-        - JSDoc for API documentation
-        - Previously reported bugs
