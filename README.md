@@ -1,10 +1,10 @@
 [![lang](https://img.shields.io/badge/Language-Typescript-Blue.svg?style=flat-square)](https://www.typescriptlang.org)
 ![License](https://img.shields.io/github/license/johnvanderton/flysh)
-[![npm version](https://img.shields.io/npm/v/flysh?color=4c55a1&logoColor=76c800&style=flat-square)](https://www.npmjs.com/package/flysh)
+[![npm version](https://img.shields.io/npm/v/flysh?color=4c55a1&logoColor=76c800&style=flat-square)](https://www.npmjs.com/package/flysh) 
 
 # README
 
-- Document last update : 20/07/2022
+- Document last update : 21/07/2022
 - Author : **John Van Derton** — **john@cserv.be** 
 
 ## What is it ?
@@ -57,11 +57,11 @@ This is showing a simple **HTML** structure that includes an element called `tab
 
 ```typescript
 // Invoke useful libraries
-import { Flysh } from "../Flysh";
-import { InputMessage } from "../model/InputMessage";
-import { OutputMessage, PageRecords } from "../model/OutputMessage";
+import { Flysh, InputMessage, OutputMessage, PageRecords, FlyshException } from 'Flysh';
 
 // Instanciate the 'InputMessage' class (the local file/filesystem parameter is set to 'true')
+// Note : The third 'InputMessage' boolean parameter is setting the source mode, either from the filesystem or the lan/wan 
+// Note+ : A fourth optional parameter can preset a timeout value (ms)
 let inputMessage = new InputMessage('.','/somepath/somefilename.htm',true);
 // Add the 'SPC' (Scope/Parent/Child) class instance with a fully defined filter selector i.e : 'table tr td'
 // Note : this method will be deprecated
@@ -73,7 +73,9 @@ let f = new Flysh(inputMessage);
 f.run();
 ```
             
-3) How to get the results ? After running the **Flysh** instance, an object response or `promise` is then returned asynchronously. See the example from below, 
+3) How to get the results ? After running the **Flysh** instance, an object response or `promise` is then returned asynchronously. 
+
+See the example from below, 
 
 ```typescript
 flysh.run()
@@ -86,6 +88,7 @@ flysh.run()
         outputMessage.pageRecordList.forEach((e: PageRecords)=> {console.log(e);});
         console.log("\n### End of process ###\n");
      });
+
 //A list is returned by the 'PageRecords' class getter method and available as follow,
 outputMessage.pageRecordList.forEach((e: PageRecords)=> {console.log(e);});
 ```
@@ -139,7 +142,7 @@ Source code of a pagination table (**NavPane**),
 The parsing of this **HTML** code produces additional results by scanning all the linked pages. To do this, it will be necessary to inform the instantiated class `InputMessage` that there is a pagination table (**navpane**). See the example from below,
 
 ```typescript
-let IM = new InputMessage('somesource','/somepath/page_root.htm',true);
+let IM = new InputMessage('.','/somepath/page_root.htm',true);
 IM.addNavPane('span.nav_pagination_control_class a','href');
 ...
 let f = new Flysh(IM);
@@ -166,7 +169,7 @@ This section will attempt to demonstrate the ability to manage different structu
 We can observe from below that the three field have their own definitions. By successively recreating three objects related to each field, it becomes possible to properly achieve the data processing.
 
 ```typescript
-    let IM = new InputMessage('somesource','/somepath/somepage.htm',true);
+    let IM = new InputMessage('.','/somepath/somepage.htm',true);
     
     IM.addSPC('#list_items_id span.item_field_span_class')
         .addSibling('column_1','p','item_name.item_class','');
@@ -220,7 +223,7 @@ or,
     addSPC(‘table tr’)
         .addSibling(‘product’,’td’,’’,’’)
         .addSibling(‘description’,’td’,'’,’’);
-or,
+or even,
 
     addSPC(‘table tr td’);
 
@@ -261,8 +264,8 @@ This current version library has been implemented and tested on,
 - **EcmaScript** = `ES2019`
 - **EcmaScript** (ESM Module) = `ESNEXT`
 - **EcmaScript** (Types Module) = `ESNEXT`
-- **NodeJS** >= `17.6.0`
 - **Jquery** = `3.6.0`
+- **NodeJS** >= `17.6.0`
 - **TypeScript** >= `4.5.2`
 
 ### Exceptions list
@@ -304,4 +307,4 @@ Please read the ['LICENCE'](./LICENSE) file for more information.
 
 Feel free to support, thanks! 
 
-BTC, [bc1q84seqrs0tvzy22gekx3u98xf92ujxvju0jsqrl](bitcoin:bc1q84seqrs0tvzy22gekx3u98xf92ujxvju0jsqrl) 
+BTC, [bc1q84seqrs0tvzy22gekx3u98xf92ujxvju0jsqrl](bitcoin://bc1q84seqrs0tvzy22gekx3u98xf92ujxvju0jsqrl) 
