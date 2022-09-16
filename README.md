@@ -1,6 +1,6 @@
-[![lang](https://img.shields.io/badge/Language-Typescript-Blue.svg?style=flat-square)](https://www.typescriptlang.org)
+[![lang](https://img.shields.io/badge/Language-Typescript-Blue.svg?color=007acc&style=flat-square)](https://www.typescriptlang.org)
 ![License](https://img.shields.io/github/license/johnvanderton/flysh)
-[![npm version](https://img.shields.io/npm/v/flysh?color=4c55a1&logoColor=76c800&style=flat-square)](https://www.npmjs.com/package/flysh) 
+[![npm version](https://img.shields.io/npm/v/flysh?color=7c2cc7&style=flat-square)](https://www.npmjs.com/package/flysh) 
 
 # README
 
@@ -9,7 +9,7 @@
 
 ## What is it ?
 
-**Flysh** is a preprocessor built over the **JQuery** library and dedicated to collect data from **HTML** document.
+**Flysh** is a preprocessor built over the **JQuery** library and dedicated to collect data from **HTML** documents.
 
 ## How does it work ?
 
@@ -25,9 +25,9 @@ Literally, if you wish to process any **HTML** pages locally or from the interne
 
 ## How to use it ?
 
-The behind philosophy is willing to provide an easy to use and accessible tool. Any usage prerequires a bit of configuration as you need to define the scope of data first and to set up particular objects afterwards. **That's it!** This section does not summarize all the possibilities but tries to give you a common basis to anticipate more complex combinations. 
+The behind philosophy is willing to provide an easy to use and accessible tool. Any usage prerequires a bit of configuration as you need to define the scope of data first and to set up particular objects afterwards. **That's all!** This section does not summarize all the possibilities but tries to give you a common basis to anticipate more complex combinations. 
 
-For concrete examples, please go to the `src/class/helpers` folder. Once in this directory, you can manually execute both `ClassLoader.ts`, `SimpleClassLoader.ts` classes by simply running the next command `node .\dist\out-tsc\index.js`. Note that the `index.js` file is the artifact generated after compiling the `index.ts` file; please refer to the **Contribute** section for more details.
+For concrete examples, please go to the `src/class/helpers` folder. Once in this directory, you can manually execute both `ClassLoader.ts`, `SimpleClassLoader.ts` classes by simply running the next command `node .\dist\out-tsc\index.js`. Note that the `index.js` file is the artifact generated after compiling `index.ts`. Please refer to the **Contribute** section for more details.
 
 ## Examples
 
@@ -152,7 +152,7 @@ The source code from above informs the **Flysh** instance that the input message
 
 ### Complex example
 
-This section will attempt to demonstrate the ability to manage different structures in the same **HTML** document. The goal is to retrieve elements from various **DOM** structures. The next example shows the case when the data, logically nested, cannot be retrieved from a single treatment. It becomes necessary to instanciate several **SPC** type classes thanks to the `addSPC()` method.
+This section will attempt to demonstrate the ability to manage different structures in the same **HTML** document. The next example shows the case when the data, logically nested, cannot be retrieved from a single treatment. It becomes necessary to instanciate several **SPC** type classes thanks to the `addSPC()` method.
 
 ```html
     <table id="list_items_id" style="width:100%; text-align: left">
@@ -183,7 +183,64 @@ We can observe from below that the three field have their own definitions. By su
  
 **Flysh** is able to perform complex combinations by nesting multiple **SPC** class. The given example from above is not exhaustive but nevertheless provides an overview of the current library performances.
 
-### How to define the filter selector (data scope) ?
+## Settings and configuration
+This section explains how to configure the objects needed to properly use the library.
+
+### Configuration of the `InputMessage` class instance
+The `InputMessage` class is defining the various informations which will be provided to the `Flysh` instance.
+
+#### Timeout setting
+The `timeout` value is defined by default by the `InputMessage` class. This value can be changed by modifying the field provided for this purpose. If no value is set, then it will be the default one that will be applyed. The below example represents the `TIMEOUT_VALUE` value as an optional numeric variable.
+
+```Typescript
+ 	new InputMessage('domain','path',DOCUMENT_ACCESS,TIMEOUT_VALUE);
+```
+
+#### Access mode setting
+The access mode can be defined following two different approaches. It is therefore possible to access documents either from the local file system or the LAN/WAN network. The `DOCUMENT_ACCESS` field contains a `boolean` value specifying either access via the filesystem (true) or the network (false). For example, accessing a document on a remote site will only be possible by specifying that it is not on the filesystem (false).
+
+```Typescript
+ 	new InputMessage('domain','path',FILESYSTEM_ACCESS);
+``` 
+
+### How to define the filter selector ?
+
+#### What's a filter selector ?
+
+Flysh is entirely relying on the JQuery library and by the same occasion fully inherits from its powerful 'selector' feature. Specificly profiled to perform deep DOM parsing operations, Flysh is currenlty using a part of what Jquery can do. For more informations please refer to next web references, https://api.jquery.com/multiple-selector/ and https://api.jquery.com/descendant-selector/
+ 
+**Simple example,**
+
+Based on the JQuery API's 'descendant selector' selector pattern, we can decompose the filter as follow,
+
+    ['scope/iterator' + 'parent' + 'children' (sibling)]
+
+The first `scope/iterator` element represents the domain where all the elements to be processed are located. The second `parent` element, which can be recursive, represents the element containing fields. Finally the last element `children`, represents the attributes or values that can potentially be exploited.
+
+For example, it is possible to define these elements according to their `tag` and their `class` (if necessary). For example, the below filter makes it possible to exploit a so-called `table` structure,
+
+    [#id_content_value tr.tr_class_value td.td_class_value]
+
+See below the HTML code,
+
+```html
+<table id="id_content_value" style="width:100%">
+    <tr class="tr_class_1">
+        <th>column_1</th>
+        ...
+    </tr>
+    <tr class="tr_class_value">
+        <td id="td_row_1_column_1_id" class="td_class_value">
+            row_1_column_1_value
+        </td>
+        ...
+    </tr>
+    ...
+    </table>
+```
+This filter definition is important as it completly relies on how the data scope is structured.  
+
+#### What the 'data scope' does mean ?
 
 It is important to get a good definition of the environment and the area where the data will be processed. It will depend on the hierarchy related to the specific architecture of the **HTML** objects and how it is organized. Going back to the `table` example, we know that this element has a hierarchy on which we can make an assumption. On this basis, we can consider that the highest element is `table` which can be defined as the **Scope** and its underlying elements, hierarchically lower, can be repetitive. In this case, the `tr` element is the direct child of `table` and parent of the `td` element. From this predicate, we can therefore conclude that the `tr` element has a role of parent related to its subclass `td` but can also be repetitive just like its descendant(s).
         
@@ -213,7 +270,7 @@ For example:
     ...
 </table>
 ```
-This **HTML** code can be parsed by **Flysh** as follow,
+This **HTML** code can be processed by **Flysh** as follow,
 
     addSPC(‘table tr’)
         .addSibling(‘product’,’td’,’class_product’,’<REGEX_VALUE>’)
