@@ -217,7 +217,7 @@ Based on the JQuery API's 'descendant selector' selector pattern, we can split t
 
 The first `scope/iterator` element represents the domain where all the elements to be processed are located. The second `parent` element, which can be recursive, represents the element containing fields. Finally the last element `children`, represents the attributes or values that can potentially be exploited. For example, it is possible to define these elements according to their `tag` and their `class` (if necessary). 
 
-For example, the below filter makes it possible to exploit a so-called `table` structure,
+The below filter allows to parse a so-called `table` structure,
 
     [#id_content_value tr.tr_class_value td.td_class_value]
 
