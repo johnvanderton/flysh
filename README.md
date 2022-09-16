@@ -190,7 +190,7 @@ This section explains how to configure the objects needed to properly use the li
 The `InputMessage` class is defining the various informations which will be provided to the `Flysh` instance.
 
 #### Timeout setting
-The `timeout` value is defined by default by the `InputMessage` class. This value can be changed by modifying the field provided for this purpose. If no value is set, then it will be the default one that will be applyed. The below example represents the `TIMEOUT_VALUE` value as an optional numeric variable.
+The `timeout` value is defined by default by the `InputMessage` class. This value can be changed by modifying the field provided for this purpose. If no value is set, then the default one will be applyed. The below example shows the `TIMEOUT_VALUE` value as an optional numeric variable.
 
 ```Typescript
  	new InputMessage('domain','path',DOCUMENT_ACCESS,TIMEOUT_VALUE);
@@ -211,17 +211,17 @@ Flysh is entirely relying on the JQuery library and by the same occasion fully i
  
 **Simple example,**
 
-Based on the JQuery API's 'descendant selector' selector pattern, we can decompose the filter as follow,
+Based on the JQuery API's 'descendant selector' selector pattern, we can split the filter as follow,
 
     ['scope/iterator' + 'parent' + 'children' (sibling)]
 
-The first `scope/iterator` element represents the domain where all the elements to be processed are located. The second `parent` element, which can be recursive, represents the element containing fields. Finally the last element `children`, represents the attributes or values that can potentially be exploited.
+The first `scope/iterator` element represents the domain where all the elements to be processed are located. The second `parent` element, which can be recursive, represents the element containing fields. Finally the last element `children`, represents the attributes or values that can potentially be exploited. For example, it is possible to define these elements according to their `tag` and their `class` (if necessary). 
 
-For example, it is possible to define these elements according to their `tag` and their `class` (if necessary). For example, the below filter makes it possible to exploit a so-called `table` structure,
+For example, the below filter makes it possible to exploit a so-called `table` structure,
 
     [#id_content_value tr.tr_class_value td.td_class_value]
 
-See below the HTML code,
+See the below HTML code,
 
 ```html
 <table id="id_content_value" style="width:100%">
