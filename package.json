@@ -3,7 +3,7 @@
   "description": "DOM Document Object Artifact Collector",
   "license": "MIT",
   "name": "flysh",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "./dist/cjs/index.js",
   "modules": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
@@ -17,7 +17,8 @@
   "scripts": {
     "build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
     "clean": "rimraf dist/*",
-    "test": "mocha -r ts-node/register test/**/*.test.ts",
+    "test [win]": "mocha -r ts-node/register test/**/*.test.ts",
+    "test [linux]": "mocha -r ts-node/register test/**/*.test.ts test/**/**/*.test.ts test/src/**/*.test.ts",
     "run": "node dist/cjs/example/index.js"
   },
   "repository": {
@@ -28,7 +29,7 @@
     "@types/node": "^18.0.6",
     "class-transformer": "^0.3.1",
     "es6-shim": "^0.35.6",
-    "jquery": "^3.6.0",
+    "jquery": "^3.6.1",
     "jsdom": "^20.0.0",
     "npm": "^8.5.2",
     "properties-reader": "^2.2.0",
@@ -38,7 +39,7 @@
   },
   "devDependencies": {
     "@types/chai": "^4.2.15",
-    "@types/mocha": "^9.1.0",
+    "@types/mocha": "^10.0.0",
     "chai": "^4.3.3",
     "chai-as-promised": "^7.1.1",
     "mocha": "^10.0.0",
