@@ -4,7 +4,7 @@
 
 # README
 
-- Document last update : 21/07/2022
+- Document last update : 29/09/2022
 - Author : **John Van Derton** — **john@cserv.be** 
 
 ## What is it ?
@@ -17,7 +17,7 @@ Shortly, it's all about **DOM** and how **HTML/XHTML/XML** pages can be interact
 
 > "The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document." (https://www.w3schools.com/)
 
-That’s being said, nothing can yet really help the developer to easily manipulate these objects except by using the **DOM** API (of course). If JavaScript already integrates the routines that facilitate the use of this API, it is surely without counting the support of tools such as `JQuery`. This way and by opting for such powerful solutions, **Flysh** is aiming only one purpose : **to help you to collect data efficiently!**
+That’s being said, nothing can yet really help the developer to easily manipulate these objects except by using the **DOM** API (of course). If JavaScript already integrates the routines that facilitate the use of this API, it is surely without counting the support of tools such as `JQuery`. This way and by opting for the best solutions, **Flysh** is aiming only one purpose : **to help you to collect data efficiently!**
 
 ## When to use it ?
 
@@ -152,7 +152,7 @@ The source code from above informs the **Flysh** instance that the input message
 
 ### Complex example
 
-This section will attempt to demonstrate the ability to manage different structures in the same **HTML** document. The next example shows the case when the data, logically nested, cannot be retrieved from a single treatment. It becomes necessary to instanciate several **SPC** type classes thanks to the `addSPC()` method.
+This section will attempt to demonstrate the ability to manage different structures in the same **HTML** document. The next example shows the case when the data, logically nested, cannot be retrieved from a single treatment. It becomes necessary to instanciate several `SPC` type classes thanks to the `addSPC()` method.
 
 ```html
     <table id="list_items_id" style="width:100%; text-align: left">
@@ -166,7 +166,7 @@ This section will attempt to demonstrate the ability to manage different structu
     </table>
 ```
 
-We can observe from below that the three field have their own definitions. By successively recreating three objects related to each field, it becomes possible to properly achieve the data processing.
+We can observe from below that the three fields have their own definitions. By successively recreating three objects related to each field, it becomes possible to properly achieve the data processing.
 
 ```typescript
     let IM = new InputMessage('.','/somepath/somepage.htm',true);
@@ -181,7 +181,7 @@ We can observe from below that the three field have their own definitions. By su
     const f = new Flysh(IM);
 ```
  
-**Flysh** is able to perform complex combinations by nesting multiple **SPC** class. The given example from above is not exhaustive but nevertheless provides an overview of the current library performances.
+**Flysh** is able to perform complex combinations by nesting multiple `SPC` class. The given example from above is not exhaustive but nevertheless provides an overview of the current library performances.
 
 ## Settings and configuration
 This section explains how to configure the objects needed to properly use the library.
@@ -205,9 +205,9 @@ The access mode can be defined following two different approaches. It is therefo
 
 ### How to define the filter selector ?
 
-#### What's a filter selector ?
+#### What is a filter selector ?
 
-Flysh is entirely relying on the JQuery library and by the same occasion fully inherits from its powerful 'selector' feature. Specificly profiled to perform deep DOM parsing operations, Flysh is currenlty using a part of what Jquery can do. For more informations please refer to next web references, https://api.jquery.com/multiple-selector/ and https://api.jquery.com/descendant-selector/
+Flysh is entirely relying on the JQuery library and, in a same time, fully inherits from its powerful 'selector' feature. Specificly profiled to perform deep DOM parsing operations, Flysh is only using a part of what Jquery can do. For more informations please refer to the next references, https://api.jquery.com/multiple-selector/ and https://api.jquery.com/descendant-selector/
  
 **Simple example,**
 
@@ -215,7 +215,7 @@ Based on the JQuery API's 'descendant selector' selector pattern, we can split t
 
     ['scope/iterator' + 'parent' + 'children' (sibling)]
 
-The first `scope/iterator` element represents the domain where all the elements to be processed are located. The second `parent` element, which can be recursive, represents the element containing fields. Finally the last element `children`, represents the attributes or values that can potentially be exploited. For example, it is possible to define these elements according to their `tag` and their `class` (if necessary). 
+The first `scope/iterator` element represents the domain where all the elements to be processed are located. The second `parent` element, which can be recursive, represents the element containing fields. Finally the last element `children`, represents the attributes or values that can potentially be exploited. For example, it is possible to define these elements accordingly to their `tag` and `class` (if necessary). 
 
 The below filter allows to parse a so-called `table` structure,
 
@@ -242,11 +242,11 @@ This filter definition is important as it completly relies on how the data scope
 
 #### What the 'data scope' does mean ?
 
-It is important to get a good definition of the environment and the area where the data will be processed. It will depend on the hierarchy related to the specific architecture of the **HTML** objects and how it is organized. Going back to the `table` example, we know that this element has a hierarchy on which we can make an assumption. On this basis, we can consider that the highest element is `table` which can be defined as the **Scope** and its underlying elements, hierarchically lower, can be repetitive. In this case, the `tr` element is the direct child of `table` and parent of the `td` element. From this predicate, we can therefore conclude that the `tr` element has a role of parent related to its subclass `td` but can also be repetitive just like its descendant(s).
+It is important to get a good definition of the environment and the area where the data will be processed. It will depend on the hierarchy related to the specific architecture of the **HTML** objects and how it is organized. Going back to the `table` example, we know that this element has a hierarchy on which we can make an assumption. On this basis, we can consider that the highest element is `table` which can be defined as the **scope** and its underlying elements, hierarchically lower, can be repetitive. In this case, the `tr` element is the direct child of `table` and parent of the `td` element. From this predicate, we can therefore conclude that the `tr` element has a role of parent related to its subclass `td` but can also be repetitive just like its descendant(s).
         
     'table' element -[has one or more]- 'tr' element(s) -[has one or more]- 'td' element(s)
 
-The purpose of the **SPC** (Scope-Parent-Child) class filter selector is to define this hierarchy in order to best identify the data to extract. To this end, the filter can be represented as follow (**table tr td**) but also in another way (**table tr**). This last representation tells the selector to only focusing on the `table` (scope) and the parent `tr` element without having to define first the 'child' element. Through the `addSibling()` method, it becomes possible to provide more details regarding the extraction of the 'child' element by defining:
+The purpose of the `SPC` (Scope-Parent-Child) class filter selector is to define this hierarchy in order to best identify the data to extract. To this end, the filter can be represented as follow (**table tr td**) but also in another way (**table tr**). This last representation tells the selector to only focusing on the `table` (scope) and the parent `tr` element without having to define first the 'child' element. Thanks to the `addSibling()` method, it becomes possible to provide more details regarding the extraction of the 'child' element by defining:
 
 - A field value, i.e: 'Product'
 - An 'HTML' tag definition, i.e: `tr` 
@@ -284,7 +284,7 @@ or even,
 
     addSPC(‘table tr td’);
 
-You will notice that it is possible to do this in different ways. Generally, the more you provide about the structure, the more precision you will have during data collection. Beforehand, this data identification can be done manually only. However, the user can benefit from several tools helping to identify the data scope area such as "DevTools" (**Chrome**), "FireBugs" (**Mozilla**) and many more.
+You will notice that it is possible to do it in different ways. Generally a precise definition of the data structure will providing you a better quality during their collection. Beforehand, this data identification can be done manually only. However, the user can benefit from tools to help to identify the data scope area such as "DevTools" (**Chrome**), "FireBugs" (**Mozilla**) and many more.
 
 ## Project contribution
 
@@ -311,7 +311,7 @@ All the commands are available from the `tasks.json` file.
 - clean binaries, `rimraf .\dist\*`
 - compile, `tsc -p .\tsconfig.json`
 - test (windows), `mocha -r ts-node/register test/**/*.test.ts`
-- test (linux), `mocha -r -r ts-node/register test/**/*.test.ts test/**/**/*.test.ts test/src/**/*.test.ts`
+- test (linux), `mocha -r ts-node/register test/**/*.test.ts test/**/**/*.test.ts test/src/**/*.test.ts`
 - run, `node .\dist\out-tsc\index.js`
 
 ### Framework dependencies
