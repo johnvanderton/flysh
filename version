@@ -1,4 +1,33 @@
 ============================================================
+= 'Base' (Pre-release version v0.2.2), Fall release 2022   = 
+============================================================
+
+## Preamble
+
+    This version has some minor changes and mainly fixes bugs from scripts.
+
+## Pre-Release version 0.2.2
+
+    - Updated the 'README.md' file
+    - Updated the 'package.json' library versions 
+        - jquery version 3.6.1 (minor)
+        - mocha version 10.0.0
+    - Added win/linux test scripts from the 'package.json' script file
+
+## Feature(s)
+
+    - Please refer to the previous log version
+
+## Limitation(s)
+
+    - Please refer to the previous log version
+
+## Well-Known bug(s)
+    
+    - Please refer to the previous log version
+    - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
+
+============================================================
 = 'Base' (Pre-release version v0.2.1), Summer release 2022 = 
 ============================================================
 
