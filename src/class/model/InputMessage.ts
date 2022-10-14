@@ -249,7 +249,9 @@ export class SPC extends DomElement {
     }
 
     /**
-     * Adds a 'Sibling' class instance and returns the current 'SPC' class itself
+     * Adds a 'Sibling' class instance and returns the current 'SPC' class itself [deprecated]
+     * 
+     * @deprecated this method is now deprecated, please use 'addField()' method instead
      * 
      * @param fieldName Contains the name of the field
      * @param tagName Defines the name of the tag (dom element)
@@ -266,6 +268,26 @@ export class SPC extends DomElement {
         return this;
     }
 
+    /**
+     * Adds a field ('Sibling') and returns the current 'SPC' class itself
+     * 
+     * Note : For the sake of good reading and interpretation, this function has been publicly renamed
+     * 
+     * @param fieldName Contains the name of the field
+     * @param tagName Defines the name of the tag (dom element)
+     * @param className Has the name of the element class property (<x class=''></x>)
+     * @param regEx Defines the regular expression following the field
+     * @returns Returns the 'SPC' class instance itself
+     */
+    @Expose()
+    public addField(fieldName: string, tagName : string, className : string, regEx : string) : SPC {
+        let newField = new Sibling(fieldName, tagName, className, regEx);
+        newField.validate();
+        this.validateSiblings(fieldName);
+        this._siblings.push(newField);
+        return this;
+    }
+    
     /**
      * Verifies that the filter selector is 'full'. A 'true' value is returned if the filter is having 3 'SPC' members 
      * (Scope/Iterator, Parent and Child). Filter can't be more than 3 arguments
@@ -588,7 +610,9 @@ export class InputMessage {
     }
 
     /**
-     * Returns the newly added 'NavPane' element
+     * Returns the newly added 'NavPane' element [deprecated]
+     * 
+     * @deprecated this method is now deprecated, please use 'addPaginator()' method instead
      * 
      * @param filterSelector Defines the 'NavPane' filter selector
      * @param attrib Contains the attrib(ute) of the element/tag (i.e : 'href')
@@ -603,10 +627,28 @@ export class InputMessage {
     }
 
     /**
-     * Returns the newly added 'SCP' element
+     * Adds a Paginator and returns the newly added 'NavPane' element
+     * 
+     * Note : For the sake of good reading and interpretation, this function has been publicly renamed
+     * 
+     * @param filterSelector Defines the 'NavPane' filter selector
+     * @param attrib Contains the attrib(ute) of the element/tag (i.e : 'href')
+     * @returns Returns the 'NavPane' class instance itself
+     */
+    public addPaginator(filterSelector : string, attrib : string) {
+        let newPaginator = new NavPane(filterSelector, attrib);
+        newPaginator.validate();
+        this.domsValidate(newPaginator);
+        this.navPane = true;
+        return (<NavPane[]>this._doms).push(new NavPane(filterSelector, attrib));
+    }
+
+    /**
+     * Returns the newly added 'SPC' type element [deprecated]
      * 
      * TODO : (new SPC(filterSelector, new Array<Sibling>())).validate() : returns SPC (this)
-     * TODO : creates an overridded push() func that includes the domsValidates() func 
+     *
+     * @deprecated this method is now deprecated, please use 'addFilterSelector()' method instead 
      * 
      * @param filterselector Contains the current class filter selector 
      * @returns Returns the 'SPC' class instance itself
@@ -617,6 +659,24 @@ export class InputMessage {
         newSPC.validate();
         this.domsValidate(newSPC);
         return (<SPC[]>this._doms)[(<SPC[]>this._doms).push(newSPC)-1];
+    }
+
+    /**
+     * Returns the newly added Filter Selector ('SPC' type element)
+     * 
+     * Note : For the sake of good reading and interpretation, this function has been publicly renamed
+     * 
+     * TODO : Implement validate() as (new SPC(filterSelector, new Array<Sibling>())).validate() : returns SPC (this)
+     * 
+     * @param filterselector Contains the current class filter selector 
+     * @returns Returns the 'SPC' class instance itself
+     */
+    @Expose()
+    public addFilterSelector(filterSelector : string) : SPC {
+        let newFilterSelector = new SPC(filterSelector, new Array<Sibling>());
+        newFilterSelector.validate();
+        this.domsValidate(newFilterSelector);
+        return (<SPC[]>this._doms)[(<SPC[]>this._doms).push(newFilterSelector)-1];
     }
 
     /**

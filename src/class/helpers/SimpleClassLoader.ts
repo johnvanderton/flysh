@@ -21,7 +21,7 @@ export class SimpleClassLoader {
         public run() {
 
                 let inputMessage = new InputMessage('.','/test/dataset/300.htm',true);
-                inputMessage.addSPC('table tr td');
+                inputMessage.addFilterSelector('table tr td');
 
                 let f = new Flysh(inputMessage);
                 f.run()
