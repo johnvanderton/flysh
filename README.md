@@ -4,7 +4,7 @@
 
 # README
 
-- Document last update : 29/09/2022
+- Document last update : 26/10/2022
 - Author : **John Van Derton** — **john@cserv.be** 
 
 ## What is it ?
@@ -59,14 +59,14 @@ This is showing a simple **HTML** structure that includes an element called `tab
 // Invoke useful libraries
 import { Flysh, InputMessage, OutputMessage, PageRecords, FlyshException } from 'Flysh';
 
-// Instanciate the 'InputMessage' class (the local file/filesystem parameter is set to 'true')
+// Instantiate the 'InputMessage' class (the local file/filesystem parameter is set to 'true')
 // Note : The third 'InputMessage' boolean parameter is setting the source mode, either from the filesystem or the lan/wan 
 // Note+ : A fourth optional parameter can preset a timeout value (ms)
 let inputMessage = new InputMessage('.','/somepath/somefilename.htm',true);
 // Add the 'SPC' (Scope/Parent/Child) class instance with a fully defined filter selector i.e : 'table tr td'
-// Note : this method will be deprecated
-inputMessage.addSPC('table tr td');
-// Instanciate the 'Flysh' class by passing the 'InputMessage' object from parameter
+// Note : the 'addSPC()' method is now deprecated
+inputMessage.addFilterSelector('table tr td');
+// Instantiate the 'Flysh' class by passing the 'InputMessage' object from parameter
 let f = new Flysh(inputMessage);
 
 // Run the 'Flysh' class instance
@@ -89,11 +89,11 @@ flysh.run()
         console.log("\n### End of process ###\n");
      });
 
-//A list is returned by the 'PageRecords' class getter method and available as follow,
+//A list is returned by the 'pageRecords()' getter method and available as follow,
 outputMessage.pageRecordList.forEach((e: PageRecords)=> {console.log(e);});
 ```
 
-4) After displaying the content of a `PageRecords`, you will finally obtain the below stack,
+4) After displaying the content of a `PageRecords` class instance, you will finally obtain the below stack,
 
 ```typescript
 PageRecords {   
@@ -108,7 +108,7 @@ The `PageRecords` object response is having the following fields,
 - `page` that provides the current 'URI'(domain/path)
 - `recordList` which contains the results either from the `Map` type variable
 
-5) To conclude, we can notice that the **SPC** class instance has been configured thanks to the `addSPC()` method. This implies,
+5) To conclude, we can notice that the **SPC** class instance has been configured thanks to the `addFilterSelector()` method. Which implies,
 
     - A hierarchical entity has been predefined within the current page,
     - This entity is composed of,
@@ -116,20 +116,20 @@ The `PageRecords` object response is having the following fields,
         - A "**parent**", i.e : `tr`
         - A "**child**", i.e : `td`  
     - This entity has been manually identified by the user on the document
-    - The `addSPC()` method is returning the instanciated **SPC** class itself
-        - Adding new sibling(s) to it is possible thanks to the `addSibling()` method,
+    - The `addFilterSelector()` method is returning the instantiated **SPC** class itself
+        - Adding new field(s) (sibling(s)) to it is possible thanks to the `addField()` method,
             - This method can be invoked as many times as there are fields. It has the following parameters,
                 - A field name, i.e : "Product"
                 - An "HTML" tag name, i.e : `<a>`
                 - A class name value, i.e : `<a class="xyz">`
                 - A regular expression value, i.e : `[0-9]+[\,]*[0-9]*`
-    - **Example** : `addSPC('table tr td').addSibling('Product','a','xyz','[0-9]+[\,]*[0-9]*');`
+    - **Example** : `addFilterSelector('table tr td').addField('Product','a','xyz','[0-9]+[\,]*[0-9]*');`
 
-### Simple example with a pagination table (NavPane)
+### Simple example with a pagination table (Paginator)
 
-A pagination table stores all the page links into a visible **HTML** navigation bar. These pages are stored with references (URI) and can be retrieved by **Flysh**. Once identified, the address values are stored into a stack and scanned sequentially. The data are then collected and saved into a list of `PageRecords` objects. In order to obtain these data, and as seen previously, a data scope area must be identified beforehand. Once the filter selector correctly defined, it will be necessary to configure the object in charge of the data collection by storing it to the main `InputMessage` class instance. This is done thanks to the `addNavPane()` method.
+A pagination table or 'Paginator' stores all the page links into a visible **HTML** navigation bar. These pages are stored with references (URI) and can be retrieved by **Flysh**. Once identified, the address values are stored into a stack and scanned sequentially. The data are then collected and saved into a list of `PageRecords` objects. In order to obtain these data, and as seen previously, a data scope area must be identified beforehand. Once the filter selector correctly defined, it will be necessary to configure the object in charge of the data collection by storing it to the main `InputMessage` class instance. This is done thanks to the `addPaginator()` method.
 
-Source code of a pagination table (**NavPane**),
+Source code of a pagination table,
 
 ```html
 <span class="nav_pagination_control_class">
@@ -139,20 +139,20 @@ Source code of a pagination table (**NavPane**),
 </span>
 ```
 
-The parsing of this **HTML** code produces additional results by scanning all the linked pages. To do this, it will be necessary to inform the instantiated class `InputMessage` that there is a pagination table (**navpane**). See the example from below,
+The parsing of this **HTML** code produces additional results by scanning all the linked pages. To do this, it must inform the instantiated `InputMessage` class that there is a pagination table (**paginator**). See the example from below,
 
 ```typescript
-let IM = new InputMessage('.','/somepath/page_root.htm',true);
-IM.addNavPane('span.nav_pagination_control_class a','href');
+let IM = new InputMessage('.','/somepath/somefilename.htm',true);
+IM.addPaginator('span.nav_pagination_control_class a','href');
 ...
 let f = new Flysh(IM);
 ```
 
-The source code from above informs the **Flysh** instance that the input message `InputMessage` has been linked with `NavPane` class instance. The `addNavPane()` method has two parameters which include the filter selector that identifies the data area to process and the tag attribute of the underlying 'child' elements. This attribute contains the path to the next page to browse.
+The source code from above informs the **Flysh** instance that the input message `InputMessage` has been linked with a `NavPane` class instance. The `addPaginator()` method has two parameters which include the filter selector that identifies the data area to process and the tag attribute of the underlying 'child' elements. This attribute contains the path to the next page to browse.
 
 ### Complex example
 
-This section will attempt to demonstrate the ability to manage different structures in the same **HTML** document. The next example shows the case when the data, logically nested, cannot be retrieved from a single treatment. It becomes necessary to instanciate several `SPC` type classes thanks to the `addSPC()` method.
+This section will attempt to demonstrate the ability to manage different structures in the same **HTML** document. The next example shows the case when the data, logically nested, cannot be retrieved from a single treatment. Instead, it becomes necessary to instantiate several `SPC` type classes thanks to the `addFilterSelector()` method.
 
 ```html
     <table id="list_items_id" style="width:100%; text-align: left">
@@ -166,37 +166,41 @@ This section will attempt to demonstrate the ability to manage different structu
     </table>
 ```
 
-We can observe from below that the three fields have their own definitions. By successively recreating three objects related to each field, it becomes possible to properly achieve the data processing.
+We can observe from below that the three fields have their own definitions. By successively recreating the three objects related to each field, it becomes possible to properly achieve the data processing. Note that the new `addField()` method is now replacing `addSibling()`.
 
 ```typescript
-    let IM = new InputMessage('.','/somepath/somepage.htm',true);
+    let IM = new InputMessage('.','/somepath/somefilename.htm',true);
     
-    IM.addSPC('#list_items_id span.item_field_span_class')
-        .addSibling('column_1','p','item_name.item_class','');
-    IM.addSPC('#list_items_id ul.item_field_ul_class li')
-        .addSibling('column_2','','','');
-    IM.addSPC('#list_items_id div.item_field_div_class')    
-        .addSibling('column_3','p','','');
+    IM.addFilterSelector('#list_items_id span.item_field_span_class')
+        .addField('column_1','p','item_name.item_class','');
+    IM.addFilterSelector('#list_items_id ul.item_field_ul_class li')
+        .addField('column_2','','','');
+    IM.addFilterSelector('#list_items_id div.item_field_div_class')    
+        .addField('column_3','p','','');
 
     const f = new Flysh(IM);
 ```
  
-**Flysh** is able to perform complex combinations by nesting multiple `SPC` class. The given example from above is not exhaustive but nevertheless provides an overview of the current library performances.
+**Flysh** is able to perform complex combinations by nesting multiple `SPC` class. The given example from above is NOT exhaustive but nevertheless provides an overview of the current library performances.
 
 ## Settings and configuration
+
 This section explains how to configure the objects needed to properly use the library.
 
 ### Configuration of the `InputMessage` class instance
-The `InputMessage` class is defining the various informations which will be provided to the `Flysh` instance.
 
-#### Timeout setting
-The `timeout` value is defined by default by the `InputMessage` class. This value can be changed by modifying the field provided for this purpose. If no value is set, then the default one will be applyed. The below example shows the `TIMEOUT_VALUE` value as an optional numeric variable.
+The `InputMessage` class is defining the various information which will be provided to the `Flysh` instance.
+
+#### **Timeout setting**
+
+The `timeout` default value is defined from the `InputMessage` class. This value can be changed by modifying the field provided for this purpose. If no value is set, then the default one will be applyed. The below example shows the `TIMEOUT_VALUE` value as an optional numeric variable.
 
 ```Typescript
  	new InputMessage('domain','path',DOCUMENT_ACCESS,TIMEOUT_VALUE);
 ```
 
-#### Access mode setting
+#### **Access mode setting**
+
 The access mode can be defined following two different approaches. It is therefore possible to access documents either from the local file system or the LAN/WAN network. The `DOCUMENT_ACCESS` field contains a `boolean` value specifying either access via the filesystem (true) or the network (false). For example, accessing a document on a remote site will only be possible by specifying that it is not on the filesystem (false).
 
 ```Typescript
@@ -205,9 +209,9 @@ The access mode can be defined following two different approaches. It is therefo
 
 ### How to define the filter selector ?
 
-#### What is a filter selector ?
+#### **What is a filter selector ?**
 
-Flysh is entirely relying on the JQuery library and, in a same time, fully inherits from its powerful 'selector' feature. Specificly profiled to perform deep DOM parsing operations, Flysh is only using a part of what Jquery can do. For more informations please refer to the next references, https://api.jquery.com/multiple-selector/ and https://api.jquery.com/descendant-selector/
+Flysh is entirely relying on the JQuery library and, in a same time, fully inherits from its powerful 'selector' feature. Specificly designed to perform deep DOM parsing operations, Flysh is only using a part of what Jquery can do. For more informations please refer to the next references, https://api.jquery.com/multiple-selector/ and https://api.jquery.com/descendant-selector/
  
 **Simple example,**
 
@@ -238,15 +242,15 @@ See the below HTML code,
     ...
     </table>
 ```
-This filter definition is important as it completly relies on how the data scope is structured.  
+_This filter definition is important as it completely relies on how the data scope is structured._
 
-#### What the 'data scope' does mean ?
+#### **What the 'data scope' does mean ?**
 
 It is important to get a good definition of the environment and the area where the data will be processed. It will depend on the hierarchy related to the specific architecture of the **HTML** objects and how it is organized. Going back to the `table` example, we know that this element has a hierarchy on which we can make an assumption. On this basis, we can consider that the highest element is `table` which can be defined as the **scope** and its underlying elements, hierarchically lower, can be repetitive. In this case, the `tr` element is the direct child of `table` and parent of the `td` element. From this predicate, we can therefore conclude that the `tr` element has a role of parent related to its subclass `td` but can also be repetitive just like its descendant(s).
         
     'table' element -[has one or more]- 'tr' element(s) -[has one or more]- 'td' element(s)
 
-The purpose of the `SPC` (Scope-Parent-Child) class filter selector is to define this hierarchy in order to best identify the data to extract. To this end, the filter can be represented as follow (**table tr td**) but also in another way (**table tr**). This last representation tells the selector to only focusing on the `table` (scope) and the parent `tr` element without having to define first the 'child' element. Thanks to the `addSibling()` method, it becomes possible to provide more details regarding the extraction of the 'child' element by defining:
+The purpose of the `SPC` (Scope-Parent-Child) class filter selector is to define this hierarchy in order to best identify the data to extract. To this end, the filter can be represented as follow (**table tr td**) but also in another way (**table tr**). This last representation tells the selector to only focusing on the `table` (scope) and the parent `tr` element without having to define first the 'child' element. Thanks to the `addField()` method, it becomes possible to provide more details regarding the extraction of the 'child' element by defining:
 
 - A field value, i.e: 'Product'
 - An 'HTML' tag definition, i.e: `tr` 
@@ -272,17 +276,19 @@ For example:
 ```
 This **HTML** code can be processed by **Flysh** as follow,
 
-    addSPC(‘table tr’)
-        .addSibling(‘product’,’td’,’class_product’,’<REGEX_VALUE>’)
-        .addSibling(‘description’,’td’,’class_description’,’’);
+    addFilterSelector(‘table tr’)
+        .addField(‘product’,’td’,’class_product’,’<REGEX_VALUE>’)
+        .addField(‘description’,’td’,’class_description’,’’);
+
 or,
 
-    addSPC(‘table tr’)
-        .addSibling(‘product’,’td’,’’,’’)
-        .addSibling(‘description’,’td’,'’,’’);
+    addFilterSelector(‘table tr’)
+        .addField(‘product’,’td’,’’,’’)
+        .addField(‘description’,’td’,'’,’’);
+
 or even,
 
-    addSPC(‘table tr td’);
+    addFilterSelector(‘table tr td’);
 
 You will notice that it is possible to do it in different ways. Generally a precise definition of the data structure will providing you a better quality during their collection. Beforehand, this data identification can be done manually only. However, the user can benefit from tools to help to identify the data scope area such as "DevTools" (**Chrome**), "FireBugs" (**Mozilla**) and many more.
 
@@ -310,25 +316,24 @@ All the commands are available from the `tasks.json` file.
 **Console commands [Windows\Linux]**
 - clean binaries, `rimraf .\dist\*`
 - compile, `tsc -p .\tsconfig.json`
-- test (windows), `mocha -r ts-node/register test/**/*.test.ts`
-- test (linux), `mocha -r ts-node/register test/**/*.test.ts test/**/**/*.test.ts test/src/**/*.test.ts`
+- test [windows], `mocha -r ts-node/register test/**/*.test.ts`
+- test [linux], `mocha -r ts-node/register test/**/*.test.ts test/**/**/*.test.ts test/src/**/*.test.ts`
 - run, `node .\dist\out-tsc\index.js`
 
 ### Framework dependencies
 
-This current version library has been implemented and tested on,
+This current version library has been implemented, built and tested on,
 
 - **EcmaScript** = `ES2019`
 - **EcmaScript** (ESM Module) = `ESNEXT`
 - **EcmaScript** (Types Module) = `ESNEXT`
 - **Jquery** = `3.6.0`
-- **NodeJS** >= `17.6.0`
-- **TypeScript** >= `4.5.2`
+- **NodeJS** >= `18.11.0`
+- **TypeScript** >= `4.8.4`
 
 ### Exceptions list
 
 The below list is showing all the current exceptions handled by **Flysh**,
-
 
     ID '1500001200', 'Flysh' Class', "No qualified 'SPC DomElement' instance(s) found"
     ID '1500001300', 'Flysh' Class', "No qualified 'NavPane DomElement' instance(s) found"
@@ -354,7 +359,7 @@ The below files are parts of the project library,
 - `properties.cnf` is the property file that help to set all the configurable values
 - `test/listing.csv` lists all the **HTML** file dataset used by set of tests classes 
 
-## Licence
+## License
 
 Copyright (C) 2020 — 2022, John Van Derton
 
@@ -362,6 +367,6 @@ Please read the ['LICENCE'](./LICENSE) file for more information.
 
 ## Donate
 
-Feel free to support, thanks! 
+Thanks for support ! 
 
-BTC, [bc1q84seqrs0tvzy22gekx3u98xf92ujxvju0jsqrl](bitcoin://bc1q84seqrs0tvzy22gekx3u98xf92ujxvju0jsqrl) 
+BTC, [bc1q84seqrs0tvzy22gekx3u98xf92ujxvju0jsqrl](bitcoin://bc1q84seqrs0tvzy22gekx3u98xf92ujxvju0jsqrl)

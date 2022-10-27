@@ -13,7 +13,10 @@
   "bugs": {
     "url": "https://github.com/johnvanderton/flysh/issues"
   },
-  "files": ["dist", "version"],
+  "files": [
+    "dist",
+    "version"
+  ],
   "scripts": {
     "build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
     "clean": "rimraf dist/*",
