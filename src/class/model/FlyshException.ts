@@ -5,8 +5,7 @@ import "reflect-metadata";
 /**
  * 'FlyshException' class model
  * 
- * This class is instanciated and internally thrown in case of error. 
- * Inherits from the Typescript framework 'Error' class
+ * This class is instanciated and thrown in case of error. Inherits from the native TypeScript framework 'Error' class
  * 
  */
 export class FlyshException extends Error {

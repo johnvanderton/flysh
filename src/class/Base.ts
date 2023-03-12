@@ -36,7 +36,7 @@ export class Base {
     }
 
     /**
-     * Running
+     * Run
      */
     public run() {
         this.init();

@@ -5,7 +5,7 @@ import { OutputMessage, PageRecords } from "../model/OutputMessage";
 /**
  * 'SimpleClassLoader' class helper
  * 
- * Loads and runs a 'Flysh' instance
+ * Loads and runs a 'Flysh' class instance
  */
 export class SimpleClassLoader {
 

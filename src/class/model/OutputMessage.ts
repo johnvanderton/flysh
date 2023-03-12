@@ -5,8 +5,8 @@ import "reflect-metadata";
 /**
  * 'PageRecords' class model
  * 
- * The class is instanciated and filled by the 'Flysh' class during page(s) parsing. The data collection is structured as an array of Map.
- * In case of exception during process, the 'error' flag is set to true (i.e: timeout, crash,...).
+ * The class is instanciated and filled by the 'Flysh' class during page(s) parsing. The data collection is structured 
+ * as an array of 'Map'. In case of exception during process, the 'error' flag is set to true (i.e: timeout, crash,...).
  * 
  * Example of the output data format sent back after page(s) parsing,
  *      [
@@ -184,7 +184,7 @@ export class OutputMessage {
     /**
      * Getter number of records
      * 
-     * @returns Returns a 'number' that contains the total of records from all the 'PageRecords' (pageRecordList)
+     * @returns Returns a 'number' that contains the total of records from all the 'PageRecords' ('pageRecordList')
      */
      @Expose()
     public get numberOfRecords() : number {

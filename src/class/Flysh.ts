@@ -14,7 +14,6 @@ export class Flysh  {
 
     /**
      * Constants
-     * 
      */
     private readonly CORE_PARSER_FILTER_SELECTOR_SPLITTER_CHILD_POSITION_VALUE = 2;
     private readonly CORE_PARSER_FILTER_SELECTOR_SPLITTER_PARENT_POSITION_VALUE = 1;
@@ -45,10 +44,10 @@ export class Flysh  {
     /**
      * Constants, exception codes
      */
-    private readonly EXCEPTION_ID_1500001200_MESSAGE_VALUE = "No qualified 'SPC DomElement' instance(s) found";
-    private readonly EXCEPTION_ID_1500001300_MESSAGE_VALUE = "No qualified 'NavPane DomElement' instance(s) found";
+    private readonly EXCEPTION_ID_1500001200_MESSAGE_VALUE = "No any filter selector found";
+    private readonly EXCEPTION_ID_1500001300_MESSAGE_VALUE = "No any 'Paginator' found";
     private readonly EXCEPTION_ID_1500001400_MESSAGE_VALUE = "Timeout value cannot be negative";
-    private readonly EXCEPTION_ID_1500003100_MESSAGE_VALUE = "Exception occured during process";
+    private readonly EXCEPTION_ID_1500003100_MESSAGE_VALUE = "Exception occurred during process";
     private readonly EXCEPTION_ID_2000000000_MESSAGE_VALUE = "Request(s) timed out";
 
     /**
@@ -166,7 +165,7 @@ export class Flysh  {
     }
 
     /**
-     * Returns the 'JQuery' selector from prefetched DOM object
+     * Returns the 'JQuery' selector from prefetched 'DOM' object
      * 
      * @param dom Object that contains the 'DOM' structure of the document
      * @returns Returns the 'JQuery' selector
@@ -197,21 +196,21 @@ export class Flysh  {
     }
 
     /**
-     * Updates the 'navmap' property with the new URIs parsed from the page's navigation pane 
+     * Updates the 'navmap' ('Paginator') property with the new URIs parsed from the page's navigation pane 
      * 
-     * @param inputData Contains an array of URIs from the navigation pane
+     * @param inputData Contains an array of URIs from the navigation ('Paginator') pane
      */
     private updateNavMapURI(inputData : string[]) { 
         inputData.forEach((e) => {this.navmap.push(e);});
     }
 
     /**
-     * Loops on each 'siblings' signature to overloads the 'filterselector'
+     * Loops on each 'siblings' (fields) signature to overloads the 'filterselector'
      *
      * i.e : - '#scope-id div.product-description' + 'a' provides the full filter selector, '#scope-id div.product-description a'
      *       - '#scope-id div.product-description' + 'span.price' provides the full filter selector, '#scope-id div.product-description span.price'
      *
-     * NOTE : As the 'JQuery' selector is only able to catch up a precise tag through the page, the parsing method must be invoked multiple times
+     * NOTE : The 'JQuery' selector is only able to catch up a precise tag through the page, the parsing method must be invoked multiple times
      * NOTE : If the 'filterselector' is having maximum 3 distinct arguments, it means that it's 'full' and don't need to loop over again
      * NOTE : Full filter means 'auto-mode'
      * 
@@ -228,7 +227,7 @@ export class Flysh  {
             tmpData = this.parser(
                             this.createWindowSelector(dom),
                             (<SPC>domelement).getFilterSelector,// Get the main filter selector
-                            ''// Reserved to 'NavPane' parsing (empty value)
+                            ''// Reserved to 'NavPane' ('Paginator') parsing
                         );
             _retVal = this.rowsMapper(tmpData, (<SPC>domelement).getFields.length);
         }
@@ -240,7 +239,7 @@ export class Flysh  {
                     this.parser(
                         this.createWindowSelector(dom),
                         (<SPC>domelement).getFilterSelector + ' ' + e.getElementWithSignature, // Get the main filter selector
-                        ''// Reserved to 'NavPane' parsing (empty value)
+                        ''// Reserved to 'NavPane' ('Paginator') parsing, empty value expected
                     ));    
             }); 
             _retVal = this.matrixMapping(matrix, (<SPC>domelement).getSiblings.length);
@@ -250,11 +249,11 @@ export class Flysh  {
     }
 
     /**
-     * Cleans each 'PageRecords' records with the corresponding sibling's regex. For each sibling, the function matches the right 
-     * label name and lookups for the corresponding regular expression
+     * Cleans each 'PageRecords' (records) with the corresponding sibling's regex (field). For each sibling, the function matches 
+     * the right label name and lookups for the corresponding regular expression
      * 
-     * NOTE : Don't process in case of undefined/empty regex ('') (no matching sibling (PK? Label ?)) 
      * NOTE : If the regular expression matches (exec) the content an update will be applied, otherwise it does nothing
+     * TOTEST : Don't process in case of undefined/empty regex ('') (no matching sibling (PK? Label ?))
      * 
      * @param pgRecords 'PageRecords' Class instance with original record(s) 
      * @param domE 'DomeElement' Generic type parameter used to retrieve the record field name
@@ -266,7 +265,7 @@ export class Flysh  {
             for (let z of e.keys()) {
                 let sib = (<SPC>domE).getSiblings.find(e => e.field === z);
                 if (sib !== undefined && sib.regex !== '') {
-                    let regex = sib.regex;
+                    let regex = String(sib.regex);
                     let keyval = e.get(z)!.toString();// Non-null assertion operator
                     let regexp = new RegExp(regex);
                     if (regexp.test(keyval))// Otherwise do not update
@@ -279,8 +278,8 @@ export class Flysh  {
     }
 
     /**
-     * Maps the received matrix into a 'PageRecords' class instance. 
-     * In a same time, validates if the returned content from the selector is not empty
+     * Maps the received matrix into a 'PageRecords' class instance and validates if the returned content from 
+     * the selector is not empty
      * 
      * @param matrix Array of array of string that contains the records 
      * @param domE 'DomeElement' generic type parameter used to retrieve the record field name
@@ -319,10 +318,10 @@ export class Flysh  {
 
         /**
          * Conditional statement in case of no sibling/field definition (returns flat results)
-         * !! QUID about the 'auto-mode' in case of multiple siblings with a same tag...?
-         * !! >> This case there is no sibling then (fieldnumber == 0) ... 
+         * !! QUID about the 'auto-mode' in case of multiple siblings with a same tag?
+         * !! >> This case there is no sibling then (fieldnumber == 0) 
          *      >> Current limitation : need to add sibling to delimitates recors (all fields)
-         *      >> Next release : if full filter and no sibling, then auto-mode OR something else...
+         *      >> Further release : if full filter and no sibling, then auto-mode OR something else...
          */
         if (fieldsNumber == this.PAGERECORD_MAPPER_UNDEFINED_FIELD_NUMBER_VALUE) 
             fieldsNumber = this.PAGERECORD_MAPPER_UNDEFINED_FIELD_SWAP_VALUE;  
@@ -373,7 +372,8 @@ export class Flysh  {
     }
 
     /**
-     * Parses the current document with his corresponding selector, this function is the nearest core caller from the 'Jquery' library
+     * Parses the current document with his corresponding selector, this function is the nearest core caller 
+     * from the 'Jquery' library
      * 
      * TODO : element.innerHTML less efficient than element.textContent ?
      * 
@@ -393,19 +393,20 @@ export class Flysh  {
          * 
          * A new update is improving the core parsing accuracy.
          * 
-         * These improvements are focusing,
+         * These improvements are focusing on,
          *      - Detection of missing elements
          *      - Detection of empty/unusable nodes
          * 
          * 'Flysh' main core logic, version 0.1
          * ====================================
          * 
-         * This first version is overriding the document selector and his returned content.
+         * This first version is overriding the document selector and 
+         * his returned content.
          */
 
         let _retVal : any[] = [];
 
-        // Check parsing a navigation panel ('navpane')
+        // Check parsing a navigation panel ('navpane'/'Paginator')
         if (attribute) $(filterselector).each((index : number, element : Element) => {_retVal.push(element.getAttribute(attribute));});
         else {// page parsing
             let fs_split = filterselector.split(" ",this.CORE_PARSER_FILTER_SELECTOR_SPLITTER_SIZE_VALUE); 
@@ -451,8 +452,8 @@ export class Flysh  {
     }
 
     /**
-     * Merges the "scrapped" pages into one 'PageRecords' object instance. The mapping is the processing between the 'recordList' returned 
-     * from the 'PageRecords' instance and the current "scraps" objects
+     * Merges the "scrapped" pages into one 'PageRecords' object instance. The mapping is the processing between the 
+     * 'recordList' returned from the 'PageRecords' instance and the current "scraps" objects
      * 
      * @param scraps Array of 'PageRecords' which contain all "scrapped" records from a page
      * @returns Returns a unique 'PageRecords' containing all the "scrapped" records
@@ -484,10 +485,10 @@ export class Flysh  {
 
     /**
      * Checks if a page is either a "scrap" or not. This method evaluates when to set a new 'PageRecords' to the 'outputmessage' 
-     * class property. It uses a 'PageRecords' type buffer (from scraps) with a size which equals the number of 'SCP' objects. 
-     * If the configuration is set to "MF/MultiFamilly", the buffer will be filled till his maximum size. Once full, 
+     * class property. It uses a 'PageRecords' type buffer (from scraps) with a size which equals the number of 'SCP' objects (fields). 
+     * If the configuration is set to "MF/MultiFamily", the buffer will be filled till his maximum size. Once full, 
      * a new 'PageRecords' page will be created and being filled with the other 'PageRecords'. If the page is not considered 
-     * as "MF/MultiFamilly", the reference will be simply returned.
+     * as "MF/MultiFamily", the reference will simply be returned.
      * 
      * @param pr 'PageRecords' class instance that contains the parsed records from a page 
      */
@@ -512,7 +513,7 @@ export class Flysh  {
      * Returns a 'Promise' that contains the parsed data from a window (dom.window). Each 'Promise' is either identified as a 
      * new 'PargeRecords' either a filepath/URIs to add
      * 
-     * NOTE : In case of multiple 'NavPane' elements, the first occurrence will only be taken into account
+     * NOTE : In case of multiple 'NavPane' ('Paginator') elements, the first occurrence will only be taken into account
      * 
      * @param uri String that contains document path from filesystem or network (lan/wan)
      * @returns Returns a 'Promise' that contains the parsed datas from the 'window' (dom.window)
@@ -520,7 +521,7 @@ export class Flysh  {
     private async harvesting(uri : string) {
         return this.fetchDOM(uri)
                    .then(dom => {// Fulfilled (settled)
-                        if (this.hasnavpane && !this.navmapupdated) {// In case of 'navmap'/'navpane'
+                        if (this.hasnavpane && !this.navmapupdated) {// In case of 'navmap'/'paginator'
                             this.updateNavMapURI(
                                 this.parser(// Returns array of parsed URI
                                     this.createWindowSelector(dom),
@@ -546,13 +547,13 @@ export class Flysh  {
     }
 
     /**
-     * Processing the page(s) preseted within the 'navmap' property
+     * Processing the page(s) preseted within the 'navmap'/'paginator' property
      * 
      * NOTE : 'foEach()' method seems not handling a 'Promise' callback
      * NOTE : Each back 'Promise' are stored from properties and available from getter functions
      */
     private async processing() {
-        await this.harvesting(this.URI)// Resolves the first page (reaching the domain and potentially creating the 'navmap')
+        await this.harvesting(this.URI)// Resolves the first page (reaching the domain and potentially creating the 'navmap' ('Paginator'))
                   .then(async () => {
                     for (const e of this.navmap)// In case of any other URI page to parse
                         await this.harvesting(e);

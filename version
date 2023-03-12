@@ -1,15 +1,21 @@
 ============================================================
-= 'Anchor' (Beta version v1.0.0), Fall release 2022        = 
+= 'Anchor' (version v1.0.0), Spring release 2023           =
 ============================================================
 
 ## Preamble
 
-    TODO
+    This is the "Anchor" release version which includes several major changes and fixes.
 
-## Pre-Release version 0.2.2
+## Major release version '1.0.0'
 
-    - Updated the 'README.md' file
-    - ...
+    - The below public methods have been renamed,
+        - 'addNavPane()'    -> 'addPaginator()'
+        - 'addSPC()'        -> 'addFilterSelector()'
+        - 'addSilbing()'    -> 'addField()'
+      Note, all previous methods are now marked as 'deprecated'
+    - Updated outdated project dependencies
+    - Default timeout value set to 1500ms
+    - Identified Git Security bot breach fixed ("http-cache-semantics")
 
 ## Feature(s)
 
@@ -20,12 +26,12 @@
     - Please refer to the previous log version
 
 ## Well-Known bug(s)
-    
+
     - Please refer to the previous log version
     - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
 
 ============================================================
-= 'Base' (Pre-release version v0.2.2), Fall release 2022   = 
+= 'Base' (Pre-release version v0.2.2), Fall release 2022   =
 ============================================================
 
 ## Preamble
@@ -35,7 +41,7 @@
 ## Pre-Release version 0.2.2
 
     - Updated the 'README.md' file
-    - Updated the 'package.json' library versions 
+    - Updated the 'package.json' library versions
         - jquery version 3.6.1 (minor)
         - mocha version 10.0.0
     - Added win/linux test scripts from the 'package.json' script file
@@ -49,12 +55,12 @@
     - Please refer to the previous log version
 
 ## Well-Known bug(s)
-    
+
     - Please refer to the previous log version
     - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
 
 ============================================================
-= 'Base' (Pre-release version v0.2.1), Summer release 2022 = 
+= 'Base' (Pre-release version v0.2.1), Summer release 2022 =
 ============================================================
 
 ## Preamble
@@ -78,12 +84,12 @@
     - Please refer to the previous log version
 
 ## Well-Known bug(s)
-    
+
     - Please refer to the previous log version
     - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
 
 =======================================================
-= 'Base' (Hotfix version v0.1.8), Spring release 2022 = 
+= 'Base' (Hotfix version v0.1.8), Spring release 2022 =
 =======================================================
 
 ## Preamble
@@ -105,12 +111,12 @@
     - The 'SPC' class 'timeout' parameter becomes optional with a default value set to 1100ms
 
 ## Limitation(s)
-    
+
         - Undefined fields means that no sibling was presetted, the returned results will be like,
             Map(1) { undefined => 'value' }, ...
 
         - An 'SPC' class instance defined with a full filter selector without any sibling is only returning a raw result,
-            
+
             ''' Typescript code example
                 let inputMessage = new InputMessage('.','/test/dataset/000.htm',true);
                 inputMessage.addSPC('table tr td');
@@ -145,6 +151,6 @@
                 errorID: '1500003100'
 
 ## Well-Known bug(s)
-    
+
     - Inconsistencies might happen from Linux environment during project installation/configuration
     - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!

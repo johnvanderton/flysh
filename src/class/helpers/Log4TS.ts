@@ -1,5 +1,5 @@
 import { appendFileSync }  from "fs";
-import { ILogObject, Logger } from "tslog";
+import { Logger } from "tslog";
 
 /**
  *  'Log4TS' class helper
@@ -24,29 +24,9 @@ export class Log4TS {
     }
 
     /**
-     * Synchronously appends data to a file, creating the file if it does not exist
-     * 
-     * @param logObject 
-     */
-    private logToTransport(logObject: ILogObject) {
-        appendFileSync(Log4TS.LOGFILE_PATH_VALUE+Log4TS.LOGFILE_NAME_VALUE, JSON.stringify(logObject) + "\n");
-    }
-
-    /**
      * Initialization
      */
     private init() {
         //read from 'ConfigReader' the log files to create (dev/prod)
-        this.log.attachTransport({
-              silly: this.logToTransport,
-              debug: this.logToTransport,
-              trace: this.logToTransport,
-              info: this.logToTransport,
-              warn: this.logToTransport,
-              error: this.logToTransport,
-              fatal: this.logToTransport,
-            },
-            "debug"
-          );
     }
 }

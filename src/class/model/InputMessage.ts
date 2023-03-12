@@ -29,10 +29,9 @@ export abstract class DomElement {
     }
 
     /**
-     * Concatenates the '_element' with the '_signature'. 
-     * If no '_signature' found then the 'element is only returned 
+     * Concatenates the '_element' with the '_signature'. If no '_signature' found then the '_element is only returned 
      * 
-     * @returns Returns a 'string' that contains the 'element' with or without a signature
+     * @returns Returns a 'string' that contains the '_element' with or without a signature
      */
     @Expose()
     get getElementWithSignature() {
@@ -60,20 +59,20 @@ export abstract class DomElement {
 }
 
 /**
- * 'Sibling' class model 
+ * 'Sibling' class model (Also qualified as 'field')
  */
  export class Sibling extends DomElement {
 
     /**
      * Public class constants
      */
-    public static readonly EXCEPTION_ID_5300000100_MESSAGE_VALUE = "A 'Sibling' class instance must have a field name";
+    public static readonly EXCEPTION_ID_5300000100_MESSAGE_VALUE = "A field name must be defined";
 
     /**
      * Class properties
      */
     private _field : string;
-    private _regex : string;
+    private _regex : string | undefined;
 
     /**
      * Constructor
@@ -81,9 +80,9 @@ export abstract class DomElement {
      * @param field 'String' that contains the sibling's field  
      * @param element 'String' that contains the element or 'tag'
      * @param signature 'String' that contains the signature of the element
-     * @param regex 'String' that contains the regular expression
+     * @param regex 'String' | 'undefined' that contains the regular expression, optional.
      */
-    constructor(field: string, element: string, signature: string, regex: string) {
+    constructor(field: string, element: string, signature: string, regex: string | undefined) {
         super(element,signature);
         this._field = field;
         this._regex = regex;
@@ -134,13 +133,14 @@ export abstract class DomElement {
 /**
  * 'SPC' class model
  * 
- * Handles the 'Scope', 'Parent' and 'Children' DOM objects.
+ * Handles the 'Scope', 'Parent' and 'Children' DOM objects. This element is direclty involved with the
+ * 'Filter Selector' functionality. 
  *  
  * Contains : - A scope/parent filter selector signature
  *            - Children 'Sibling' elements
  *            - Fields record order
  *
- * TODO : Verifying annotations syntax in case of [] array
+ * TODO : Verifying annotations syntax in case of [] array ()
  *
  */
 export class SPC extends DomElement {
@@ -148,9 +148,9 @@ export class SPC extends DomElement {
     /**
      * Public class constants
      */
-    public static readonly EXCEPTION_ID_5200000100_MESSAGE_VALUE = "A 'SPC' class instance must have a filter selector value, i.e : 'table tr td'";
-    public static readonly EXCEPTION_ID_5200000200_MESSAGE_VALUE = "A 'SPC' class instance filter selector must have 2 elements at least";
-    public static readonly EXCEPTION_ID_5200000300_MESSAGE_VALUE = "A 'Sibling' class instance is already having the same field";
+    public static readonly EXCEPTION_ID_5200000100_MESSAGE_VALUE = "Empty filter selector, i.e : 'table tr td'";
+    public static readonly EXCEPTION_ID_5200000200_MESSAGE_VALUE = "A filter selector must have 2 elements at least";
+    public static readonly EXCEPTION_ID_5200000300_MESSAGE_VALUE = "A previous similar field has already been added";
  
     /**
      * Private class constants
@@ -165,15 +165,15 @@ export class SPC extends DomElement {
     /**
      * Property that defines the full filter selector ('scope'/'parent'/'children')
      * 
-     * NOTE : This property might be fully defined or not.
-     *        If not full, this signature must be completed by the other 'Sibling' element(s)
+     * NOTE : This property might be fully defined or not. If not full, this signature must be completed by the other '
+     *        Sibling' element(s)
      *        
      */
     @Type(() => String)
     private _filterselectorsignature : string;
 
     /**
-     * Contains all the children 'Sibling' class instances
+     * Contains all the children 'Sibling' (fields) class instances
      */
     @Type(() => Sibling)
     private _siblings : Sibling[];
@@ -182,7 +182,7 @@ export class SPC extends DomElement {
      * Constructor
      * 
      * @param filterselectorsignature 'String' that contains the filter selector signature
-     * @param siblings Array of 'Sibling' instances that contains the current instance
+     * @param siblings Array of 'Sibling' (field) instances that contains the current instance
      */
     constructor(filterselectorsignature : string, siblings: Sibling[]) {
         super('','');
@@ -240,7 +240,7 @@ export class SPC extends DomElement {
     /**
      * Gets the object properties (overridden) 
      * 
-     * @returns Returns a 'String' that contains the class filter selector with all the 'Sibling' entrie(s)
+     * @returns Returns a 'String' that contains the class filter selector with all the 'Sibling' entrie(s) (field(s))
      */
     @Expose()
     get getEntry() {
@@ -271,16 +271,16 @@ export class SPC extends DomElement {
     /**
      * Adds a field ('Sibling') and returns the current 'SPC' class itself
      * 
-     * Note : For the sake of good reading and interpretation, this function has been publicly renamed
+     * Note : For the sake of good reading and interpretation, this function has been publicly renamed (cf. 'addSbling()')
      * 
      * @param fieldName Contains the name of the field
      * @param tagName Defines the name of the tag (dom element)
      * @param className Has the name of the element class property (<x class=''></x>)
-     * @param regEx Defines the regular expression following the field
-     * @returns Returns the 'SPC' class instance itself
+     * @param regEx Defines the regular expression following the field [optional]
+     * @returns Returns the 'field' ('SPC') class instance itself
      */
     @Expose()
-    public addField(fieldName: string, tagName : string, className : string, regEx : string) : SPC {
+    public addField(fieldName: string, tagName : string, className : string, regEx ?: string) : SPC {
         let newField = new Sibling(fieldName, tagName, className, regEx);
         newField.validate();
         this.validateSiblings(fieldName);
@@ -289,9 +289,8 @@ export class SPC extends DomElement {
     }
     
     /**
-     * Verifies that the filter selector is 'full'. A 'true' value is returned if the filter is having 3 'SPC' members 
+     * Verifies that the filter selector is 'full'. A 'true' value is returned if the filter selector is having 3 'SPC' members 
      * (Scope/Iterator, Parent and Child). Filter can't be more than 3 arguments
-     *
      */
     @Expose()
     public hasFullFilter() : boolean {
@@ -315,7 +314,7 @@ export class SPC extends DomElement {
     }
 
     /**
-     * Validates the 'Sibling' stack content
+     * Validates the 'Sibling' (field) stack content
      */
      @Expose()
      private validateSiblings(sibFieldName: string) : void {
@@ -327,16 +326,16 @@ export class SPC extends DomElement {
 }
 
 /**
- * 'NavPane' class model
+ * 'NavPane' ('Paginator') class model
  */
 export class NavPane extends DomElement {
 
     /**
      * Public class constants
      */
-     public static readonly EXCEPTION_ID_5100000100_MESSAGE_VALUE = "A 'NavPane' class instance must have a filter selector value, i.e : 'table tr td'";
-     public static readonly EXCEPTION_ID_5100000200_MESSAGE_VALUE = "A 'NavPane' class instance filter selector must have 2 elements at least";
-     public static readonly EXCEPTION_ID_5100000300_MESSAGE_VALUE = "A 'NavPane' class instance must have an attribute, i.e : 'href'";
+     public static readonly EXCEPTION_ID_5100000100_MESSAGE_VALUE = "A 'Paginator' must have a filter selector value, i.e : 'table tr td'";
+     public static readonly EXCEPTION_ID_5100000200_MESSAGE_VALUE = "A 'Paginator' filter selector must have 2 elements at least";
+     public static readonly EXCEPTION_ID_5100000300_MESSAGE_VALUE = "A 'Paginator' must have an attribute, i.e : 'href'";
  
     /**
      * Private class constants
@@ -415,14 +414,14 @@ export class InputMessage {
     /**
     * Public class constants
     */
-    public static readonly EXCEPTION_ID_6500001100_MESSAGE_VALUE = "Another 'SCP' class instance has the same filter selector";
-    public static readonly EXCEPTION_ID_6500001200_MESSAGE_VALUE = "A 'NavPane' class instance has already been set";
+    public static readonly EXCEPTION_ID_6500001100_MESSAGE_VALUE = "Another filter selector object has the same signature";
+    public static readonly EXCEPTION_ID_6500001200_MESSAGE_VALUE = "A 'Paginator' has already been set";
 
     /**
      * Private class constants
      */
     private readonly ID_GENERATED_FLOOR_FUNC_COMPLEXITY_VALUE = 100000000000;
-    private readonly DEFAULT_INSTANCE_TIMEOUT_VALUE = 1100;
+    private readonly DEFAULT_INSTANCE_TIMEOUT_VALUE = 1500;
     private readonly DOM_VALIDATION_NAVPANE_MIN_OCCURS_VALUE = 0;
 
     /**
@@ -469,7 +468,7 @@ export class InputMessage {
      * Validates the content of the '_doms' class property
      * 
      *  - 'SPC' class instance, verifies that is no other instance(s) having the same 'filter selector'
-     *  - 'NavPane' class instance, verifies that there is not more than one instance within the stack
+     *  - 'NavPane' ('Paginator') class instance, verifies that there is not more than one instance within the stack
      * 
      * @param Class Parameter that contains the class name to validate
      */
@@ -511,7 +510,7 @@ export class InputMessage {
     }
 
     /**
-     * Getter 'hasNavpane' boolean property
+     * Getter 'hasNavpane' ('Paginator') boolean property
      * 
      * @return Returns the '_navpane' class property
      */
@@ -629,11 +628,11 @@ export class InputMessage {
     /**
      * Adds a Paginator and returns the newly added 'NavPane' element
      * 
-     * Note : For the sake of good reading and interpretation, this function has been publicly renamed
+     * Note : For the sake of good reading and interpretation, this function has been publicly renamed ('addNavPane()')
      * 
-     * @param filterSelector Defines the 'NavPane' filter selector
+     * @param filterSelector Defines the 'Paginator' filter selector
      * @param attrib Contains the attrib(ute) of the element/tag (i.e : 'href')
-     * @returns Returns the 'NavPane' class instance itself
+     * @returns Returns the 'Paginator' ('NavPane') class instance itself
      */
     public addPaginator(filterSelector : string, attrib : string) {
         let newPaginator = new NavPane(filterSelector, attrib);
@@ -664,12 +663,12 @@ export class InputMessage {
     /**
      * Returns the newly added Filter Selector ('SPC' type element)
      * 
-     * Note : For the sake of good reading and interpretation, this function has been publicly renamed
+     * Note : For the sake of good reading and interpretation, this function has been publicly renamed ('addSPC()')
      * 
      * TODO : Implement validate() as (new SPC(filterSelector, new Array<Sibling>())).validate() : returns SPC (this)
      * 
      * @param filterselector Contains the current class filter selector 
-     * @returns Returns the 'SPC' class instance itself
+     * @returns Returns the 'Filter Selector' ('SPC') class instance itself
      */
     @Expose()
     public addFilterSelector(filterSelector : string) : SPC {
@@ -682,7 +681,7 @@ export class InputMessage {
     /**
      * Returns all the inherited 'DOMElement' instance(s) from the '_doms' stack property that match the 'Class' parameter
      * 
-     * NOTE : The returned value in case of 'navpane' should always be 1 element
+     * NOTE : The returned value in case of 'navpane'/'paginator' should always be 1 element
      * 
      * @param Class Contains the class name to retrieve
      * @return Returns an array of 'DomElement' that contains the found occurrence(s) 

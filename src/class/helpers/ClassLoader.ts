@@ -30,7 +30,7 @@ export class ClassLoader {
          * Loads 'InputMessage' instance(s)
          * 
          * ###
-         * ### Here you can manually add some tests to execute from command line (tasks.json)
+         * ### Here, you can add some tests to execute from command line (tasks.json)
          * ###
          * ### ~ $ node ${workspaceRoot}\\dist\\out-tsc\\index.js
          * ###
@@ -42,7 +42,8 @@ export class ClassLoader {
                  * Simple table example
                  */
                 let inputMessage_1 = new InputMessage('.','/test/dataset/100.htm',true);
-                inputMessage_1.addFilterSelector('table tr td').addField('column_1','tr','cls','');
+                inputMessage_1.addFilterSelector('table tr td')
+                        .addField('column_1','tr','cls','');
 
                 /**
                  * Simple table example, field undefined (no sibling)
@@ -102,7 +103,7 @@ export class ClassLoader {
         }
 
         /**
-         * Invoked by the asynchronous instance(s) once they've finished their job(s)
+         * Invoked by the asynchronous instances once they've finished their jobs
          * 
          * @param f 'Flysh' class to instanciate
          */
