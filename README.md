@@ -328,6 +328,7 @@ This current version library has been implemented, built and tested on,
 - **EcmaScript** = `ESNEXT` (ESM Module) 
 - **EcmaScript** = `ESNEXT` (Types Module)
 - **Jquery** = `3.6.3`
+- **Jsdom** = `21.1.0`
 - **NodeJS** >= `19.0.1`
 - **NPM** >= `9.1.1`
 - **TypeScript** >= `4.8.4`

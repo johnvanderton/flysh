@@ -445,6 +445,15 @@ export class Flysh  {
             setTimeout(() => reject(new FlyshException(2000000000,new Error(),this.EXCEPTION_ID_2000000000_MESSAGE_VALUE + ' (' + this.timeout + ' ms)',this.id)), this.timeout);
         });
 
+        /**
+         * implement a private function that evaluates if the target is on a filesystem or not
+         * TODO - where and when evalutes the uri (or previously just the domain ? (not the path ?) or both)
+         *      - remove the flysh _fs property ?
+         *      - not possible to remove fs from parameter (timeout is already optional...)
+         *      - how to identify the domain regex match http protocol check ? see best practise and standard
+         *      - think to add a flag or function (.forceFS()) to override auto check...
+         */
+
         if (this.filesystem) jsdomPromise = JSDOM.fromFile(uri, this.JSDOMOptions);
         else jsdomPromise = JSDOM.fromURL(uri, this.JSDOMOptions);
 
