@@ -51,7 +51,7 @@ export class FlyshException extends Error {
     /**
      * Getter 'instanceID'
      * 
-     * @returns Returns a 'string' that contains the '_instance_ID number' class property or 'undefined'
+     * @returns Returns a 'string' that contains the '_instance_ID' number class property or 'undefined'
      */
     @Expose()
     public get instanceID() : number | undefined {

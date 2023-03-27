@@ -459,10 +459,32 @@ export class InputMessage {
                 timeout ?: number
                 ) {
         this._domain = domain;
-        this._fs = fs;
+        this._fs = fs;//implement a function that checks if the domain+path is on the filesystem or on the network
         this._pagepath = pagepath;
         this._timeout = timeout || this.DEFAULT_INSTANCE_TIMEOUT_VALUE;
     }
+
+
+    /**
+     * This internal function is evaluating if the specified document is well located on a filesystem.
+     * If the document is not located on a filesystem then a 'false' value will be returned 
+     */
+    private _validateDocumentFSLocation(domain : string, docPath : string) : boolean {
+        let _retVal : boolean = true;
+
+        /**
+         * TODO - where and when evalutes the uri (or previously just the domain ? (not the path ?) or both)
+         *      - not possible to remove fs from parameter (timeout is already optional...)
+         *      - how to identify the domain regex match http protocol check ? see best practise and standard
+         *      - think to add a flag or function (.forceFS()) to override auto check...
+         */
+
+        return _retVal;
+    }
+
+
+
+
 
     /**
      * Validates the content of the '_doms' class property
