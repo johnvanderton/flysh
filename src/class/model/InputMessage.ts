@@ -423,6 +423,7 @@ export class InputMessage {
     private readonly ID_GENERATED_FLOOR_FUNC_COMPLEXITY_VALUE = 100000000000;
     private readonly DEFAULT_INSTANCE_TIMEOUT_VALUE = 1500;
     private readonly DOM_VALIDATION_NAVPANE_MIN_OCCURS_VALUE = 0;
+    private readonly REGEX_WEB_URI_VALIDATION_VALUE = /^(www|http:|https:)+[^\s]+[\w]$/;
 
     /**
      * Class properties
@@ -459,32 +460,25 @@ export class InputMessage {
                 timeout ?: number
                 ) {
         this._domain = domain;
-        this._fs = fs;//implement a function that checks if the domain+path is on the filesystem or on the network
+        this._fs = fs;// this._validateDocumentFSLocation(); //implement a function that checks if the domain+path is on the filesystem or on the network
         this._pagepath = pagepath;
         this._timeout = timeout || this.DEFAULT_INSTANCE_TIMEOUT_VALUE;
     }
 
-
     /**
      * This internal function is evaluating if the specified document is well located on a filesystem.
      * If the document is not located on a filesystem then a 'false' value will be returned 
+     * TODO : test & implement a forceFS() method
      */
-    private _validateDocumentFSLocation(domain : string, docPath : string) : boolean {
+    private _validateDocumentFSLocation() : boolean {
         let _retVal : boolean = true;
 
-        /**
-         * TODO - where and when evalutes the uri (or previously just the domain ? (not the path ?) or both)
-         *      - not possible to remove fs from parameter (timeout is already optional...)
-         *      - how to identify the domain regex match http protocol check ? see best practise and standard
-         *      - think to add a flag or function (.forceFS()) to override auto check...
-         */
+        //var expr = /^(www|http:|https:)+[^\s]+[\w]$/;
+        var regEx = new RegExp(this.REGEX_WEB_URI_VALIDATION_VALUE);
+        if (this._domain.match(regEx) !== null) _retVal = false;
 
         return _retVal;
     }
-
-
-
-
 
     /**
      * Validates the content of the '_doms' class property
