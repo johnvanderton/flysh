@@ -553,7 +553,7 @@ export class Flysh  {
     /**
      * Processing the page(s) preseted within the 'navmap'/'paginator' property
      * 
-     * NOTE : 'foEach()' method seems not handling a 'Promise' callback
+     * NOTE : 'forEach()' method seems not handling a 'Promise' callback
      * NOTE : Each back 'Promise' are stored from properties and available from getter functions
      */
     private async processing() {

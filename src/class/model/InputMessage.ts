@@ -416,14 +416,15 @@ export class InputMessage {
     */
     public static readonly EXCEPTION_ID_6500001100_MESSAGE_VALUE = "Another filter selector object has the same signature";
     public static readonly EXCEPTION_ID_6500001200_MESSAGE_VALUE = "A 'Paginator' has already been set";
+    public static readonly EXCEPTION_ID_6500005100_MESSAGE_VALUE = "Invalid domain value";
 
     /**
      * Private class constants
      */
-    private readonly ID_GENERATED_FLOOR_FUNC_COMPLEXITY_VALUE = 100000000000;
     private readonly DEFAULT_INSTANCE_TIMEOUT_VALUE = 1500;
     private readonly DOM_VALIDATION_NAVPANE_MIN_OCCURS_VALUE = 0;
-    private readonly REGEX_WEB_URI_VALIDATION_VALUE = /^(www|http:|https:)+[^\s]+[\w]$/;
+    private readonly ID_GENERATED_FLOOR_FUNC_COMPLEXITY_VALUE = 100000000000;
+    private readonly REGEX_FS_URI_VALIDATION_VALUE = /^(www|http:|https:)+[^\s]+[\w]$/;
 
     /**
      * Class properties
@@ -439,8 +440,8 @@ export class InputMessage {
           },
     })
     private _doms : DomElement[] | NavPane[] | SPC[] = new Array<DomElement>();
-    private _fs : boolean = false;
-    private _id : number = Math.floor(Math.random() * Math.floor(this.ID_GENERATED_FLOOR_FUNC_COMPLEXITY_VALUE));
+    private _fs : boolean;
+    private _id : number;
     private _navpane : boolean = false;
     private _pagepath : string;
     private _timeout : number;
@@ -450,31 +451,42 @@ export class InputMessage {
      * 
      * @param domain Defines the 'URI' domain
      * @param pagepath Contains the 'URI' path 
-     * @param fs Sets the filesystem or local file flag to 'true' or 'false'
      * @param timeout Optional parameter that defines the timeout value
      * 
      */
     constructor(domain : string, 
                 pagepath : string, 
-                fs : boolean,
                 timeout ?: number
                 ) {
-        this._domain = domain;
-        this._fs = fs;// this._validateDocumentFSLocation(); //implement a function that checks if the domain+path is on the filesystem or on the network
+        this._domain = this._documentDomainLocationValidator(domain);
+        this._fs = this._documentFSLocationValidator();
+        this._id = Math.floor(Math.random() * Math.floor(this.ID_GENERATED_FLOOR_FUNC_COMPLEXITY_VALUE));
         this._pagepath = pagepath;
         this._timeout = timeout || this.DEFAULT_INSTANCE_TIMEOUT_VALUE;
     }
 
     /**
-     * This internal function is evaluating if the specified document is well located on a filesystem.
-     * If the document is not located on a filesystem then a 'false' value will be returned 
-     * TODO : test & implement a forceFS() method
+     * This internal function is evaluating if the domain validity.
      */
-    private _validateDocumentFSLocation() : boolean {
+    private _documentDomainLocationValidator(domain : string) : string {
+        let _retVal = domain;
+
+        if ((domain.length === 0) || (domain === undefined) || (domain === null))
+            throw new FlyshException(6500005100, new TypeError(), InputMessage.EXCEPTION_ID_6500005100_MESSAGE_VALUE);
+
+        return _retVal;
+    }
+
+    /**
+     * This internal function is evaluating if the specified document is located on a filesystem.
+     * If the document is not located on a filesystem then a 'false' value will be returned 
+     * TODO : test & implement a .forceFS() method
+     *        test this internal function
+     */
+    private _documentFSLocationValidator() : boolean {
         let _retVal : boolean = true;
 
-        //var expr = /^(www|http:|https:)+[^\s]+[\w]$/;
-        var regEx = new RegExp(this.REGEX_WEB_URI_VALIDATION_VALUE);
+        let regEx = new RegExp(this.REGEX_FS_URI_VALIDATION_VALUE);
         if (this._domain.match(regEx) !== null) _retVal = false;
 
         return _retVal;

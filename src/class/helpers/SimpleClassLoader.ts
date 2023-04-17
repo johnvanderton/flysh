@@ -20,7 +20,7 @@ export class SimpleClassLoader {
          */
         public run() {
 
-                let inputMessage = new InputMessage('.','/test/dataset/300.htm',true);
+                let inputMessage = new InputMessage('.','/test/dataset/300.htm');
                 inputMessage.addFilterSelector('table tr td');
 
                 let f = new Flysh(inputMessage);

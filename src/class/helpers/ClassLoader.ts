@@ -41,20 +41,20 @@ export class ClassLoader {
                 /**
                  * Simple table example
                  */
-                let inputMessage_1 = new InputMessage('.','/test/dataset/100.htm',true);
+                let inputMessage_1 = new InputMessage('.','/test/dataset/100.htm');
                 inputMessage_1.addFilterSelector('table tr td')
                         .addField('column_1','tr','cls','');
 
                 /**
                  * Simple table example, field undefined (no sibling)
                  */
-                let inputMessage_2 = new InputMessage('.','/test/dataset/300.htm',true);
+                let inputMessage_2 = new InputMessage('.','/test/dataset/300.htm');
                 inputMessage_2.addFilterSelector('table tr td');
 
                 /**
                  * Complex 'dom' with defined field/siblings 
                  */
-                let inputMessage_3 = new InputMessage('.','/test/dataset/10005.htm',true);
+                let inputMessage_3 = new InputMessage('.','/test/dataset/10005.htm');
                 inputMessage_3.addPaginator('span.nav_pagination_control_class a','href');
                 inputMessage_3.addFilterSelector('#table_1_id tr.tr_class_1 td.td_class_1')
                         .addField('column_1','','','')
@@ -64,7 +64,7 @@ export class ClassLoader {
                 /**
                  * Complex 'dom' with defined field/sibling
                  */
-                let inputMessage_4 = new InputMessage('.','/test/dataset/30003.htm',true);
+                let inputMessage_4 = new InputMessage('.','/test/dataset/30003.htm');
                 inputMessage_4.addFilterSelector('#list_items_id span.item_field_span_class')
                         .addField('column_1','p','item_name.item_class','');
                 inputMessage_4.addFilterSelector('#list_items_id ul.item_field_ul_class li')

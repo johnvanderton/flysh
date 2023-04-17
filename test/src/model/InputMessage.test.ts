@@ -30,12 +30,12 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
          describe('>>> During Class constructor, do : ', () => {
 
             it('[001] Expecting "_timeout" property equals to "500" value', () => {
-                const im_001 = new InputMessage('local','testpage',false,500);
+                const im_001 = new InputMessage('local','testpage',500);
                 expect(im_001.timeout).equal(500);
             });
 
             it('[002] Expecting "_timeout" property equals to the default "1500" value', () => {
-                const im_001 = new InputMessage('local','testpage',false);
+                const im_001 = new InputMessage('local','testpage');
                 expect(im_001.timeout).equal(1500);
             });
 
@@ -47,13 +47,13 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
         describe('>>> During Class initialization, do : ', () => {
 
             it('[001] Expecting "URI" property equals to "https://testdomain/testpage" value', () => {
-                const im_001 = new InputMessage('https://testdomain/','testpage',false,10);
+                const im_001 = new InputMessage('https://testdomain/','testpage',10);
                 expect(im_001.URI).equal('https://testdomain/testpage');
             });
 
-            it('[002] Expecting "filesystem" property to be false', () => {
-                const im_001 = new InputMessage('https://testdomain/','testpage',false,10);
-                expect(im_001.filesystem).to.be.false;
+            it('[002] Expecting "filesystem" property to be true', () => {
+                const im_001 = new InputMessage('https://testdomain/','testpage',10);
+                expect(im_001.filesystem).to.be.true;
             });
         });
 
@@ -66,7 +66,7 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
              * Verifies specific parts of the string returned by the 'toString()' function
              */
             it('[001] Expecting "toString()" method returning specific string', () => {
-                const im_001 = new InputMessage('https://testdomain/','testpage',false,10);
+                const im_001 = new InputMessage('https://testdomain/','testpage',10);
                 im_001.addFilterSelector('scope_tag parent_tag child_tag')
                         .addField('column_1','tagName_1','className_1','RegExString_1')
                         .addField('column_2','tagName_2','className_2','RegExString_2')
@@ -80,7 +80,7 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
              * Validates the 'doms' type elements returned by the 'findDOMElement()' function
              */
             it('[002] Expecting "findDOMElement()" method returning 1 "NavPane" and 2 "SCP" class instances', () => {
-                const im_001 = new InputMessage('https://testdomain/','testpage',false,10);
+                const im_001 = new InputMessage('https://testdomain/','testpage',10);
                 im_001.addFilterSelector('scope_value_1 parent_tag_value_1 child_tag_value_1');
                 im_001.addFilterSelector('scope_value_2 parent_tag_value_2 child_tag_value_2');
                 im_001.addPaginator('scope_tag_value_1 parent_tag_value_1 child_tag_value_1','dom_element_class');
@@ -93,7 +93,7 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
             * Verifies that the 'addFilterSelector()' function is returning the new added 'SPC' class instance itself
             */
             it('[003] Verifies that the new added "SPC" class instance is having the same filter selector signature and 0 "Sibling" element', () => {
-                let IM = new InputMessage('testdomain.com','',false,10);
+                let IM = new InputMessage('testdomain.com','',10);
                 let addedSPC_1 = IM.addFilterSelector("somevalue_1 somevalue_2");
                 expect(addedSPC_1.getFilterSelector).to.equal("somevalue_1 somevalue_2");
                 expect((addedSPC_1.getSiblings.length)).to.equal(0);
@@ -104,7 +104,7 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
             */
             it('[004] Verifies that the "addFilterSelector()" method is throwing an exception due to a redundant "SPC" class instance with the same filter selector value', () => {
                 let err = new FlyshException(0,new Error(),"");
-                let IM = new InputMessage('testdomain.com','',false,10);
+                let IM = new InputMessage('testdomain.com','',10);
                  try {
                     IM.addFilterSelector("somevalue_1 somevalue_2");
                     IM.addFilterSelector("somevalue_1 somevalue_2");
@@ -120,7 +120,7 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
             */
             it('[005] Verifies that the "addPaginator()" is throwing an exception due to a already existing "NavPane" instance', () => {
                 let err = new FlyshException(0,new Error(),"");
-                let IM = new InputMessage('testdomain.com','',false,10);
+                let IM = new InputMessage('testdomain.com','',10);
                 try {
                     IM.addPaginator("somevalue_1 somevalue_2","href");
                     IM.addPaginator("somevalue_1 somevalue_2","href");
@@ -226,7 +226,7 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
                  * the number 9 from alphanumeric field                       
                  */
                 it('[004] Validates the optional "regex" parameter to be equal to a string value', async () => {
-                    const f = new Flysh(new InputMessage('domainTest','pathTest',false));
+                    const f = new Flysh(new InputMessage('domainTest','pathTest'));
                     let pgRecord = new PageRecords("uriTest",false);
                     let mapArr = new Map<String, String>();
                     mapArr.set("testField","fir9stTest");
@@ -242,7 +242,7 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
                  * the number 00 from alphanumeric field                         
                  */
                 it('[005] Validates the optional "regex" parameter to be equal to a string value', async () => {
-                    const f = new Flysh(new InputMessage('domainTest','pathTest',false));
+                    const f = new Flysh(new InputMessage('domainTest','pathTest'));
                     let pgRecord = new PageRecords("uriTest",false);
                     let mapArr = new Map<String, String>();
                     mapArr.set("testField","00fir9stTest");
@@ -258,7 +258,7 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
                  * the number 2 from alphanumeric field
                  */
                 it('[006] Validates the optional "regex" parameter to be equal to a string value', async () => {
-                    const f = new Flysh(new InputMessage('domainTest','pathTest',false));
+                    const f = new Flysh(new InputMessage('domainTest','pathTest'));
                     let pgRecord = new PageRecords("uriTest",false);
                     let mapArr = new Map<String, String>();
                     mapArr.set("testField","abc0002");
