@@ -18,10 +18,10 @@ chai.use(require('chai-as-promised'));
  *  - `before()`, `beforeEach()`, `after()`, `afterEach()` are hooks to run before/after first/each it() or describe()
  *  - `before()` is run before first it()/describe()
  *
- *  DOC : 'Mochas' https://samwize.com/2014/02/08/a-guide-to-mochas-describe-it-and-setup-hooks/
  *  DOC : 'Chai as Promised' https://www.chaijs.com/plugins/chai-as-promised/
+ *  DOC : 'Mochas' https://samwize.com/2014/02/08/a-guide-to-mochas-describe-it-and-setup-hooks/
  *  DOC : 'Promise' https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
- *  DOC : 'testing' https://journal.artfuldev.com/unit-testing-node-applications-with-typescript-using-mocha-and-chai-384ef05f32b2
+ *  DOC : 'Testing' https://journal.artfuldev.com/unit-testing-node-applications-with-typescript-using-mocha-and-chai-384ef05f32b2
  */
 
 /**

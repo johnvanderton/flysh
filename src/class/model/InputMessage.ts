@@ -466,12 +466,12 @@ export class InputMessage {
     }
 
     /**
-     * This internal function is evaluating if the domain validity.
+     * This internal function is evaluating if the domain validity
      */
     private _documentDomainLocationValidator(domain : string) : string {
         let _retVal = domain;
 
-        if ((domain.length === 0) || (domain === undefined) || (domain === null))
+        if ((domain.length === 0))
             throw new FlyshException(6500005100, new TypeError(), InputMessage.EXCEPTION_ID_6500005100_MESSAGE_VALUE);
 
         return _retVal;
@@ -481,7 +481,6 @@ export class InputMessage {
      * This internal function is evaluating if the specified document is located on a filesystem.
      * If the document is not located on a filesystem then a 'false' value will be returned 
      * TODO : test & implement a .forceFS() method
-     *        test this internal function
      */
     private _documentFSLocationValidator() : boolean {
         let _retVal : boolean = true;

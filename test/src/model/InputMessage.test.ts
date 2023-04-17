@@ -30,13 +30,30 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
          describe('>>> During Class constructor, do : ', () => {
 
             it('[001] Expecting "_timeout" property equals to "500" value', () => {
-                const im_001 = new InputMessage('local','testpage',500);
-                expect(im_001.timeout).equal(500);
+                const im = new InputMessage('local','testpage',500);
+                expect(im.timeout).equal(500);
             });
 
             it('[002] Expecting "_timeout" property equals to the default "1500" value', () => {
-                const im_001 = new InputMessage('local','testpage');
-                expect(im_001.timeout).equal(1500);
+                const im = new InputMessage('local','testpage');
+                expect(im.timeout).equal(1500);
+            });
+
+            it('[003] Expecting a throwed exception due to invalid domain (empty)', () => {
+                let err = new FlyshException(0, new Error(), "");
+                try {
+                    new InputMessage('','');
+                } catch (exception) {
+                    err = <FlyshException>exception;
+                }
+                expect(err.errorID).to.equal(6500005100);
+                expect(err.message).to.equal(InputMessage.EXCEPTION_ID_6500005100_MESSAGE_VALUE+"\nCause : ");
+            });
+
+            it('[004] Expecting identical domain value', () => {
+                let err = new FlyshException(0, new Error(), "");
+                const im = new InputMessage('https://domain.abc','');
+                expect(im.URI).equal('https://domain.abc');
             });
 
         });
