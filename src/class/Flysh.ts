@@ -1,5 +1,5 @@
 import { DomElement, InputMessage, NavPane, SPC } from "./model/InputMessage";
-import { FlyshException } from "./model/FlyshException";
+import { FlyshException } from "./exception/FlyshException";
 import { OutputMessage, PageRecords } from "./model/OutputMessage";
 
 const jquery = require("jquery");

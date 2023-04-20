@@ -1,4 +1,4 @@
-import {  } from '../../../src/class/model/FlyshException';
+import { FlyshException } from '../../../src/class/exception/FlyshException';
 
 /**
  * 'FlyshException' Main Class Test

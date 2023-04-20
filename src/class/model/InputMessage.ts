@@ -1,5 +1,5 @@
 import { Expose, Type } from 'class-transformer';
-import { FlyshException } from './FlyshException';
+import { FlyshException } from '../exception/FlyshException';
 
 import "reflect-metadata";
 
@@ -440,7 +440,7 @@ export class InputMessage {
           },
     })
     private _doms : DomElement[] | NavPane[] | SPC[] = new Array<DomElement>();
-    private _fs : boolean;
+    private _fs : boolean = true;
     private _id : number;
     private _navpane : boolean = false;
     private _pagepath : string;
@@ -458,35 +458,29 @@ export class InputMessage {
                 pagepath : string, 
                 timeout ?: number
                 ) {
-        this._domain = this._documentDomainLocationValidator(domain);
-        this._fs = this._documentFSLocationValidator();
+        this._domain = this._domainValidator(domain);
         this._id = Math.floor(Math.random() * Math.floor(this.ID_GENERATED_FLOOR_FUNC_COMPLEXITY_VALUE));
         this._pagepath = pagepath;
         this._timeout = timeout || this.DEFAULT_INSTANCE_TIMEOUT_VALUE;
     }
-
+ 
     /**
-     * This internal function is evaluating if the domain validity
+     * Check only if the domain is locally based (filesytem) or from the network. If the domain is an URL 
+     * then the private filesystem propeerty is set to false
+     * 
+     * @param domain Input string parameter that contains the domain value
+     * @returns A string formatted value that contains the passed parameter
      */
-    private _documentDomainLocationValidator(domain : string) : string {
+    private _domainValidator(domain : string) : string {
         let _retVal = domain;
 
+        // Evaluates if the domain/path is empty
         if ((domain.length === 0))
             throw new FlyshException(6500005100, new TypeError(), InputMessage.EXCEPTION_ID_6500005100_MESSAGE_VALUE);
-
-        return _retVal;
-    }
-
-    /**
-     * This internal function is evaluating if the specified document is located on a filesystem.
-     * If the document is not located on a filesystem then a 'false' value will be returned 
-     * TODO : test & implement a .forceFS() method
-     */
-    private _documentFSLocationValidator() : boolean {
-        let _retVal : boolean = true;
-
+        
+        // Evaluates if the domain is a wall formed URL
         let regEx = new RegExp(this.REGEX_FS_URI_VALIDATION_VALUE);
-        if (this._domain.match(regEx) !== null) _retVal = false;
+        if (domain.match(regEx) !== null) this._fs = false;
 
         return _retVal;
     }

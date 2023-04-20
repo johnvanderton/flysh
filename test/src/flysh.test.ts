@@ -1,5 +1,4 @@
 import { Flysh } from '../../src/class/Flysh';
-import { FlyshException } from '../../src/class/model/FlyshException';
 import { InputMessage } from '../../src/class/model/InputMessage';
 import { OutputMessage, PageRecords } from '../../src/class/model/OutputMessage';
 
@@ -44,49 +43,7 @@ describe('_________(Flysh Class "Dynamic Tests")_________', () => {
 
      describe('>>> Before parsing the current page document, do : ', () => {
 
-        /**
-         * This test is not relevant anymore as the previous 'InputMessage' class validation is now handling it
-         */
-        // it('[001] Throws an exception because of invalid (URL), "fetchDOM()"', async () => {
-        //     const f = new Flysh(new InputMessage('.','',false));
-        //     let pageRecNotFaulted : PageRecords = new PageRecords('', false);
-        //     let pageRecFaulted : PageRecords = new PageRecords('', true);
-        //     let pglist = new Array<PageRecords>();
-        //     pglist.push(pageRecFaulted);
-        //     pglist.push(pageRecNotFaulted);
-        //     pglist.push(pageRecNotFaulted);
-        //     await expect(f['fetchDOM']("")).to.be.rejectedWith(TypeError,"Invalid URL");
-        // });
-
-        /**
-         * This test is not relevant anymore as the previous 'InputMessage' class validation is now handling it
-         */
-        // it('[002] Throws an exception because of file not found (empty), invalid directory (ENOENT), "harvesting()"', async () => {
-        //     const f = new Flysh(new InputMessage('.','',true));
-        //     let pageRecNotFaulted : PageRecords = new PageRecords('', false);
-        //     let pageRecFaulted : PageRecords = new PageRecords('', true);
-        //     let pglist = new Array<PageRecords>();
-        //     pglist.push(pageRecFaulted);
-        //     pglist.push(pageRecNotFaulted);
-        //     pglist.push(pageRecNotFaulted);
-        //     await expect(f['harvesting']("")).to.be.rejectedWith(FlyshException,"Exception occurred during process\nCause : ENOENT: no such file or directory, open \'\'");
-        // });
-
-         /**
-         * This test is not relevant anymore as the previous 'InputMessage' class validation is now handling it
-         */
-        // it('[003] Throws an exception because of invalid URL (empty), harvesting()', async () => {
-        //     const f = new Flysh(new InputMessage('.','',false));
-        //     let pageRecNotFaulted : PageRecords = new PageRecords('', false);
-        //     let pageRecFaulted : PageRecords = new PageRecords('', true);
-        //     let pglist = new Array<PageRecords>();
-        //     pglist.push(pageRecFaulted);
-        //     pglist.push(pageRecNotFaulted);
-        //     pglist.push(pageRecNotFaulted);
-        //     await expect(f['harvesting']("")).to.be.rejectedWith(FlyshException,"Exception occurred during process\nCause : Invalid URL: ");
-        // });
-
-        it('[004] Expects harvesting() method to be fulfilled', async () => {
+        it('[001] Expects harvesting() method to be fulfilled', async () => {
             const f = new Flysh(new InputMessage('.',''));
             await expect(f['harvesting']("./test/dataset/100.htm")).to.be.fulfilled;
         });

@@ -4,7 +4,7 @@
 
 # **README**
 
-- Document last update : 12/03/2023
+- Document last update : 20/04/2023
 - Author : **John Van Derton** — **john@cserv.be** 
 
 ## **What is it ?**
@@ -59,10 +59,9 @@ This is showing a simple **HTML** structure that includes an element called `tab
 // Invoke useful libraries
 import { Flysh, InputMessage, OutputMessage, PageRecords, FlyshException } from 'Flysh';
 
-// Instantiate the 'InputMessage' class (the local file/filesystem parameter is set to 'true')
-// Note : The third 'InputMessage' boolean parameter is setting the source mode, either from the filesystem or the lan/wan 
-// Note+ : A fourth optional parameter can preset a timeout value (default 1500ms)
-let inputMessage = new InputMessage('.','/somepath/somefilename.htm',true);
+// Instantiate the 'InputMessage' class
+// Note : A third optional parameter can preset 6a timeout value (default 1500ms)
+let inputMessage = new InputMessage('.','/somepath/somefilename.htm');
 // Add the 'SPC' (Scope/Parent/Child) class instance with a fully defined filter selector i.e : 'table tr td'
 // Note : the 'addSPC()' method is now deprecated -> 'addFilterSelector()'
 inputMessage.addFilterSelector('table tr td');
@@ -142,7 +141,7 @@ Source code of a pagination table,
 The parsing of this **HTML** code additionally produces result by scanning all the linked pages. In order to do this properly, it must inform the instantiated `InputMessage` class that there is a pagination table (**paginator**). See the example from below,
 
 ```typescript
-let IM = new InputMessage('.','/somepath/somefilename.htm',true);
+let IM = new InputMessage('.','/somepath/somefilename.htm');
 IM.addPaginator('span.nav_pagination_control_class a','href');
 ...
 let f = new Flysh(IM);
@@ -169,7 +168,7 @@ This section will attempt to demonstrate the ability to manage different structu
 We can observe from below that the three fields have their own definition. By successively recreating the three objects related to each field, it becomes possible to properly achieve the data processing. Note that the new `addField()` method is now replacing `addSibling()`.
 
 ```typescript
-    let IM = new InputMessage('.','/somepath/somefilename.htm',true);
+    let IM = new InputMessage('.','/somepath/somefilename.htm');
     
     IM.addFilterSelector('#list_items_id span.item_field_span_class')
         .addField('column_1','p','item_name.item_class','');
@@ -198,14 +197,6 @@ The `timeout` default value is defined from the `InputMessage` class. This value
 ```Typescript
  	new InputMessage('domain','path',DOCUMENT_ACCESS,TIMEOUT_VALUE);
 ```
-
-#### **Access mode setting**
-
-The access mode can be defined following two different approaches. It is therefore possible to access documents either from the local file system or the LAN/WAN network. The `DOCUMENT_ACCESS` field contains a `boolean` value who is specifying either an access via the filesystem (true) or the network (false). For example, accessing a document on a remote site will only be possible by specifying that it is not on the filesystem (false).
-
-```Typescript
- 	new InputMessage('domain','path',FILESYSTEM_ACCESS);
-``` 
 
 ### **How to define the filter selector ?**
 

@@ -1,5 +1,5 @@
 import { Flysh } from '../../../src/class/Flysh';
-import { FlyshException } from '../../../src/class/model/FlyshException';
+import { FlyshException } from '../../../src/class/exception/FlyshException';
 import { InputMessage, NavPane, Sibling, SPC } from '../../../src/class/model/InputMessage';
 import { PageRecords } from '../../../src/class/model/OutputMessage';
 
@@ -50,10 +50,40 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
                 expect(err.message).to.equal(InputMessage.EXCEPTION_ID_6500005100_MESSAGE_VALUE+"\nCause : ");
             });
 
-            it('[004] Expecting identical domain value', () => {
-                let err = new FlyshException(0, new Error(), "");
+            it('[004] Expecting filesystem property setted to true (local)', () => {
+                const im = new InputMessage('.','');
+                expect(im.filesystem).equal(true);
+                expect(im.URI).equal('.');
+            });
+
+            it('[005] Expecting filesystem property setted to true (local)', () => {
+                const im = new InputMessage('file.html','');
+                expect(im.filesystem).equal(true);
+                expect(im.URI).equal('file.html');
+            });
+
+            it('[006] Expecting filesystem property setted to false (URL)', () => {
                 const im = new InputMessage('https://domain.abc','');
+                expect(im.filesystem).equal(false);
                 expect(im.URI).equal('https://domain.abc');
+            });
+
+            it('[007] Expecting filesystem property setted to false (URL)', () => {
+                const im = new InputMessage('http://domain.abc','');
+                expect(im.filesystem).equal(false);
+                expect(im.URI).equal('http://domain.abc');
+            });
+
+            it('[008] Expecting filesystem property setted to false (URL)', () => {
+                const im = new InputMessage('http://www.domain.abc','');
+                expect(im.filesystem).equal(false);
+                expect(im.URI).equal('http://www.domain.abc');
+            });
+
+            it('[009] Expecting filesystem property setted to false (URL)', () => {
+                const im = new InputMessage('https://www.domain.abc','');
+                expect(im.filesystem).equal(false);
+                expect(im.URI).equal('https://www.domain.abc');
             });
 
         });
