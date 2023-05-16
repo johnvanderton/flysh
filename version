@@ -1,6 +1,36 @@
-============================================================
-= 'Anchor' (version v1.0.0), Spring release 2023           =
-============================================================
+==================================================
+= 'Anchor' (version v1.1.0), Spring release 2023 =
+==================================================
+
+## Preamble
+
+    This is the "Anchor" mid-minor release version which includes several changes and fixes
+
+## Mid-minor release version '1.1.0'
+
+    - Removed the ´InputMessage´ ´fs´ property parameter (#43)
+    - Relocated the ´FlyshException´ class into new folder (#94)
+    - Relocated internal classes from the ´InputMessage´ class (#105)
+    - Extracted the ´PageRecord´ class to an external file (#91)
+    - JQuery 3.7.0 compliant
+
+## Feature(s)
+
+    - The ´InputMessage´ class doesn't need anymore a parameter that precises if the located document if either on a filesytem 
+      or from a network (#43)
+
+## Limitation(s)
+
+    - Please refer to the previous log version
+
+## Well-Known bug(s)
+
+    - Please refer to the previous log version
+    - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
+
+==================================================
+= 'Anchor' (version v1.0.0), Spring release 2023 =
+==================================================
 
 ## Preamble
 
@@ -30,9 +60,9 @@
     - Please refer to the previous log version
     - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
 
-============================================================
-= 'Base' (Pre-release version v0.2.2), Fall release 2022   =
-============================================================
+==========================================================
+= 'Base' (Pre-release version v0.2.2), Fall release 2022 =
+==========================================================
 
 ## Preamble
 

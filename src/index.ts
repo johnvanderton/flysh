@@ -1,5 +1,5 @@
 /**
- * 'Flysh' modules classes export
+ * 'Flysh' class modules export
  * 
  * @packageDocumentation
  */
@@ -13,5 +13,6 @@ export { Flysh } from "./class/Flysh";
  * Model classes with exception
  */
 export { FlyshException } from "./class/exception/FlyshException";
-export { InputMessage } from "./class/model/InputMessage";
-export { OutputMessage, PageRecords } from "./class/model/OutputMessage";
+export { InputMessage } from "./class/io/InputMessage";
+export { OutputMessage } from "./class/io/OutputMessage";
+export { PageRecords } from './class/lib/PageRecords';

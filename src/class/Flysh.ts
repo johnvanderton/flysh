@@ -1,6 +1,10 @@
-import { DomElement, InputMessage, NavPane, SPC } from "./model/InputMessage";
 import { FlyshException } from "./exception/FlyshException";
-import { OutputMessage, PageRecords } from "./model/OutputMessage";
+import { DomElement } from "./lib/DomElement";
+import { NavPane } from "./lib/NavPane";
+import { PageRecords } from "./lib/PageRecords";
+import { SPC } from "./lib/SPC";
+import { InputMessage } from "./io/InputMessage";
+import { OutputMessage } from "./io/OutputMessage"; 
 
 const jquery = require("jquery");
 const jsdom = require("jsdom");
@@ -31,12 +35,12 @@ export class Flysh  {
     private readonly MFAM_DOM_SCP_MIN_OCCURENCE_VALUE = 1;
     private readonly OUTPUTMESSAGE_DEFAULT_ID_INSTANCE_VALUE = -1;
     private readonly OUTPUTMESSAGE_DEFAULT_URI_VALUE = '';
-    private readonly PAGERECORD_MERGER_FIRST_OCCURENCE_INDEX_VALUE = 0;
-    private readonly PAGERECORD_MERGER_FOUND_ERROR_FLAG_VALUE = true;
-    private readonly PAGERECORD_MAPPER_UNDEFINED_FIELD_NUMBER_VALUE = 0;
-    private readonly PAGERECORD_MAPPER_UNDEFINED_FIELD_SWAP_VALUE = 1;
     private readonly PAGERECORD_DEFAULT_ERROR_FLAG_VALUE = false;
     private readonly PAGERECORD_ERROR_STATE_FLAG_VALUE = true;
+    private readonly PAGERECORD_MAPPER_UNDEFINED_FIELD_NUMBER_VALUE = 0;
+    private readonly PAGERECORD_MAPPER_UNDEFINED_FIELD_SWAP_VALUE = 1;
+    private readonly PAGERECORD_MERGER_FIRST_OCCURENCE_INDEX_VALUE = 0;
+    private readonly PAGERECORD_MERGER_FOUND_ERROR_FLAG_VALUE = true;
     private readonly PRCLEANER_REGEXP_EXEC_ARRAY_RESULT_INDEX_VALUE = 0;
     private readonly VALIDATION_MINIMUM_SPC_DOMELEMENT_VALUE = 1;
     private readonly VALIDATION_MINIMUM_TIMEOUT_VALUE = 0;

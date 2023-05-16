@@ -1,5 +1,6 @@
 import { expect } from 'chai';
-import { OutputMessage, PageRecords } from '../../../src/class/model/OutputMessage';
+import { OutputMessage } from '../../../src/class/io/OutputMessage';
+import { PageRecords } from '../../../src/class/lib/PageRecords';
 
 /**
  * 'OutputMessage' Main Class Test
@@ -16,11 +17,11 @@ describe('_________("OuputMessage" Class Model Tests)_________', () => {
             /**
              * Integrity check 'integrityCheck()' method validation
              */
-            it('[0001] Expecting "integrityCheck()" method to returns "false" value', () => {    
+            it('[001] Expecting "integrityCheck()" method to returns "false" value', () => {    
                 let output = new OutputMessage(1,"testdomain.com");
-                let pageR1 = new PageRecords("testdomain.com/test1",true);
-                let pageR2 = new PageRecords("testdomain.com/test2",true);
-                let pageR3 = new PageRecords("testdomain.com/test3",false);
+                let pageR1 = new PageRecords("testdomain.abc/test1",true);
+                let pageR2 = new PageRecords("testdomain.abc/test2",true);
+                let pageR3 = new PageRecords("testdomain.abc/test3",false);
                 output.addPageRecords(pageR1);
                 output.addPageRecords(pageR2);
                 output.addPageRecords(pageR3);
@@ -30,11 +31,11 @@ describe('_________("OuputMessage" Class Model Tests)_________', () => {
             /**
              * Integrity check 'integrityCheck()' method validation
              */
-            it('[0002] Expecting "integrityCheck()" method to returns "true" value', () => {    
+            it('[002] Expecting "integrityCheck()" method to returns "true" value', () => {    
                 let output = new OutputMessage(1,"testdomain.com");
-                let pageR1 = new PageRecords("testdomain.com/test1",false);
-                let pageR2 = new PageRecords("testdomain.com/test2",false);
-                let pageR3 = new PageRecords("testdomain.com/test3",false);
+                let pageR1 = new PageRecords("testdomain.abc/test1",false);
+                let pageR2 = new PageRecords("testdomain.abc/test2",false);
+                let pageR3 = new PageRecords("testdomain.abc/test3",false);
                 output.addPageRecords(pageR1);
                 output.addPageRecords(pageR2);
                 output.addPageRecords(pageR3);
@@ -44,11 +45,11 @@ describe('_________("OuputMessage" Class Model Tests)_________', () => {
             /**
              * Integrity check 'integrityCheck()' method validation
              */
-            it('[0003] Expecting "integrityCheck()" method to returns "false" value', () => {    
+            it('[003] Expecting "integrityCheck()" method to returns "false" value', () => {    
                 let output = new OutputMessage(1,"testdomain.com");
-                let pageR1 = new PageRecords("testdomain.com/test1",true);
-                let pageR2 = new PageRecords("testdomain.com/test2",true);
-                let pageR3 = new PageRecords("testdomain.com/test3",true);
+                let pageR1 = new PageRecords("testdomain.abc/test1",true);
+                let pageR2 = new PageRecords("testdomain.abc/test2",true);
+                let pageR3 = new PageRecords("testdomain.abc/test3",true);
                 output.addPageRecords(pageR1);
                 output.addPageRecords(pageR2);
                 output.addPageRecords(pageR3);
@@ -58,9 +59,9 @@ describe('_________("OuputMessage" Class Model Tests)_________', () => {
             /**
              * Integrity check 'integrityCheck()' method validation
              */
-            it('[0004] Expecting "integrityCheck()" method to returns "true" value', () => {    
-                let output = new OutputMessage(1,"testdomain.com");
-                let pageR1 = new PageRecords("testdomain.com/test1",false);
+            it('[004] Expecting "integrityCheck()" method to returns "true" value', () => {    
+                let output = new OutputMessage(1,"testdomain.abc");
+                let pageR1 = new PageRecords("testdomain.abc/test1",false);
                 output.addPageRecords(pageR1);
                 expect(output.integrityCheck).to.be.true;
             });

@@ -1,6 +1,7 @@
 import { Flysh } from '../../src/class/Flysh';
-import { InputMessage } from '../../src/class/model/InputMessage';
-import { OutputMessage, PageRecords } from '../../src/class/model/OutputMessage';
+import { InputMessage } from '../../src/class/io/InputMessage';
+import { OutputMessage } from '../../src/class/io/OutputMessage';
+import { PageRecords } from '../../src/class/lib/PageRecords';
 
 const chai = require('chai');
 const expect = chai.expect;

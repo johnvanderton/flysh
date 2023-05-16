@@ -4,7 +4,7 @@
 
 # **README**
 
-- Document last update : 20/04/2023
+- Document last update : 15/05/2023
 - Author : **John Van Derton** — **john@cserv.be** 
 
 ## **What is it ?**
@@ -195,7 +195,7 @@ The `InputMessage` class is defining the various information which will be provi
 The `timeout` default value is defined from the `InputMessage` class. This value can be changed by modifying the field provided for this purpose. If no value is set, then the default one will be applyed. The below example shows the `TIMEOUT_VALUE` value as an optional numeric variable.
 
 ```Typescript
- 	new InputMessage('domain','path',DOCUMENT_ACCESS,TIMEOUT_VALUE);
+ 	new InputMessage('domain', 'path', DOCUMENT_ACCESS,TIMEOUT_VALUE);
 ```
 
 ### **How to define the filter selector ?**
@@ -316,13 +316,13 @@ All the commands are available from the `tasks.json` file.
 This current version library has been implemented, built and tested on,
 
 - **EcmaScript** = `ES2019`
-- **EcmaScript** = `ESNEXT` (ESM Module) 
-- **EcmaScript** = `ESNEXT` (Types Module)
-- **Jquery** = `3.6.3`
-- **Jsdom** = `21.1.0`
-- **NodeJS** >= `19.0.1`
+- **EcmaScript** (ESM Module) = `ESNEXT`
+- **EcmaScript** (Types Module) = `ESNEXT`
+- **Jquery** = `3.7.0`
+- **Jsdom** = `22.0.0`
+- **NodeJS** >= `20.1.0`
 - **NPM** >= `9.1.1`
-- **TypeScript** >= `4.8.4`
+- **TypeScript** >= `5.0.2`
 
 ### **Exceptions list**
 

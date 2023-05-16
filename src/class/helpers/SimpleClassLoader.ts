@@ -1,6 +1,7 @@
 import { Flysh } from "../Flysh";
-import { InputMessage } from "../model/InputMessage";
-import { OutputMessage, PageRecords } from "../model/OutputMessage";
+import { InputMessage } from "../io/InputMessage";
+import { OutputMessage } from "../io/OutputMessage";
+import { PageRecords } from '../../../src/class/lib/PageRecords';
 
 /**
  * 'SimpleClassLoader' class helper
@@ -20,7 +21,7 @@ export class SimpleClassLoader {
          */
         public run() {
 
-                let inputMessage = new InputMessage('.','/test/dataset/300.htm');
+                let inputMessage = new InputMessage('.','/test/dataset/300.htm/');
                 inputMessage.addFilterSelector('table tr td');
 
                 let f = new Flysh(inputMessage);
@@ -34,6 +35,7 @@ export class SimpleClassLoader {
                            outputMessage.pageRecordList.forEach((e: PageRecords)=> {console.log(e);});
                            console.log("\n### End of process ###\n");
                         });
+
         }
 
 }
