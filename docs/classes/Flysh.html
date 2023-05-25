@@ -1,0 +1,847 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Flysh | flysh</title><meta name="description" content="Documentation for flysh"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container">
+<div class="table-cell" id="tsd-search" data-base="..">
+<div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
+<div class="field">
+<div id="tsd-toolbar-links"></div></div>
+<ul class="results">
+<li class="state loading">Preparing search index...</li>
+<li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">flysh</a></div>
+<div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="7" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="11" width="14" height="2" fill="var(--color-text)"></rect></svg></a></div></div></header>
+<div class="container container-main">
+<div class="col-content">
+<div class="tsd-page-title">
+<ul class="tsd-breadcrumb">
+<li><a href="../modules.html">flysh</a></li>
+<li><a href="Flysh.html">Flysh</a></li></ul>
+<h1>Class Flysh</h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>&#39;Flysh&#39; class definition</p>
+<p>This class called &#39;Flysh&#39; is the main element of the library. It allows the extraction of data thanks to the 
+interpretation of the DOM structure from HTML type documents. This is currently invoking specific libraries 
+such as&#39;JQuery&#39; and &#39;JSDOM&#39;.</p>
+</div></section>
+<section class="tsd-panel tsd-hierarchy">
+<h4>Hierarchy</h4>
+<ul class="tsd-hierarchy">
+<li><span class="target">Flysh</span></li></ul></section><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L22">src/class/Flysh.ts:22</a></li></ul></aside>
+<section class="tsd-panel-group tsd-index-group">
+<section class="tsd-panel tsd-index-panel">
+<details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
+<h5 class="tsd-index-heading uppercase" role="button" aria-expanded="false" tabIndex=0><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.5 5.50969L8 11.6609L14.5 5.50969L12.5466 3.66086L8 7.96494L3.45341 3.66086L1.5 5.50969Z" fill="var(--color-text)"></path></svg> Index</h5></summary>
+<div class="tsd-accordion-details">
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading">Constructors</h3>
+<div class="tsd-index-list"><a href="Flysh.html#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#4D7FFF" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-512-path"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)" id="icon-512-text"></path></svg><span>constructor</span></a>
+</div></section>
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading">Properties</h3>
+<div class="tsd-index-list"><a href="Flysh.html#CORE_PARSER_FILTER_SELECTOR_SPLITTED_CHILD_TAG_POSITION_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-1024-path"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)" id="icon-1024-text"></path></svg><span>CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTED_<wbr/>CHILD_<wbr/>TAG_<wbr/>POSITION_<wbr/>VALUE</span></a>
+<a href="Flysh.html#CORE_PARSER_FILTER_SELECTOR_SPLITTER_CHILD_POSITION_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>CHILD_<wbr/>POSITION_<wbr/>VALUE</span></a>
+<a href="Flysh.html#CORE_PARSER_FILTER_SELECTOR_SPLITTER_PARENT_POSITION_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>PARENT_<wbr/>POSITION_<wbr/>VALUE</span></a>
+<a href="Flysh.html#CORE_PARSER_FILTER_SELECTOR_SPLITTER_SCOPE_POSITION_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>SCOPE_<wbr/>POSITION_<wbr/>VALUE</span></a>
+<a href="Flysh.html#CORE_PARSER_FILTER_SELECTOR_SPLITTER_SIZE_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>SIZE_<wbr/>VALUE</span></a>
+<a href="Flysh.html#CORE_PARSER_QUERY_SELECTOR_ALL_NO_MATCH_RESULT_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>CORE_<wbr/>PARSER_<wbr/>QUERY_<wbr/>SELECTOR_<wbr/>ALL_<wbr/>NO_<wbr/>MATCH_<wbr/>RESULT_<wbr/>VALUE</span></a>
+<a href="Flysh.html#DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_PROXY_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RESSOURCELOADER_<wbr/>PROXY_<wbr/>VALUE</span></a>
+<a href="Flysh.html#DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_STRICT_SSL_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RESSOURCELOADER_<wbr/>STRICT_<wbr/>SSL_<wbr/>VALUE</span></a>
+<a href="Flysh.html#DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_USER_AGENT_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RESSOURCELOADER_<wbr/>USER_<wbr/>AGENT_<wbr/>VALUE</span></a>
+<a href="Flysh.html#DEFAULT_INSTANCE_JSDOM_OPTIONS_RUNSCRIPTS_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RUNSCRIPTS_<wbr/>VALUE</span></a>
+<a href="Flysh.html#EXCEPTION_ID_1500001200_MESSAGE_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>EXCEPTION_<wbr/>ID_<wbr/>1500001200_<wbr/>MESSAGE_<wbr/>VALUE</span></a>
+<a href="Flysh.html#EXCEPTION_ID_1500001300_MESSAGE_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>EXCEPTION_<wbr/>ID_<wbr/>1500001300_<wbr/>MESSAGE_<wbr/>VALUE</span></a>
+<a href="Flysh.html#EXCEPTION_ID_1500001400_MESSAGE_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>EXCEPTION_<wbr/>ID_<wbr/>1500001400_<wbr/>MESSAGE_<wbr/>VALUE</span></a>
+<a href="Flysh.html#EXCEPTION_ID_1500003100_MESSAGE_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>EXCEPTION_<wbr/>ID_<wbr/>1500003100_<wbr/>MESSAGE_<wbr/>VALUE</span></a>
+<a href="Flysh.html#EXCEPTION_ID_2000000000_MESSAGE_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>EXCEPTION_<wbr/>ID_<wbr/>2000000000_<wbr/>MESSAGE_<wbr/>VALUE</span></a>
+<a href="Flysh.html#HARVEST_NAVPANE_DOM_STACK_FIRST_OCCURENCE_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>HARVEST_<wbr/>NAVPANE_<wbr/>DOM_<wbr/>STACK_<wbr/>FIRST_<wbr/>OCCURENCE_<wbr/>VALUE</span></a>
+<a href="Flysh.html#JSDOMOptions" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>JSDOMOptions</span></a>
+<a href="Flysh.html#MATRIX_MAPPER_LENGTH_INDEX_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>MATRIX_<wbr/>MAPPER_<wbr/>LENGTH_<wbr/>INDEX_<wbr/>VALUE</span></a>
+<a href="Flysh.html#MFAM_DOM_SCP_MERGING_BUFF_REC_MIN_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>MFAM_<wbr/>DOM_<wbr/>SCP_<wbr/>MERGING_<wbr/>BUFF_<wbr/>REC_<wbr/>MIN_<wbr/>VALUE</span></a>
+<a href="Flysh.html#MFAM_DOM_SCP_MIN_OCCURENCE_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>MFAM_<wbr/>DOM_<wbr/>SCP_<wbr/>MIN_<wbr/>OCCURENCE_<wbr/>VALUE</span></a>
+<a href="Flysh.html#OUTPUTMESSAGE_DEFAULT_ID_INSTANCE_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>OUTPUTMESSAGE_<wbr/>DEFAULT_<wbr/>ID_<wbr/>INSTANCE_<wbr/>VALUE</span></a>
+<a href="Flysh.html#OUTPUTMESSAGE_DEFAULT_URI_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>OUTPUTMESSAGE_<wbr/>DEFAULT_<wbr/>URI_<wbr/>VALUE</span></a>
+<a href="Flysh.html#PAGERECORD_DEFAULT_ERROR_FLAG_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>PAGERECORD_<wbr/>DEFAULT_<wbr/>ERROR_<wbr/>FLAG_<wbr/>VALUE</span></a>
+<a href="Flysh.html#PAGERECORD_ERROR_STATE_FLAG_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>PAGERECORD_<wbr/>ERROR_<wbr/>STATE_<wbr/>FLAG_<wbr/>VALUE</span></a>
+<a href="Flysh.html#PAGERECORD_MAPPER_UNDEFINED_FIELD_NUMBER_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>PAGERECORD_<wbr/>MAPPER_<wbr/>UNDEFINED_<wbr/>FIELD_<wbr/>NUMBER_<wbr/>VALUE</span></a>
+<a href="Flysh.html#PAGERECORD_MAPPER_UNDEFINED_FIELD_SWAP_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>PAGERECORD_<wbr/>MAPPER_<wbr/>UNDEFINED_<wbr/>FIELD_<wbr/>SWAP_<wbr/>VALUE</span></a>
+<a href="Flysh.html#PAGERECORD_MERGER_FIRST_OCCURENCE_INDEX_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>PAGERECORD_<wbr/>MERGER_<wbr/>FIRST_<wbr/>OCCURENCE_<wbr/>INDEX_<wbr/>VALUE</span></a>
+<a href="Flysh.html#PAGERECORD_MERGER_FOUND_ERROR_FLAG_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>PAGERECORD_<wbr/>MERGER_<wbr/>FOUND_<wbr/>ERROR_<wbr/>FLAG_<wbr/>VALUE</span></a>
+<a href="Flysh.html#PRCLEANER_REGEXP_EXEC_ARRAY_RESULT_INDEX_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>PRCLEANER_<wbr/>REGEXP_<wbr/>EXEC_<wbr/>ARRAY_<wbr/>RESULT_<wbr/>INDEX_<wbr/>VALUE</span></a>
+<a href="Flysh.html#URI" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>URI</span></a>
+<a href="Flysh.html#VALIDATION_MINIMUM_SPC_DOMELEMENT_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>VALIDATION_<wbr/>MINIMUM_<wbr/>SPC_<wbr/>DOMELEMENT_<wbr/>VALUE</span></a>
+<a href="Flysh.html#VALIDATION_MINIMUM_TIMEOUT_VALUE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>VALIDATION_<wbr/>MINIMUM_<wbr/>TIMEOUT_<wbr/>VALUE</span></a>
+<a href="Flysh.html#domain" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>domain</span></a>
+<a href="Flysh.html#done" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>done</span></a>
+<a href="Flysh.html#filesystem" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>filesystem</span></a>
+<a href="Flysh.html#hasnavpane" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>hasnavpane</span></a>
+<a href="Flysh.html#id" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>id</span></a>
+<a href="Flysh.html#mfpagerecordsbuffer" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>mfpagerecordsbuffer</span></a>
+<a href="Flysh.html#navmap" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>navmap</span></a>
+<a href="Flysh.html#navmapupdated" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>navmapupdated</span></a>
+<a href="Flysh.html#navpane" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>navpane</span></a>
+<a href="Flysh.html#outputmessage" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>outputmessage</span></a>
+<a href="Flysh.html#resourceLoader" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>resource<wbr/>Loader</span></a>
+<a href="Flysh.html#spc" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>spc</span></a>
+<a href="Flysh.html#timeout" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>timeout</span></a>
+</div></section>
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading">Methods</h3>
+<div class="tsd-index-list"><a href="Flysh.html#addHaverstedPages" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF4DB8" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-2048-path"></rect><path d="M9.162 16V7.24H10.578L11.514 10.072C11.602 10.328 11.674 10.584 11.73 10.84C11.794 11.088 11.842 11.28 11.874 11.416C11.906 11.28 11.954 11.088 12.018 10.84C12.082 10.584 12.154 10.324 12.234 10.06L13.122 7.24H14.538V16H13.482V12.82C13.482 12.468 13.49 12.068 13.506 11.62C13.53 11.172 13.558 10.716 13.59 10.252C13.622 9.78 13.654 9.332 13.686 8.908C13.726 8.476 13.762 8.1 13.794 7.78L12.366 12.16H11.334L9.894 7.78C9.934 8.092 9.97 8.456 10.002 8.872C10.042 9.28 10.078 9.716 10.11 10.18C10.142 10.636 10.166 11.092 10.182 11.548C10.206 12.004 10.218 12.428 10.218 12.82V16H9.162Z" fill="var(--color-text)" id="icon-2048-text"></path></svg><span>add<wbr/>Haversted<wbr/>Pages</span></a>
+<a href="Flysh.html#createWindowSelector" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>create<wbr/>Window<wbr/>Selector</span></a>
+<a href="Flysh.html#fetchDOM" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>fetchDOM</span></a>
+<a href="Flysh.html#getOutputMessage" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Output<wbr/>Message</span></a>
+<a href="Flysh.html#harvesting" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>harvesting</span></a>
+<a href="Flysh.html#init" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>init</span></a>
+<a href="Flysh.html#isDone" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>is<wbr/>Done</span></a>
+<a href="Flysh.html#isMF" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>isMF</span></a>
+<a href="Flysh.html#matrixMapping" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>matrix<wbr/>Mapping</span></a>
+<a href="Flysh.html#pageParser" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>page<wbr/>Parser</span></a>
+<a href="Flysh.html#pageRecordsCleaner" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>page<wbr/>Records<wbr/>Cleaner</span></a>
+<a href="Flysh.html#pageRecordsHandler" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>page<wbr/>Records<wbr/>Handler</span></a>
+<a href="Flysh.html#pageRecordsMapper" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>page<wbr/>Records<wbr/>Mapper</span></a>
+<a href="Flysh.html#pageRecordsMerger" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>page<wbr/>Records<wbr/>Merger</span></a>
+<a href="Flysh.html#parser" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>parser</span></a>
+<a href="Flysh.html#processing" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>processing</span></a>
+<a href="Flysh.html#rowsMapper" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>rows<wbr/>Mapper</span></a>
+<a href="Flysh.html#run" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>run</span></a>
+<a href="Flysh.html#updateNavMapURI" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>update<wbr/>Nav<wbr/>MapURI</span></a>
+<a href="Flysh.html#validation" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>validation</span></a>
+</div></section></div></details></section></section>
+<section class="tsd-panel-group tsd-member-group">
+<h2>Constructors</h2>
+<section class="tsd-panel tsd-member"><a id="constructor" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>constructor</span><a href="#constructor" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="constructor.new_Flysh"><span class="tsd-kind-constructor-signature">new <wbr/>Flysh</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">config</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Flysh.html" class="tsd-signature-type tsd-kind-class">Flysh</a><a href="#constructor.new_Flysh" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Constructor</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">config</span>: <a href="InputMessage.html" class="tsd-signature-type tsd-kind-class">InputMessage</a></h5>
+<div class="tsd-comment tsd-typography"><p>Contains the preseted input message &#39;InputMessage&#39; class instance</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="Flysh.html" class="tsd-signature-type tsd-kind-class">Flysh</a></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L108">src/class/Flysh.ts:108</a></li></ul></aside></li></ul></section></section>
+<section class="tsd-panel-group tsd-member-group">
+<h2>Properties</h2>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="CORE_PARSER_FILTER_SELECTOR_SPLITTED_CHILD_TAG_POSITION_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTED_<wbr/>CHILD_<wbr/>TAG_<wbr/>POSITION_<wbr/>VALUE</span><a href="#CORE_PARSER_FILTER_SELECTOR_SPLITTED_CHILD_TAG_POSITION_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTED_<wbr/>CHILD_<wbr/>TAG_<wbr/>POSITION_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> = 0</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L30">src/class/Flysh.ts:30</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="CORE_PARSER_FILTER_SELECTOR_SPLITTER_CHILD_POSITION_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>CHILD_<wbr/>POSITION_<wbr/>VALUE</span><a href="#CORE_PARSER_FILTER_SELECTOR_SPLITTER_CHILD_POSITION_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>CHILD_<wbr/>POSITION_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">2</span><span class="tsd-signature-symbol"> = 2</span></div>
+<div class="tsd-comment tsd-typography"><p>Constants</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L27">src/class/Flysh.ts:27</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="CORE_PARSER_FILTER_SELECTOR_SPLITTER_PARENT_POSITION_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>PARENT_<wbr/>POSITION_<wbr/>VALUE</span><a href="#CORE_PARSER_FILTER_SELECTOR_SPLITTER_PARENT_POSITION_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>PARENT_<wbr/>POSITION_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">1</span><span class="tsd-signature-symbol"> = 1</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L28">src/class/Flysh.ts:28</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="CORE_PARSER_FILTER_SELECTOR_SPLITTER_SCOPE_POSITION_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>SCOPE_<wbr/>POSITION_<wbr/>VALUE</span><a href="#CORE_PARSER_FILTER_SELECTOR_SPLITTER_SCOPE_POSITION_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>SCOPE_<wbr/>POSITION_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> = 0</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L29">src/class/Flysh.ts:29</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="CORE_PARSER_FILTER_SELECTOR_SPLITTER_SIZE_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>SIZE_<wbr/>VALUE</span><a href="#CORE_PARSER_FILTER_SELECTOR_SPLITTER_SIZE_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>SIZE_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">3</span><span class="tsd-signature-symbol"> = 3</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L31">src/class/Flysh.ts:31</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="CORE_PARSER_QUERY_SELECTOR_ALL_NO_MATCH_RESULT_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>CORE_<wbr/>PARSER_<wbr/>QUERY_<wbr/>SELECTOR_<wbr/>ALL_<wbr/>NO_<wbr/>MATCH_<wbr/>RESULT_<wbr/>VALUE</span><a href="#CORE_PARSER_QUERY_SELECTOR_ALL_NO_MATCH_RESULT_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">CORE_<wbr/>PARSER_<wbr/>QUERY_<wbr/>SELECTOR_<wbr/>ALL_<wbr/>NO_<wbr/>MATCH_<wbr/>RESULT_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> = 0</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L32">src/class/Flysh.ts:32</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_PROXY_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RESSOURCELOADER_<wbr/>PROXY_<wbr/>VALUE</span><a href="#DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_PROXY_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RESSOURCELOADER_<wbr/>PROXY_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;&quot;</span><span class="tsd-signature-symbol"> = &#39;&#39;</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L33">src/class/Flysh.ts:33</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_STRICT_SSL_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RESSOURCELOADER_<wbr/>STRICT_<wbr/>SSL_<wbr/>VALUE</span><a href="#DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_STRICT_SSL_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RESSOURCELOADER_<wbr/>STRICT_<wbr/>SSL_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> = false</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L34">src/class/Flysh.ts:34</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_USER_AGENT_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RESSOURCELOADER_<wbr/>USER_<wbr/>AGENT_<wbr/>VALUE</span><a href="#DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_USER_AGENT_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RESSOURCELOADER_<wbr/>USER_<wbr/>AGENT_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;powered by Flysh Lib!&quot;</span><span class="tsd-signature-symbol"> = &#39;powered by Flysh Lib!&#39;</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L35">src/class/Flysh.ts:35</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="DEFAULT_INSTANCE_JSDOM_OPTIONS_RUNSCRIPTS_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RUNSCRIPTS_<wbr/>VALUE</span><a href="#DEFAULT_INSTANCE_JSDOM_OPTIONS_RUNSCRIPTS_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RUNSCRIPTS_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;outside-only&quot;</span><span class="tsd-signature-symbol"> = &#39;outside-only&#39;</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L36">src/class/Flysh.ts:36</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="EXCEPTION_ID_1500001200_MESSAGE_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>EXCEPTION_<wbr/>ID_<wbr/>1500001200_<wbr/>MESSAGE_<wbr/>VALUE</span><a href="#EXCEPTION_ID_1500001200_MESSAGE_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">EXCEPTION_<wbr/>ID_<wbr/>1500001200_<wbr/>MESSAGE_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;No any filter selector found&quot;</span><span class="tsd-signature-symbol"> = &quot;No any filter selector found&quot;</span></div>
+<div class="tsd-comment tsd-typography"><p>Constants, exception codes</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L56">src/class/Flysh.ts:56</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="EXCEPTION_ID_1500001300_MESSAGE_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>EXCEPTION_<wbr/>ID_<wbr/>1500001300_<wbr/>MESSAGE_<wbr/>VALUE</span><a href="#EXCEPTION_ID_1500001300_MESSAGE_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">EXCEPTION_<wbr/>ID_<wbr/>1500001300_<wbr/>MESSAGE_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;No any &#39;Paginator&#39; found&quot;</span><span class="tsd-signature-symbol"> = &quot;No any &#39;Paginator&#39; found&quot;</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L57">src/class/Flysh.ts:57</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="EXCEPTION_ID_1500001400_MESSAGE_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>EXCEPTION_<wbr/>ID_<wbr/>1500001400_<wbr/>MESSAGE_<wbr/>VALUE</span><a href="#EXCEPTION_ID_1500001400_MESSAGE_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">EXCEPTION_<wbr/>ID_<wbr/>1500001400_<wbr/>MESSAGE_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;Timeout value cannot be negative&quot;</span><span class="tsd-signature-symbol"> = &quot;Timeout value cannot be negative&quot;</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L58">src/class/Flysh.ts:58</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="EXCEPTION_ID_1500003100_MESSAGE_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>EXCEPTION_<wbr/>ID_<wbr/>1500003100_<wbr/>MESSAGE_<wbr/>VALUE</span><a href="#EXCEPTION_ID_1500003100_MESSAGE_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">EXCEPTION_<wbr/>ID_<wbr/>1500003100_<wbr/>MESSAGE_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;Exception occurred during process&quot;</span><span class="tsd-signature-symbol"> = &quot;Exception occurred during process&quot;</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L59">src/class/Flysh.ts:59</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="EXCEPTION_ID_2000000000_MESSAGE_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>EXCEPTION_<wbr/>ID_<wbr/>2000000000_<wbr/>MESSAGE_<wbr/>VALUE</span><a href="#EXCEPTION_ID_2000000000_MESSAGE_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">EXCEPTION_<wbr/>ID_<wbr/>2000000000_<wbr/>MESSAGE_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;Request(s) timed out&quot;</span><span class="tsd-signature-symbol"> = &quot;Request(s) timed out&quot;</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L60">src/class/Flysh.ts:60</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="HARVEST_NAVPANE_DOM_STACK_FIRST_OCCURENCE_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>HARVEST_<wbr/>NAVPANE_<wbr/>DOM_<wbr/>STACK_<wbr/>FIRST_<wbr/>OCCURENCE_<wbr/>VALUE</span><a href="#HARVEST_NAVPANE_DOM_STACK_FIRST_OCCURENCE_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">HARVEST_<wbr/>NAVPANE_<wbr/>DOM_<wbr/>STACK_<wbr/>FIRST_<wbr/>OCCURENCE_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> = 0</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L37">src/class/Flysh.ts:37</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="JSDOMOptions" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>JSDOMOptions</span><a href="#JSDOMOptions" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">JSDOMOptions</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">resources</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">runScripts</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol"> = ...</span></div>
+<div class="tsd-comment tsd-typography"><p>JSDOM options</p>
+<p>Note: Behavior should be different either by using &#39;fromFile()&#39; and &#39;fromURL()&#39; methods</p>
+</div>
+<div class="tsd-type-declaration">
+<h4>Type declaration</h4>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5><span class="tsd-kind-property">resources</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5></li>
+<li class="tsd-parameter">
+<h5><span class="tsd-kind-property">run<wbr/>Scripts</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5></li></ul></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L93">src/class/Flysh.ts:93</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="MATRIX_MAPPER_LENGTH_INDEX_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>MATRIX_<wbr/>MAPPER_<wbr/>LENGTH_<wbr/>INDEX_<wbr/>VALUE</span><a href="#MATRIX_MAPPER_LENGTH_INDEX_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">MATRIX_<wbr/>MAPPER_<wbr/>LENGTH_<wbr/>INDEX_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> = 0</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L38">src/class/Flysh.ts:38</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="MFAM_DOM_SCP_MERGING_BUFF_REC_MIN_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>MFAM_<wbr/>DOM_<wbr/>SCP_<wbr/>MERGING_<wbr/>BUFF_<wbr/>REC_<wbr/>MIN_<wbr/>VALUE</span><a href="#MFAM_DOM_SCP_MERGING_BUFF_REC_MIN_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">MFAM_<wbr/>DOM_<wbr/>SCP_<wbr/>MERGING_<wbr/>BUFF_<wbr/>REC_<wbr/>MIN_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> = 0</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L39">src/class/Flysh.ts:39</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="MFAM_DOM_SCP_MIN_OCCURENCE_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>MFAM_<wbr/>DOM_<wbr/>SCP_<wbr/>MIN_<wbr/>OCCURENCE_<wbr/>VALUE</span><a href="#MFAM_DOM_SCP_MIN_OCCURENCE_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">MFAM_<wbr/>DOM_<wbr/>SCP_<wbr/>MIN_<wbr/>OCCURENCE_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">1</span><span class="tsd-signature-symbol"> = 1</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L40">src/class/Flysh.ts:40</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="OUTPUTMESSAGE_DEFAULT_ID_INSTANCE_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>OUTPUTMESSAGE_<wbr/>DEFAULT_<wbr/>ID_<wbr/>INSTANCE_<wbr/>VALUE</span><a href="#OUTPUTMESSAGE_DEFAULT_ID_INSTANCE_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">OUTPUTMESSAGE_<wbr/>DEFAULT_<wbr/>ID_<wbr/>INSTANCE_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">-1</span><span class="tsd-signature-symbol"> = -1</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L41">src/class/Flysh.ts:41</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="OUTPUTMESSAGE_DEFAULT_URI_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>OUTPUTMESSAGE_<wbr/>DEFAULT_<wbr/>URI_<wbr/>VALUE</span><a href="#OUTPUTMESSAGE_DEFAULT_URI_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">OUTPUTMESSAGE_<wbr/>DEFAULT_<wbr/>URI_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;&quot;</span><span class="tsd-signature-symbol"> = &#39;&#39;</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L42">src/class/Flysh.ts:42</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="PAGERECORD_DEFAULT_ERROR_FLAG_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>PAGERECORD_<wbr/>DEFAULT_<wbr/>ERROR_<wbr/>FLAG_<wbr/>VALUE</span><a href="#PAGERECORD_DEFAULT_ERROR_FLAG_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PAGERECORD_<wbr/>DEFAULT_<wbr/>ERROR_<wbr/>FLAG_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> = false</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L43">src/class/Flysh.ts:43</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="PAGERECORD_ERROR_STATE_FLAG_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>PAGERECORD_<wbr/>ERROR_<wbr/>STATE_<wbr/>FLAG_<wbr/>VALUE</span><a href="#PAGERECORD_ERROR_STATE_FLAG_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PAGERECORD_<wbr/>ERROR_<wbr/>STATE_<wbr/>FLAG_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> = true</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L44">src/class/Flysh.ts:44</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="PAGERECORD_MAPPER_UNDEFINED_FIELD_NUMBER_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>PAGERECORD_<wbr/>MAPPER_<wbr/>UNDEFINED_<wbr/>FIELD_<wbr/>NUMBER_<wbr/>VALUE</span><a href="#PAGERECORD_MAPPER_UNDEFINED_FIELD_NUMBER_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PAGERECORD_<wbr/>MAPPER_<wbr/>UNDEFINED_<wbr/>FIELD_<wbr/>NUMBER_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> = 0</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L45">src/class/Flysh.ts:45</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="PAGERECORD_MAPPER_UNDEFINED_FIELD_SWAP_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>PAGERECORD_<wbr/>MAPPER_<wbr/>UNDEFINED_<wbr/>FIELD_<wbr/>SWAP_<wbr/>VALUE</span><a href="#PAGERECORD_MAPPER_UNDEFINED_FIELD_SWAP_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PAGERECORD_<wbr/>MAPPER_<wbr/>UNDEFINED_<wbr/>FIELD_<wbr/>SWAP_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">1</span><span class="tsd-signature-symbol"> = 1</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L46">src/class/Flysh.ts:46</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="PAGERECORD_MERGER_FIRST_OCCURENCE_INDEX_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>PAGERECORD_<wbr/>MERGER_<wbr/>FIRST_<wbr/>OCCURENCE_<wbr/>INDEX_<wbr/>VALUE</span><a href="#PAGERECORD_MERGER_FIRST_OCCURENCE_INDEX_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PAGERECORD_<wbr/>MERGER_<wbr/>FIRST_<wbr/>OCCURENCE_<wbr/>INDEX_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> = 0</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L47">src/class/Flysh.ts:47</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="PAGERECORD_MERGER_FOUND_ERROR_FLAG_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>PAGERECORD_<wbr/>MERGER_<wbr/>FOUND_<wbr/>ERROR_<wbr/>FLAG_<wbr/>VALUE</span><a href="#PAGERECORD_MERGER_FOUND_ERROR_FLAG_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PAGERECORD_<wbr/>MERGER_<wbr/>FOUND_<wbr/>ERROR_<wbr/>FLAG_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> = true</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L48">src/class/Flysh.ts:48</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="PRCLEANER_REGEXP_EXEC_ARRAY_RESULT_INDEX_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>PRCLEANER_<wbr/>REGEXP_<wbr/>EXEC_<wbr/>ARRAY_<wbr/>RESULT_<wbr/>INDEX_<wbr/>VALUE</span><a href="#PRCLEANER_REGEXP_EXEC_ARRAY_RESULT_INDEX_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PRCLEANER_<wbr/>REGEXP_<wbr/>EXEC_<wbr/>ARRAY_<wbr/>RESULT_<wbr/>INDEX_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> = 0</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L49">src/class/Flysh.ts:49</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="URI" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>URI</span><a href="#URI" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">URI</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L77">src/class/Flysh.ts:77</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="VALIDATION_MINIMUM_SPC_DOMELEMENT_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>VALIDATION_<wbr/>MINIMUM_<wbr/>SPC_<wbr/>DOMELEMENT_<wbr/>VALUE</span><a href="#VALIDATION_MINIMUM_SPC_DOMELEMENT_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">VALIDATION_<wbr/>MINIMUM_<wbr/>SPC_<wbr/>DOMELEMENT_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">1</span><span class="tsd-signature-symbol"> = 1</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L50">src/class/Flysh.ts:50</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="VALIDATION_MINIMUM_TIMEOUT_VALUE" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>VALIDATION_<wbr/>MINIMUM_<wbr/>TIMEOUT_<wbr/>VALUE</span><a href="#VALIDATION_MINIMUM_TIMEOUT_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">VALIDATION_<wbr/>MINIMUM_<wbr/>TIMEOUT_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> = 0</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L51">src/class/Flysh.ts:51</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="domain" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>domain</span><a href="#domain" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">domain</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Class properties</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L65">src/class/Flysh.ts:65</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="done" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>done</span><a href="#done" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">done</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L66">src/class/Flysh.ts:66</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="filesystem" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>filesystem</span><a href="#filesystem" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">filesystem</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L68">src/class/Flysh.ts:68</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="hasnavpane" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>hasnavpane</span><a href="#hasnavpane" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">hasnavpane</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L67">src/class/Flysh.ts:67</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="id" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>id</span><a href="#id" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L69">src/class/Flysh.ts:69</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="mfpagerecordsbuffer" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>mfpagerecordsbuffer</span><a href="#mfpagerecordsbuffer" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">mfpagerecordsbuffer</span><span class="tsd-signature-symbol">:</span> <a href="PageRecords.html" class="tsd-signature-type tsd-kind-class">PageRecords</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L70">src/class/Flysh.ts:70</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="navmap" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>navmap</span><a href="#navmap" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">navmap</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L71">src/class/Flysh.ts:71</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="navmapupdated" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>navmapupdated</span><a href="#navmapupdated" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">navmapupdated</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L72">src/class/Flysh.ts:72</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="navpane" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>navpane</span><a href="#navpane" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">navpane</span><span class="tsd-signature-symbol">:</span> <a href="model.DomElement.html" class="tsd-signature-type tsd-kind-class">DomElement</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L73">src/class/Flysh.ts:73</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="outputmessage" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>outputmessage</span><a href="#outputmessage" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">outputmessage</span><span class="tsd-signature-symbol">:</span> <a href="OutputMessage.html" class="tsd-signature-type tsd-kind-class">OutputMessage</a></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L74">src/class/Flysh.ts:74</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="resourceLoader" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>resource<wbr/>Loader</span><a href="#resourceLoader" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">resource<wbr/>Loader</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = ...</span></div>
+<div class="tsd-comment tsd-typography"><p>JSDOM options (RessourceLoader)</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L82">src/class/Flysh.ts:82</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="spc" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>spc</span><a href="#spc" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">spc</span><span class="tsd-signature-symbol">:</span> <a href="model.DomElement.html" class="tsd-signature-type tsd-kind-class">DomElement</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L75">src/class/Flysh.ts:75</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="timeout" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>timeout</span><a href="#timeout" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">timeout</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L76">src/class/Flysh.ts:76</a></li></ul></aside></section></section>
+<section class="tsd-panel-group tsd-member-group">
+<h2>Methods</h2>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="addHaverstedPages" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>add<wbr/>Haversted<wbr/>Pages</span><a href="#addHaverstedPages" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="addHaverstedPages.addHaverstedPages-1"><span class="tsd-kind-call-signature">add<wbr/>Haversted<wbr/>Pages</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">pageRecords</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#addHaverstedPages.addHaverstedPages-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Adds the &#39;PageRecords&#39; class instance to the &#39;outputmessage&#39; message property</p>
+<p>TODO : Create two models with records and &#39;FullListing&#39; two methods &#39;setOutputMessage()&#39; and &#39;addRecords(Object rec)&#39;</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">pageRecords</span>: <a href="PageRecords.html" class="tsd-signature-type tsd-kind-class">PageRecords</a></h5>
+<div class="tsd-comment tsd-typography"><p>Contains all the records parsed from a page</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L203">src/class/Flysh.ts:203</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="createWindowSelector" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>create<wbr/>Window<wbr/>Selector</span><a href="#createWindowSelector" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="createWindowSelector.createWindowSelector-1"><span class="tsd-kind-call-signature">create<wbr/>Window<wbr/>Selector</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">dom</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#createWindowSelector.createWindowSelector-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns the &#39;JQuery&#39; selector from prefetched &#39;DOM&#39; object</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">dom</span>: <span class="tsd-signature-type">any</span></h5>
+<div class="tsd-comment tsd-typography"><p>Object that contains the &#39;DOM&#39; structure of the document</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><p>Returns the &#39;JQuery&#39; selector</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L182">src/class/Flysh.ts:182</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="fetchDOM" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>fetchDOM</span><a href="#fetchDOM" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="fetchDOM.fetchDOM-1"><span class="tsd-kind-call-signature">fetchDOM</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">uri</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><a href="#fetchDOM.fetchDOM-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Fetches and returns the DOM document either from a distant URI or from the filesystem</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">uri</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>String that contains document path from filesystem or network (lan/wan)</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><p>Returns a &#39;Promise&#39; which contains the DOM structure from document (filsesystem/network)</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L449">src/class/Flysh.ts:449</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="getOutputMessage" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Output<wbr/>Message</span><a href="#getOutputMessage" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="getOutputMessage.getOutputMessage-1"><span class="tsd-kind-call-signature">get<wbr/>Output<wbr/>Message</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="OutputMessage.html" class="tsd-signature-type tsd-kind-class">OutputMessage</a><a href="#getOutputMessage.getOutputMessage-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns collected records from post-process</p>
+</div>
+<h4 class="tsd-returns-title">Returns <a href="OutputMessage.html" class="tsd-signature-type tsd-kind-class">OutputMessage</a></h4><p>Returns the output message &#39;OutputMessage&#39; class instance</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L125">src/class/Flysh.ts:125</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="harvesting" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>harvesting</span><a href="#harvesting" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="harvesting.harvesting-1"><span class="tsd-kind-call-signature">harvesting</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">uri</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#harvesting.harvesting-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns a &#39;Promise&#39; that contains the parsed data from a window (dom.window). Each &#39;Promise&#39; is either identified as a 
+new &#39;PargeRecords&#39; either a filepath/URIs to add</p>
+<p>NOTE : In case of multiple &#39;NavPane&#39; (&#39;Paginator&#39;) elements, the first occurrence will only be taken into account</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">uri</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>String that contains document path from filesystem or network (lan/wan)</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><p>Returns a &#39;Promise&#39; that contains the parsed datas from the &#39;window&#39; (dom.window)</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L534">src/class/Flysh.ts:534</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="init" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>init</span><a href="#init" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="init.init-1"><span class="tsd-kind-call-signature">init</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#init.init-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Class initialization</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L159">src/class/Flysh.ts:159</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="isDone" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>is<wbr/>Done</span><a href="#isDone" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="isDone.isDone-1"><span class="tsd-kind-call-signature">is<wbr/>Done</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../functions/model.Boolean-1.html" class="tsd-signature-type tsd-kind-function">Boolean</a><a href="#isDone.isDone-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns &#39;true&#39; if the instance has finished his run</p>
+</div>
+<h4 class="tsd-returns-title">Returns <a href="../functions/model.Boolean-1.html" class="tsd-signature-type tsd-kind-function">Boolean</a></h4><p>Returns the &#39;done&#39; &#39;boolean&#39; value if the instance has finished his run</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L134">src/class/Flysh.ts:134</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="isMF" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>isMF</span><a href="#isMF" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="isMF.isMF-1"><span class="tsd-kind-call-signature">isMF</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#isMF.isMF-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Checks if the current parsed pages are elligible for &#39;MFaM&#39; mode (Multiple Families) parsing</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><p>Returns a &#39;boolean&#39; value set to true if the &#39;SCP&#39; property is having more than 1 element</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L191">src/class/Flysh.ts:191</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="matrixMapping" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>matrix<wbr/>Mapping</span><a href="#matrixMapping" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="matrixMapping.matrixMapping-1"><span class="tsd-kind-call-signature">matrix<wbr/>Mapping</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">matrix</span>, <span class="tsd-kind-parameter">fieldsNumber</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">String</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span><a href="#matrixMapping.matrixMapping-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Swaps the initial matrix grid into array of array of &#39;string&#39;</p>
+<p>NOTE : 
+     matrix[0][0] +&#39;:&#39;+ matrix[1][0] +&#39;:&#39;+ matrix[2][0]);
+     matrix[0][1] +&#39;:&#39;+ matrix[1][1] +&#39;:&#39;+ matrix[2][1]);
+     matrix[0][2] +&#39;:&#39;+ matrix[1][2] +&#39;:&#39;+ matrix[2][2]);</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">matrix</span>: <span class="tsd-signature-type ">String</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>Array of array of &#39;string&#39; that contains the records</p>
+</div></li>
+<li>
+<h5><span class="tsd-kind-parameter">fieldsNumber</span>: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Number of the current field</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">String</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h4><p>Returns an ordered (field) array of array of &#39;string&#39;</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L366">src/class/Flysh.ts:366</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="pageParser" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>page<wbr/>Parser</span><a href="#pageParser" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="pageParser.pageParser-1"><span class="tsd-kind-call-signature">page<wbr/>Parser</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">dom</span>, <span class="tsd-kind-parameter">domelement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">String</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span><a href="#pageParser.pageParser-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Loops on each &#39;siblings&#39; (fields) signature to overloads the &#39;filterselector&#39;</p>
+<p>i.e : - &#39;#scope-id div.product-description&#39; + &#39;a&#39; provides the full filter selector, &#39;#scope-id div.product-description a&#39;
+      - &#39;#scope-id div.product-description&#39; + &#39;span.price&#39; provides the full filter selector, &#39;#scope-id div.product-description span.price&#39;</p>
+<p>NOTE : The &#39;JQuery&#39; selector is only able to catch up a precise tag through the page, the parsing method must be invoked multiple times
+NOTE : If the &#39;filterselector&#39; is having maximum 3 distinct arguments, it means that it&#39;s &#39;full&#39; and don&#39;t need to loop over again
+NOTE : Full filter means &#39;auto-mode&#39;</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">dom</span>: <span class="tsd-signature-type">any</span></h5>
+<div class="tsd-comment tsd-typography"><p>Document filter selector</p>
+</div></li>
+<li>
+<h5><span class="tsd-kind-parameter">domelement</span>: <a href="model.DomElement.html" class="tsd-signature-type tsd-kind-class">DomElement</a></h5>
+<div class="tsd-comment tsd-typography"><p>Generic &#39;DomElement&#39; type class</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">String</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h4><p>Returns an array of array of &#39;String&#39; that contains each record collected from the page</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L230">src/class/Flysh.ts:230</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="pageRecordsCleaner" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>page<wbr/>Records<wbr/>Cleaner</span><a href="#pageRecordsCleaner" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="pageRecordsCleaner.pageRecordsCleaner-1"><span class="tsd-kind-call-signature">page<wbr/>Records<wbr/>Cleaner</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">pgRecords</span>, <span class="tsd-kind-parameter">domE</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="PageRecords.html" class="tsd-signature-type tsd-kind-class">PageRecords</a><a href="#pageRecordsCleaner.pageRecordsCleaner-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Cleans each &#39;PageRecords&#39; (records) with the corresponding sibling&#39;s regex (field). For each sibling, the function matches 
+the right label name and lookups for the corresponding regular expression</p>
+<p>NOTE : If the regular expression matches (exec) the content an update will be applied, otherwise it does nothing
+TOTEST : Don&#39;t process in case of undefined/empty regex (&#39;&#39;) (no matching sibling (PK? Label ?))</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">pgRecords</span>: <a href="PageRecords.html" class="tsd-signature-type tsd-kind-class">PageRecords</a></h5>
+<div class="tsd-comment tsd-typography"><p>&#39;PageRecords&#39; Class instance with original record(s)</p>
+</div></li>
+<li>
+<h5><span class="tsd-kind-parameter">domE</span>: <a href="model.DomElement.html" class="tsd-signature-type tsd-kind-class">DomElement</a></h5>
+<div class="tsd-comment tsd-typography"><p>&#39;DomeElement&#39; Generic type parameter used to retrieve the record field name</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="PageRecords.html" class="tsd-signature-type tsd-kind-class">PageRecords</a></h4><p>Returns a &#39;PageRecords&#39; Class instance with cleaned field(s)</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L271">src/class/Flysh.ts:271</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="pageRecordsHandler" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>page<wbr/>Records<wbr/>Handler</span><a href="#pageRecordsHandler" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="pageRecordsHandler.pageRecordsHandler-1"><span class="tsd-kind-call-signature">page<wbr/>Records<wbr/>Handler</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">pr</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#pageRecordsHandler.pageRecordsHandler-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Checks if a page is either a &quot;scrap&quot; or not. This method evaluates when to set a new &#39;PageRecords&#39; to the &#39;outputmessage&#39; 
+class property. It uses a &#39;PageRecords&#39; type buffer (from scraps) with a size which equals the number of &#39;SCP&#39; objects (fields). 
+If the configuration is set to &quot;MF/MultiFamily&quot;, the buffer will be filled till his maximum size. Once full, 
+a new &#39;PageRecords&#39; page will be created and being filled with the other &#39;PageRecords&#39;. If the page is not considered 
+as &quot;MF/MultiFamily&quot;, the reference will simply be returned.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">pr</span>: <a href="PageRecords.html" class="tsd-signature-type tsd-kind-class">PageRecords</a></h5>
+<div class="tsd-comment tsd-typography"><p>&#39;PageRecords&#39; class instance that contains the parsed records from a page</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L508">src/class/Flysh.ts:508</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="pageRecordsMapper" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>page<wbr/>Records<wbr/>Mapper</span><a href="#pageRecordsMapper" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="pageRecordsMapper.pageRecordsMapper-1"><span class="tsd-kind-call-signature">page<wbr/>Records<wbr/>Mapper</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">matrix</span>, <span class="tsd-kind-parameter">domE</span>, <span class="tsd-kind-parameter">uri</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="PageRecords.html" class="tsd-signature-type tsd-kind-class">PageRecords</a><a href="#pageRecordsMapper.pageRecordsMapper-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Maps the received matrix into a &#39;PageRecords&#39; class instance and validates if the returned content from 
+the selector is not empty</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">matrix</span>: <span class="tsd-signature-type ">String</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>Array of array of string that contains the records</p>
+</div></li>
+<li>
+<h5><span class="tsd-kind-parameter">domE</span>: <a href="model.DomElement.html" class="tsd-signature-type tsd-kind-class">DomElement</a></h5>
+<div class="tsd-comment tsd-typography"><p>&#39;DomeElement&#39; generic type parameter used to retrieve the record field name</p>
+</div></li>
+<li>
+<h5><span class="tsd-kind-parameter">uri</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>String that contains document path from filesystem or network (lan/wan)</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="PageRecords.html" class="tsd-signature-type tsd-kind-class">PageRecords</a></h4><p>Returns a &#39;PageRecords&#39; class instance</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L298">src/class/Flysh.ts:298</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="pageRecordsMerger" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>page<wbr/>Records<wbr/>Merger</span><a href="#pageRecordsMerger" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="pageRecordsMerger.pageRecordsMerger-1"><span class="tsd-kind-call-signature">page<wbr/>Records<wbr/>Merger</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">scraps</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="PageRecords.html" class="tsd-signature-type tsd-kind-class">PageRecords</a><a href="#pageRecordsMerger.pageRecordsMerger-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Merges the &quot;scrapped&quot; pages into one &#39;PageRecords&#39; object instance. The mapping is the processing between the 
+&#39;recordList&#39; returned from the &#39;PageRecords&#39; instance and the current &quot;scraps&quot; objects</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">scraps</span>: <a href="PageRecords.html" class="tsd-signature-type tsd-kind-class">PageRecords</a><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>Array of &#39;PageRecords&#39; which contain all &quot;scrapped&quot; records from a page</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="PageRecords.html" class="tsd-signature-type tsd-kind-class">PageRecords</a></h4><p>Returns a unique &#39;PageRecords&#39; containing all the &quot;scrapped&quot; records</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L474">src/class/Flysh.ts:474</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="parser" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>parser</span><a href="#parser" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="parser.parser-1"><span class="tsd-kind-call-signature">parser</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">$</span>, <span class="tsd-kind-parameter">filterselector</span>, <span class="tsd-kind-parameter">attribute</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><a href="#parser.parser-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Parses the current document with his corresponding selector, this function is the nearest core caller 
+from the &#39;Jquery&#39; library</p>
+<p>TODO : element.innerHTML less efficient than element.textContent ?</p>
+<p>DOC : JQuery core selector dev style 1 (<a href="https://learn.jquery.com/using-jquery-core/traversing/">https://learn.jquery.com/using-jquery-core/traversing/</a>)
+DOC : JQuery core selector dev style 2 (<a href="http://net-informations.com/jq/iq/parent.htm">http://net-informations.com/jq/iq/parent.htm</a>)</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">$</span>: <span class="tsd-signature-type">any</span></h5>
+<div class="tsd-comment tsd-typography"><p>&#39;Jquery Document Selector&#39; related to the current Document page (DOM)</p>
+</div></li>
+<li>
+<h5><span class="tsd-kind-parameter">filterselector</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>&#39;String&#39; type that defines the &#39;Filter Selector&#39; content</p>
+</div></li>
+<li>
+<h5><span class="tsd-kind-parameter">attribute</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>&#39;String&#39; type that defines the attribute to read (optional : to optimize ?) (i.e : &#39;href&#39;)</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4><p>Returns a generic object array either filled by a string, a null or an &#39;undefined&#39; value</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L397">src/class/Flysh.ts:397</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="processing" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>processing</span><a href="#processing" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="processing.processing-1"><span class="tsd-kind-call-signature">processing</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#processing.processing-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Processing the page(s) preseted within the &#39;navmap&#39;/&#39;paginator&#39; property</p>
+<p>NOTE : &#39;forEach()&#39; method seems not handling a &#39;Promise&#39; callback
+NOTE : Each back &#39;Promise&#39; are stored from properties and available from getter functions</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L568">src/class/Flysh.ts:568</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="rowsMapper" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>rows<wbr/>Mapper</span><a href="#rowsMapper" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="rowsMapper.rowsMapper-1"><span class="tsd-kind-call-signature">rows<wbr/>Mapper</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">arrayRecords</span>, <span class="tsd-kind-parameter">fieldsNumber</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">String</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span><a href="#rowsMapper.rowsMapper-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Swaps arrays into array of array of &#39;string&#39; (matrix)</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">arrayRecords</span>: <span class="tsd-signature-type ">String</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>Array of string that contains record(s)</p>
+</div></li>
+<li>
+<h5><span class="tsd-kind-parameter">fieldsNumber</span>: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Number value that indicates the current field number</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">String</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h4><p>Returns an array of array of string</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L323">src/class/Flysh.ts:323</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="run" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>run</span><a href="#run" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="run.run-1"><span class="tsd-kind-call-signature">run</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#run.run-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Starts the class process asynchronously and waits for the parsed data from local/distant document(s)</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L141">src/class/Flysh.ts:141</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="updateNavMapURI" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>update<wbr/>Nav<wbr/>MapURI</span><a href="#updateNavMapURI" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="updateNavMapURI.updateNavMapURI-1"><span class="tsd-kind-call-signature">update<wbr/>Nav<wbr/>MapURI</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">inputData</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#updateNavMapURI.updateNavMapURI-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Updates the &#39;navmap&#39; (&#39;Paginator&#39;) property with the new URIs parsed from the page&#39;s navigation pane</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">inputData</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>Contains an array of URIs from the navigation (&#39;Paginator&#39;) pane</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L212">src/class/Flysh.ts:212</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="validation" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>validation</span><a href="#validation" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="validation.validation-1"><span class="tsd-kind-call-signature">validation</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#validation.validation-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Instance properties validation</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/d08cb4c/src/class/Flysh.ts#L167">src/class/Flysh.ts:167</a></li></ul></aside></li></ul></section></section></div>
+<div class="col-sidebar">
+<div class="page-menu">
+<div class="tsd-navigation settings">
+<details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg>Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility">
+<h4 class="uppercase">Member Visibility</h4><form>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div>
+<div class="tsd-theme-toggle">
+<h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<details open class="tsd-index-accordion tsd-page-navigation"><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg>On This Page</h3></summary>
+<div class="tsd-accordion-details">
+<ul>
+<li><a href="#constructor" class=""><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-512-path"></use><use href="#icon-512-text"></use></svg><span>constructor</span></a></li>
+<li><a href="#CORE_PARSER_FILTER_SELECTOR_SPLITTED_CHILD_TAG_POSITION_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTED_<wbr/>CHILD_<wbr/>TAG_<wbr/>POSITION_<wbr/>VALUE</span></a></li>
+<li><a href="#CORE_PARSER_FILTER_SELECTOR_SPLITTER_CHILD_POSITION_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>CHILD_<wbr/>POSITION_<wbr/>VALUE</span></a></li>
+<li><a href="#CORE_PARSER_FILTER_SELECTOR_SPLITTER_PARENT_POSITION_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>PARENT_<wbr/>POSITION_<wbr/>VALUE</span></a></li>
+<li><a href="#CORE_PARSER_FILTER_SELECTOR_SPLITTER_SCOPE_POSITION_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>SCOPE_<wbr/>POSITION_<wbr/>VALUE</span></a></li>
+<li><a href="#CORE_PARSER_FILTER_SELECTOR_SPLITTER_SIZE_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>CORE_<wbr/>PARSER_<wbr/>FILTER_<wbr/>SELECTOR_<wbr/>SPLITTER_<wbr/>SIZE_<wbr/>VALUE</span></a></li>
+<li><a href="#CORE_PARSER_QUERY_SELECTOR_ALL_NO_MATCH_RESULT_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>CORE_<wbr/>PARSER_<wbr/>QUERY_<wbr/>SELECTOR_<wbr/>ALL_<wbr/>NO_<wbr/>MATCH_<wbr/>RESULT_<wbr/>VALUE</span></a></li>
+<li><a href="#DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_PROXY_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RESSOURCELOADER_<wbr/>PROXY_<wbr/>VALUE</span></a></li>
+<li><a href="#DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_STRICT_SSL_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RESSOURCELOADER_<wbr/>STRICT_<wbr/>SSL_<wbr/>VALUE</span></a></li>
+<li><a href="#DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_USER_AGENT_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RESSOURCELOADER_<wbr/>USER_<wbr/>AGENT_<wbr/>VALUE</span></a></li>
+<li><a href="#DEFAULT_INSTANCE_JSDOM_OPTIONS_RUNSCRIPTS_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>DEFAULT_<wbr/>INSTANCE_<wbr/>JSDOM_<wbr/>OPTIONS_<wbr/>RUNSCRIPTS_<wbr/>VALUE</span></a></li>
+<li><a href="#EXCEPTION_ID_1500001200_MESSAGE_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>EXCEPTION_<wbr/>ID_<wbr/>1500001200_<wbr/>MESSAGE_<wbr/>VALUE</span></a></li>
+<li><a href="#EXCEPTION_ID_1500001300_MESSAGE_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>EXCEPTION_<wbr/>ID_<wbr/>1500001300_<wbr/>MESSAGE_<wbr/>VALUE</span></a></li>
+<li><a href="#EXCEPTION_ID_1500001400_MESSAGE_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>EXCEPTION_<wbr/>ID_<wbr/>1500001400_<wbr/>MESSAGE_<wbr/>VALUE</span></a></li>
+<li><a href="#EXCEPTION_ID_1500003100_MESSAGE_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>EXCEPTION_<wbr/>ID_<wbr/>1500003100_<wbr/>MESSAGE_<wbr/>VALUE</span></a></li>
+<li><a href="#EXCEPTION_ID_2000000000_MESSAGE_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>EXCEPTION_<wbr/>ID_<wbr/>2000000000_<wbr/>MESSAGE_<wbr/>VALUE</span></a></li>
+<li><a href="#HARVEST_NAVPANE_DOM_STACK_FIRST_OCCURENCE_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>HARVEST_<wbr/>NAVPANE_<wbr/>DOM_<wbr/>STACK_<wbr/>FIRST_<wbr/>OCCURENCE_<wbr/>VALUE</span></a></li>
+<li><a href="#JSDOMOptions" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>JSDOMOptions</span></a></li>
+<li><a href="#MATRIX_MAPPER_LENGTH_INDEX_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>MATRIX_<wbr/>MAPPER_<wbr/>LENGTH_<wbr/>INDEX_<wbr/>VALUE</span></a></li>
+<li><a href="#MFAM_DOM_SCP_MERGING_BUFF_REC_MIN_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>MFAM_<wbr/>DOM_<wbr/>SCP_<wbr/>MERGING_<wbr/>BUFF_<wbr/>REC_<wbr/>MIN_<wbr/>VALUE</span></a></li>
+<li><a href="#MFAM_DOM_SCP_MIN_OCCURENCE_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>MFAM_<wbr/>DOM_<wbr/>SCP_<wbr/>MIN_<wbr/>OCCURENCE_<wbr/>VALUE</span></a></li>
+<li><a href="#OUTPUTMESSAGE_DEFAULT_ID_INSTANCE_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>OUTPUTMESSAGE_<wbr/>DEFAULT_<wbr/>ID_<wbr/>INSTANCE_<wbr/>VALUE</span></a></li>
+<li><a href="#OUTPUTMESSAGE_DEFAULT_URI_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>OUTPUTMESSAGE_<wbr/>DEFAULT_<wbr/>URI_<wbr/>VALUE</span></a></li>
+<li><a href="#PAGERECORD_DEFAULT_ERROR_FLAG_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>PAGERECORD_<wbr/>DEFAULT_<wbr/>ERROR_<wbr/>FLAG_<wbr/>VALUE</span></a></li>
+<li><a href="#PAGERECORD_ERROR_STATE_FLAG_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>PAGERECORD_<wbr/>ERROR_<wbr/>STATE_<wbr/>FLAG_<wbr/>VALUE</span></a></li>
+<li><a href="#PAGERECORD_MAPPER_UNDEFINED_FIELD_NUMBER_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>PAGERECORD_<wbr/>MAPPER_<wbr/>UNDEFINED_<wbr/>FIELD_<wbr/>NUMBER_<wbr/>VALUE</span></a></li>
+<li><a href="#PAGERECORD_MAPPER_UNDEFINED_FIELD_SWAP_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>PAGERECORD_<wbr/>MAPPER_<wbr/>UNDEFINED_<wbr/>FIELD_<wbr/>SWAP_<wbr/>VALUE</span></a></li>
+<li><a href="#PAGERECORD_MERGER_FIRST_OCCURENCE_INDEX_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>PAGERECORD_<wbr/>MERGER_<wbr/>FIRST_<wbr/>OCCURENCE_<wbr/>INDEX_<wbr/>VALUE</span></a></li>
+<li><a href="#PAGERECORD_MERGER_FOUND_ERROR_FLAG_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>PAGERECORD_<wbr/>MERGER_<wbr/>FOUND_<wbr/>ERROR_<wbr/>FLAG_<wbr/>VALUE</span></a></li>
+<li><a href="#PRCLEANER_REGEXP_EXEC_ARRAY_RESULT_INDEX_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>PRCLEANER_<wbr/>REGEXP_<wbr/>EXEC_<wbr/>ARRAY_<wbr/>RESULT_<wbr/>INDEX_<wbr/>VALUE</span></a></li>
+<li><a href="#URI" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>URI</span></a></li>
+<li><a href="#VALIDATION_MINIMUM_SPC_DOMELEMENT_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>VALIDATION_<wbr/>MINIMUM_<wbr/>SPC_<wbr/>DOMELEMENT_<wbr/>VALUE</span></a></li>
+<li><a href="#VALIDATION_MINIMUM_TIMEOUT_VALUE" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>VALIDATION_<wbr/>MINIMUM_<wbr/>TIMEOUT_<wbr/>VALUE</span></a></li>
+<li><a href="#domain" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>domain</span></a></li>
+<li><a href="#done" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>done</span></a></li>
+<li><a href="#filesystem" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>filesystem</span></a></li>
+<li><a href="#hasnavpane" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>hasnavpane</span></a></li>
+<li><a href="#id" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>id</span></a></li>
+<li><a href="#mfpagerecordsbuffer" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>mfpagerecordsbuffer</span></a></li>
+<li><a href="#navmap" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>navmap</span></a></li>
+<li><a href="#navmapupdated" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>navmapupdated</span></a></li>
+<li><a href="#navpane" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>navpane</span></a></li>
+<li><a href="#outputmessage" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>outputmessage</span></a></li>
+<li><a href="#resourceLoader" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>resource<wbr/>Loader</span></a></li>
+<li><a href="#spc" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>spc</span></a></li>
+<li><a href="#timeout" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>timeout</span></a></li>
+<li><a href="#addHaverstedPages" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>add<wbr/>Haversted<wbr/>Pages</span></a></li>
+<li><a href="#createWindowSelector" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>create<wbr/>Window<wbr/>Selector</span></a></li>
+<li><a href="#fetchDOM" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>fetchDOM</span></a></li>
+<li><a href="#getOutputMessage" class=""><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Output<wbr/>Message</span></a></li>
+<li><a href="#harvesting" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>harvesting</span></a></li>
+<li><a href="#init" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>init</span></a></li>
+<li><a href="#isDone" class=""><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>is<wbr/>Done</span></a></li>
+<li><a href="#isMF" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>isMF</span></a></li>
+<li><a href="#matrixMapping" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>matrix<wbr/>Mapping</span></a></li>
+<li><a href="#pageParser" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>page<wbr/>Parser</span></a></li>
+<li><a href="#pageRecordsCleaner" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>page<wbr/>Records<wbr/>Cleaner</span></a></li>
+<li><a href="#pageRecordsHandler" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>page<wbr/>Records<wbr/>Handler</span></a></li>
+<li><a href="#pageRecordsMapper" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>page<wbr/>Records<wbr/>Mapper</span></a></li>
+<li><a href="#pageRecordsMerger" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>page<wbr/>Records<wbr/>Merger</span></a></li>
+<li><a href="#parser" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>parser</span></a></li>
+<li><a href="#processing" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>processing</span></a></li>
+<li><a href="#rowsMapper" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>rows<wbr/>Mapper</span></a></li>
+<li><a href="#run" class=""><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>run</span></a></li>
+<li><a href="#updateNavMapURI" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>update<wbr/>Nav<wbr/>MapURI</span></a></li>
+<li><a href="#validation" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>validation</span></a></li></ul></div></details></div>
+<div class="site-menu">
+<nav class="tsd-navigation"><a href="../modules.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-namespace)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-4-path"></rect><path d="M9.33 16V7.24H10.77L13.446 14.74C13.43 14.54 13.41 14.296 13.386 14.008C13.37 13.712 13.354 13.404 13.338 13.084C13.33 12.756 13.326 12.448 13.326 12.16V7.24H14.37V16H12.93L10.266 8.5C10.282 8.692 10.298 8.936 10.314 9.232C10.33 9.52 10.342 9.828 10.35 10.156C10.366 10.476 10.374 10.784 10.374 11.08V16H9.33Z" fill="var(--color-text)" id="icon-4-text"></path></svg><span>flysh</span></a>
+<ul class="tsd-small-nested-navigation">
+<li>
+<details class="tsd-index-accordion" data-key="model"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg><a href="../modules/model.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4-path"></use><use href="#icon-4-text"></use></svg><span>model</span></a></summary>
+<div class="tsd-accordion-details">
+<ul class="tsd-nested-navigation">
+<li><a href="model.DomElement.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-class)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-128-path"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)" id="icon-128-text"></path></svg><span>Dom<wbr/>Element</span></a></li>
+<li><a href="model.NavPane.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg><span>Nav<wbr/>Pane</span></a></li>
+<li><a href="model.SPC.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg><span>SPC</span></a></li>
+<li><a href="model.Sibling.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg><span>Sibling</span></a></li>
+<li><a href="../interfaces/model.Boolean.html" class="tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-interface)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-256-path"></rect><path d="M9.51 16V15.016H11.298V8.224H9.51V7.24H14.19V8.224H12.402V15.016H14.19V16H9.51Z" fill="var(--color-text)" id="icon-256-text"></path></svg><span>Boolean</span></a></li>
+<li><a href="../interfaces/model.CallSite.html" class="tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Call<wbr/>Site</span></a></li>
+<li><a href="../interfaces/model.Error.html" class="tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Error</span></a></li>
+<li><a href="../functions/model.Boolean-1.html" class="tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg><span>Boolean</span></a></li>
+<li><a href="../functions/model.Error-1.html" class="tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>Error</span></a></li></ul></div></details></li>
+<li><a href="Flysh.html" class="current"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg><span>Flysh</span></a></li>
+<li><a href="FlyshException.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg><span>Flysh<wbr/>Exception</span></a></li>
+<li><a href="InputMessage.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg><span>Input<wbr/>Message</span></a></li>
+<li><a href="OutputMessage.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg><span>Output<wbr/>Message</span></a></li>
+<li><a href="PageRecords.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg><span>Page<wbr/>Records</span></a></li></ul></nav></div></div></div>
+<div class="tsd-generator">
+<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
+<div class="overlay"></div></body></html>

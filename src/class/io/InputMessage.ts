@@ -1,9 +1,9 @@
 import { Expose, Type } from 'class-transformer';
 import { FlyshException } from '../exception/FlyshException';
-import { DomElement } from '../lib/DomElement';
-import { NavPane } from '../lib/NavPane'; 
-import { Sibling } from '../lib/Sibling';
-import { SPC } from '../lib/SPC';
+import { DomElement } from '../model/DomElement';
+import { NavPane } from '../model/NavPane'; 
+import { Sibling } from '../model/Sibling';
+import { SPC } from '../model/SPC';
 
 import "reflect-metadata";
 

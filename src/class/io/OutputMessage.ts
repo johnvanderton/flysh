@@ -1,5 +1,5 @@
 import { Expose } from 'class-transformer';
-import { PageRecords } from '../lib/PageRecords';
+import { PageRecords } from '../model/PageRecords';
 
 import "reflect-metadata";
 

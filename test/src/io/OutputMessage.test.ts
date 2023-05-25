@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { OutputMessage } from '../../../src/class/io/OutputMessage';
-import { PageRecords } from '../../../src/class/lib/PageRecords';
+import { PageRecords } from '../../../src/class/model/PageRecords';
 
 /**
  * 'OutputMessage' Main Class Test

@@ -1,7 +1,7 @@
 import { FlyshException } from '../../../src/class/exception/FlyshException';
 import { InputMessage } from '../../../src/class/io/InputMessage';
-import { NavPane } from '../../../src/class/lib/NavPane';
-import { SPC } from '../../../src/class/lib/SPC';
+import { NavPane } from '../../../src/class/model/NavPane';
+import { SPC } from '../../../src/class/model/SPC';
 
 const chai = require('chai');
 const expect = chai.expect;

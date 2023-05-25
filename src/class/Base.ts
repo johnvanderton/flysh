@@ -5,7 +5,7 @@ import { Log4TS } from "./helpers/Log4TS";
 import { SimpleClassLoader } from "./helpers/SimpleClassLoader";
 
 /**
-* 'Base' class
+* 'Base' class definition
 */
 export class Base {
 

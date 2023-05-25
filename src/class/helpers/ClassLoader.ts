@@ -1,7 +1,7 @@
 import { Flysh } from "../Flysh";
 import { InputMessage } from "../io/InputMessage";
 import { OutputMessage } from "../io/OutputMessage";
-import { PageRecords } from '../../../src/class/lib/PageRecords';
+import { PageRecords } from '../model/PageRecords';
 
 /**
  * 'ClassLoader' class helper 

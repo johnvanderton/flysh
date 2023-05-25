@@ -1,9 +1,9 @@
 import { Flysh } from '../../../src/class/Flysh';
 import { FlyshException } from '../../../src/class/exception/FlyshException';
 import { InputMessage } from '../../../src/class/io/InputMessage';
-import { PageRecords } from '../../../src/class/lib/PageRecords';
-import { Sibling } from '../../../src/class/lib/Sibling';
-import { SPC } from '../../../src/class/lib/SPC';
+import { PageRecords } from '../../../src/class/model/PageRecords';
+import { Sibling } from '../../../src/class/model/Sibling';
+import { SPC } from '../../../src/class/model/SPC';
 
 const chai = require('chai');
 const expect = chai.expect;

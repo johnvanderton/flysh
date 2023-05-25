@@ -1,8 +1,8 @@
 import { FlyshException } from "./exception/FlyshException";
-import { DomElement } from "./lib/DomElement";
-import { NavPane } from "./lib/NavPane";
-import { PageRecords } from "./lib/PageRecords";
-import { SPC } from "./lib/SPC";
+import { DomElement } from "./model/DomElement";
+import { NavPane } from "./model/NavPane";
+import { PageRecords } from "./model/PageRecords";
+import { SPC } from "./model/SPC";
 import { InputMessage } from "./io/InputMessage";
 import { OutputMessage } from "./io/OutputMessage"; 
 
@@ -12,7 +12,12 @@ const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
 /**
- * Flysh class
+ * 'Flysh' class definition
+ * 
+ * This class called 'Flysh' is the main element of the library. It allows the extraction of data thanks to the 
+ * interpretation of the DOM structure from HTML type documents. This is currently invoking specific libraries 
+ * such as'JQuery' and 'JSDOM'.
+ * 
  */
 export class Flysh  {
 
@@ -174,7 +179,7 @@ export class Flysh  {
      * @param dom Object that contains the 'DOM' structure of the document
      * @returns Returns the 'JQuery' selector
      */
-    private createWindowSelector(dom : any) {
+    private createWindowSelector(dom : any) : typeof jsdom {
         return jquery(dom.window);
     }
 
