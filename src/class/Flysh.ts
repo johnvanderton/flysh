@@ -1,10 +1,10 @@
 import { FlyshException } from "./exception/FlyshException";
 import { DomElement } from "./model/DomElement";
+import { InputMessage } from "./io/InputMessage"; 
 import { NavPane } from "./model/NavPane";
+import { OutputMessage } from "./io/OutputMessage";
 import { PageRecords } from "./model/PageRecords";
 import { SPC } from "./model/SPC";
-import { InputMessage } from "./io/InputMessage";
-import { OutputMessage } from "./io/OutputMessage"; 
 
 const jquery = require("jquery");
 const jsdom = require("jsdom");
@@ -136,21 +136,26 @@ export class Flysh  {
     }
 
     /**
-     * Starts the class process asynchronously and waits for the parsed data from local/distant document(s)
+     * Starts the whole process asynchronously and waits for the parsed data coming from local/distant document(s)
+     * 
+     * @returns Returns a 'Promise' that contains the 'OutputMessage' class instance
      */
-    public async run() {
+    public async run() : Promise<OutputMessage> {
+
         try {
             this.init()
             await this.processing()
-                .catch((err) => {
-                    console.log(err);
-                });
+                      .catch((err) => {
+                        console.log(err);
+                      });
         } catch (err) {
             console.log(err);
         }
         finally {
             this.done = true;
         }
+        
+        return this.getOutputMessage();
     }
 
     /**
@@ -435,9 +440,7 @@ export class Flysh  {
                 } else nodeList.forEach((elem) => {_retVal.push(elem.innerHTML);});
             });
         }
-
         return _retVal;
-
     }
 
     /**
@@ -566,9 +569,11 @@ export class Flysh  {
      * NOTE : Each back 'Promise' are stored from properties and available from getter functions
      */
     private async processing() {
-        await this.harvesting(this.URI)// Resolves the first page (reaching the domain and potentially creating the 'navmap' ('Paginator'))
+        // Resolve the first page (reaching the domain and potentially creating the 'navmap' ('Paginator'))
+        await this.harvesting(this.URI)
                   .then(async () => {
-                    for (const e of this.navmap)// In case of any other URI page to parse
+                    // In case of any other URI page to parse
+                    for (const e of this.navmap)
                         await this.harvesting(e);
                     })
     }

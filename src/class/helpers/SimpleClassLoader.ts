@@ -26,14 +26,13 @@ export class SimpleClassLoader {
 
                 let f = new Flysh(inputMessage);
                 f.run()
-                     .then(() => {
-                         let outputMessage : OutputMessage = f.getOutputMessage();
-                           console.log('Pages/Total of Records [' + outputMessage.numberOfPages + ', ' 
-                                                                  + outputMessage.numberOfRecords + ']' 
-                                                                  + "\n" + 'Integrity Check ' + ' : ' 
-                                                                  + outputMessage.integrityCheck);
-                           outputMessage.pageRecordList.forEach((e: PageRecords)=> {console.log(e);});
-                           console.log("\n### End of process ###\n");
+                        .then((results) => {
+                                console.log('Pages/Total of Records [' + results.numberOfPages + ', ' 
+                                                                       + results.numberOfRecords + ']' 
+                                                                       + "\n" + 'Integrity Check ' + ' : ' 
+                                                                       + results.integrityCheck);
+                                results.pageRecordList.forEach((e: PageRecords)=> {console.log(e);});
+                                console.log("\n### End of process ###\n");
                         });
 
         }

@@ -97,21 +97,20 @@ export class ClassLoader {
         private startPreloadedClassInstances() {
                 this.preloadedFlyshInstances.forEach((flyshInstance) => {
                         flyshInstance.run()
-                                .then(() => {
-                                        this.collectingLaunchedClassInstances(flyshInstance);
-                                        });
+                                     .then((result) => {
+                                        this.collectingLaunchedClassInstances(result);
+                                     });
                 });
         }
 
         /**
          * Invoked by the asynchronous instances once they've finished their jobs
          * 
-         * @param f 'Flysh' class to instanciate
+         * @param outputMessage 
          */
-        private collectingLaunchedClassInstances(f : Flysh) {
-                let outputMessage : OutputMessage = f.getOutputMessage();
+        private collectingLaunchedClassInstances(outputMessage : OutputMessage) {
                 console.log('Pages/Total of Records, [' + outputMessage.numberOfPages + ', ' 
-                                                       + outputMessage.numberOfRecords + ']' 
+                                                        + outputMessage.numberOfRecords + ']' 
                             + "\n" + 'Integrity Check : ' + outputMessage.integrityCheck
                             + "\n" + 'Instance ID : ' + outputMessage.ID 
                             );

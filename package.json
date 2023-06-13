@@ -22,7 +22,7 @@
     "build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
     "clean": "rimraf dist/",
     "test [windows]": "mocha -r ts-node/register test/**/*.test.ts",
-    "test [linux]": "mocha -r ts-node/register test/**/*.test.ts test/**/**/*.test.ts test/src/**/*.test.ts",
+    "test [nix]": "mocha -r ts-node/register test/**/*.test.ts test/**/**/*.test.ts test/src/**/*.test.ts",
     "run": "node dist/cjs/example/index.js"
   },
   "repository": {
