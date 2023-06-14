@@ -154,14 +154,14 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
             const f = new Flysh(IM);
 
             it('Expects 1 records returned from the first page list', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].numberRecords).to.be.equal(1);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].numberRecords).to.be.equal(1);
                 });
             });
 
             it('Expects preseted data values from the first page, first row, first column', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[0].values().next().value).to.be.equal('row_0_column_0_value');
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[0].values().next().value).to.be.equal('row_0_column_0_value');                    
                 });
             });
         });
@@ -180,20 +180,20 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
             const f = new Flysh(IM);
 
             it('Expects 6 records returned from the first page list', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].numberRecords).to.be.equal(6);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].numberRecords).to.be.equal(6);
                 });
             });
 
             it('Expects preseted data values from the first page, second row, third column', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[1].get('column_3')).to.be.equal("row_2_column_3_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[1].get('column_3')).to.be.equal("row_2_column_3_value");
                 });
             });
 
             it('Expects preseted data values from the first page, first row, second column', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[0].get('column_2')).to.be.equal("row_1_column_2_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[0].get('column_2')).to.be.equal("row_1_column_2_value");
                 });
             });
 
@@ -213,20 +213,20 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
             const f = new Flysh(IM);
 
             it('Expects 6 records returned from the first page list', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].numberRecords).to.be.equal(6);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].numberRecords).to.be.equal(6);
                 });
             });
 
             it('Expects preseted data values from the first page, second row, third column', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[1].get('column_3')).to.be.equal("row_2_column_3_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[1].get('column_3')).to.be.equal("row_2_column_3_value");
                 });
             });
 
             it('Expects preseted data values from the first page, first row, second column', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[0].get('column_2')).to.be.equal("row_1_column_2_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[0].get('column_2')).to.be.equal("row_1_column_2_value");
                 });
             });
 
@@ -246,20 +246,20 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
             const f = new Flysh(IM);
 
             it('Expects 6 records returned from the first page list', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].numberRecords).to.be.equal(6);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].numberRecords).to.be.equal(6);
                 });
             });
 
             it('Expects preseted data values from the first page, second row, third column', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[1].get('column_3')).to.be.equal("row_2_column_3_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[1].get('column_3')).to.be.equal("row_2_column_3_value");
                 });
             });
 
             it('Expects preseted data values from the first page, first row, second column', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[0].get('column_2')).to.be.equal("row_1_column_2_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[0].get('column_2')).to.be.equal("row_1_column_2_value");
                 });
             });
 
@@ -279,20 +279,20 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
             const f = new Flysh(IM);
 
             it('Expects 6 records returned from the first page list', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].numberRecords).to.be.equal(6);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].numberRecords).to.be.equal(6);
                 }); 
             });
 
             it('Expects preseted data values from the first page, second row, third column', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[1].get('column_3')).to.be.equal("row_2_column_3_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[1].get('column_3')).to.be.equal("row_2_column_3_value");
                 });
             });
 
             it('Expects preseted data values from the first page, first row, second column', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[0].get('column_2')).to.be.equal("row_1_column_2_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[0].get('column_2')).to.be.equal("row_1_column_2_value");
                 });
             });
 
@@ -313,32 +313,32 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
             const f = new Flysh(IM);
 
             it('Expects 6 records returned from the first page list', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].numberRecords).to.be.equal(6);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].numberRecords).to.be.equal(6);
                 });
             });
 
             it('Expects preseted data values from the first page, second row, third column', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[1].get('column_3')).to.be.equal("row_2_column_3_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[1].get('column_3')).to.be.equal("row_2_column_3_value");
                 });
             });
 
             it('Expects preseted data values from the first page, first row, second column', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[0].get('column_2')).to.be.equal("row_1_column_2_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[0].get('column_2')).to.be.equal("row_1_column_2_value");
                 });
             });
 
             it('Expects multiple pages to parse from navigation page (3x)', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).numberOfPages).to.be.equal(3);
+                await f.run().then((result) => {
+                    expect((result).numberOfPages).to.be.equal(3);
                 });
             });
 
             it('Expects total number of records equal to 18', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).numberOfRecords).to.be.equal(18);
+                await f.run().then((result) => {
+                    expect((result).numberOfRecords).to.be.equal(18);
                 });
             });
 
@@ -358,26 +358,26 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
             const f = new Flysh(IM);
 
             it('Expects 6 records returned from the list', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].numberRecords).to.be.equal(6);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].numberRecords).to.be.equal(6);
                 });
             });
 
             it('Expects preseted data values from the first page, second item, second field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[1].get('column_2')).to.be.equal("item_1_description_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[1].get('column_2')).to.be.equal("item_1_description_value");
                 });
             });
 
             it('Expects preseted data values from the first page, first item, third field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[0].get('column_3')).to.be.equal("item_0_detail_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[0].get('column_3')).to.be.equal("item_0_detail_value");
                 });
             });
 
             it('Expects multiple pages to parse from navigation page (1x)', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).numberOfPages).to.be.equal(1);
+                await f.run().then((result) => {
+                    expect((result).numberOfPages).to.be.equal(1);
                 });
             });
 
@@ -398,38 +398,38 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
             const f = new Flysh(IM);
 
             it('Expects 6 records returned from the first page list', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].numberRecords).to.be.equal(6);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].numberRecords).to.be.equal(6);
                 });
             });
 
             it('Expects preseted data values from the first page, second item, second field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[1].get('column_2')).to.be.equal("item_1_description_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[1].get('column_2')).to.be.equal("item_1_description_value");
                 });
             });
 
             it('Expects preseted data values from the first page, first item, third field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[0].get('column_3')).to.be.equal("item_0_detail_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[0].get('column_3')).to.be.equal("item_0_detail_value");
                 });
             });
 
             it('Expects preseted data values from the second page, first item, third field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[1].recordList[0].get('column_3')).to.be.equal("item_0_detail_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[1].recordList[0].get('column_3')).to.be.equal("item_0_detail_value");
                 });
             });
 
             it('Expects preseted data values from the third page, first item, third field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[2].recordList[0].get('column_3')).to.be.equal("item_0_detail_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[2].recordList[0].get('column_3')).to.be.equal("item_0_detail_value");
                 });
             });
 
             it('Expects multiple pages to parse from navigation page (3x)', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).numberOfPages).to.be.equal(3);
+                await f.run().then((result) => {
+                    expect((result).numberOfPages).to.be.equal(3);
                 });
             });
 
@@ -450,38 +450,38 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
             const f = new Flysh(IM);
 
             it('Expects one page to parse', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).numberOfPages).to.be.equal(1);
+                await f.run().then((result) => {
+                    expect((result).numberOfPages).to.be.equal(1);
                 });
             });
 
             it('Expects 36 records returned from the first page list', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].numberRecords).to.be.equal(36);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].numberRecords).to.be.equal(36);
                 });
             });
 
             it('Expects preseted data values from the first page, second item, second field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[1].get('column_2')).to.be.equal("item_row_0_column_1_detail_1_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[1].get('column_2')).to.be.equal("item_row_0_column_1_detail_1_value");
                 });
             });
 
             it('Expects preseted data values from the first page, first item, third field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[0].get('column_3')).to.be.equal("item_row_0_column_0_detail_2_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[0].get('column_3')).to.be.equal("item_row_0_column_0_detail_2_value");
                 });
             });
 
             it('Expects preseted data values from the first page, fifth item, fourth field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[5].get('column_4')).to.be.equal("item_row_1_column_2_detail_3_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[5].get('column_4')).to.be.equal("item_row_1_column_2_detail_3_value");
                 });
             });
 
             it('Expects preseted data values from the first page, seventh field, second field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[7].get('column_2')).to.be.equal("item_row_2_column_1_detail_1_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[7].get('column_2')).to.be.equal("item_row_2_column_1_detail_1_value");
                 });
             });
 
@@ -504,32 +504,32 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
             const f = new Flysh(IM);
 
             it('Expects one page to parse', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).numberOfPages).to.be.equal(1);
+                await f.run().then((result) => {
+                    expect((result).numberOfPages).to.be.equal(1);
                 });
             });
 
             it('Expects 12 records returned from the first page list', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].numberRecords).to.be.equal(12);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].numberRecords).to.be.equal(12);
                 });
             });
 
             it('Expects preseted data values from the first page, second item, second field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[1].get('column_2')).to.be.equal("row_1_field_1_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[1].get('column_2')).to.be.equal("row_1_field_1_value");
                 });
             });
 
             it('Expects preseted data values from the first page, first item, third field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[0].get('column_3')).to.be.equal("row_0_field_2_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[0].get('column_3')).to.be.equal("row_0_field_2_value");
                 });
             });
 
             it('Expects preseted data values from the first page, fourth item, third field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[3].get('column_3')).to.be.equal("row_3_field_2_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[3].get('column_3')).to.be.equal("row_3_field_2_value");
                 });
             });
 
@@ -549,20 +549,20 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
             const f = new Flysh(IM);
 
             it('Expected 9 records returned from the first page list', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].numberRecords).to.be.equal(9);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].numberRecords).to.be.equal(9);
                 });
             });
 
             it('Expected preseted data values from the first page, second item, second field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[1].get('column_2')).to.be.equal("row_2_column_3_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[1].get('column_2')).to.be.equal("row_2_column_3_value");
                 });
             });
 
             it('Expected preseted data values from the first page, third item, first field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[2].get('column_1')).to.be.equal("row_3_column_2_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[2].get('column_1')).to.be.equal("row_3_column_2_value");
                 });
             });
 
@@ -582,20 +582,20 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
             const f = new Flysh(IM);
 
             it('Expected 9 records returned from the first page list', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].numberRecords).to.be.equal(9);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].numberRecords).to.be.equal(9);
                 });
             });
 
             it('Expected preseted data values from the first page, second item, first field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[1].get('column_1')).to.be.equal(undefined);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[1].get('column_1')).to.be.equal(undefined);
                 });
             });
 
             it('Expected preseted data values from the first page, third item, third field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[2].get('column_3')).to.be.equal("row_3_column_3_value");
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[2].get('column_3')).to.be.equal("row_3_column_3_value");
                 });
             });
     
@@ -615,32 +615,32 @@ describe('_________(Flysh Class "Non Dynamic Tests")_________', () => {
             const f = new Flysh(IM);
 
             it('Expected 1 page of records', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).numberOfPages).to.be.equal(1);
+                await f.run().then((result) => {
+                    expect((result).numberOfPages).to.be.equal(1);
                 });
             });
 
             it('Expected 12 records returned from the first page list', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].numberRecords).to.be.equal(12);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].numberRecords).to.be.equal(12);
                 });
             });
 
             it('Expected preseted data values from the first page, first item, first field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[0].get('column_1')).to.be.equal('row_1_column_1_value');
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[0].get('column_1')).to.be.equal('row_1_column_1_value');
                 });
             });
 
             it('Expected preseted data values from the first page (undefined), third item, second field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[2].get('column_2')).to.be.equal(undefined);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[2].get('column_2')).to.be.equal(undefined);
                 });
             });
 
             it('Expected preseted data values from the first page (undefined), fourth item, first field', async () => {
-                await f.run().then(() => {
-                    expect((<OutputMessage>f.getOutputMessage()).pageRecordList[0].recordList[3].get('column_1')).to.be.equal(undefined);
+                await f.run().then((result) => {
+                    expect((result).pageRecordList[0].recordList[3].get('column_1')).to.be.equal(undefined);
                 });
             });
     

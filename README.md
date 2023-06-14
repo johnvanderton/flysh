@@ -4,7 +4,7 @@
 
 # **README**
 
-- Document last update : 15/05/2023
+- Document last update : 13/06/2023
 - Author : **John Van Derton** — **john@cserv.be** 
 
 ## **What is it ?**
@@ -78,18 +78,17 @@ See the example from below,
 
 ```typescript
 flysh.run()
-     .then(() => {
-        let outputMessage : OutputMessage = f.getOutputMessage();
-        console.log('Pages/Total of Records [' + outputMessage.numberOfPages + ', ' 
-                                                + outputMessage.numberOfRecords + ']' 
-                                                + "\n" + 'Integrity Check ' + ' : ' 
-                                                + outputMessage.integrityCheck);
-        outputMessage.pageRecordList.forEach((e: PageRecords)=> {console.log(e);});
+     .then((result) => {
+        console.log('Pages/Total of Records [' + result.numberOfPages + ', ' 
+                                               + result.numberOfRecords + ']' 
+                                               + "\n" + 'Integrity Check ' + ' : ' 
+                                               + result.integrityCheck);
+        result.pageRecordList.forEach((e: PageRecords) => {console.log(e);});
         console.log("\n### End of process ###\n");
      });
 
-//A list is returned by the 'pageRecords()' getter method and available as follow,
-outputMessage.pageRecordList.forEach((e: PageRecords)=> {console.log(e);});
+//A list is returned by the 'pageRecordList()' getter method and available as follow,
+result.pageRecordList.forEach((e: PageRecords)=> {console.log(e);});
 ```
 
 4) After displaying the content of a `PageRecords` class instance, you will finally obtain the below stack,
@@ -305,24 +304,23 @@ You can manually install the library from **NPM** by doing the next command,
 All the commands are available from the `tasks.json` file.
 
 **Console commands [Windows\Linux]**
-- **clean binaries**, `rimraf .\dist\*`
+
+- **deploy (all)**, `rimraf dist/ && tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json && node dist/cjs/example/index.js` 
+- **build**, `tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json`
+- **build doc**, `npx typedoc --internalModule model --plugin typedoc-plugin-missing-exports --out docs ./src` 
+- **clean binaries**, `rimraf dist/`
 - **compile**, `tsc -p .\tsconfig.json`
-- **test**, [windows], `mocha -r ts-node/register test/**/*.test.ts`
-- **test**, [linux], `mocha -r ts-node/register test/**/*.test.ts test/**/**/*.test.ts test/src/**/*.test.ts`
-- **run**, `node .\dist\out-tsc\index.js`
+- **test [windows]**, `mocha -r ts-node/register test/**/*.test.ts`
+- **test [*nix*]**, `mocha -r ts-node/register test/**/*.test.ts test/**/**/*.test.ts test/src/**/*.test.ts`
+- **run**, `node dist/cjs/example/index.js`
 
 ### Framework dependencies
 
-This current version library has been implemented, built and tested on,
+EcmaScript versions,
 
 - **EcmaScript** = `ES2019`
 - **EcmaScript** (ESM Module) = `ESNEXT`
 - **EcmaScript** (Types Module) = `ESNEXT`
-- **Jquery** = `3.7.0`
-- **Jsdom** = `22.0.0`
-- **NodeJS** >= `20.1.0`
-- **NPM** >= `9.1.1`
-- **TypeScript** >= `5.0.2`
 
 ### **Exceptions list**
 
