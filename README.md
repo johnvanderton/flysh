@@ -11,8 +11,6 @@
 
 **Flysh** is an HTML type document parser based on **jQuery** and **JSDOM**.
 
-Topics
-
 ## **How does it work ?**
 
 Shortly, it's all about **DOM** and how **HTML/(XHTML/XML)** pages can be interacted with. But what **DOM** acronym does mean? The definition given by the **W3C** consortium is 'Document Object Model', this standard is dedicated to formalize interaction when accessing documents.
