@@ -4,12 +4,14 @@
 
 # **README**
 
-- Document last update : 13/06/2023
+- Document last update : 19/06/2023
 - Author : **John Van Derton** — **john@cserv.be** 
 
 ## **What is it ?**
 
-**Flysh** is a preprocessor built over the **JQuery** library and dedicated to collect data from **HTML** documents.
+**Flysh** is an HTML type document parser based on **jQuery** and **JSDOM**.
+
+Topics
 
 ## **How does it work ?**
 
