@@ -23,6 +23,7 @@
 
 ## Well-Known bug(s)
 
+    - The npx package is having security issues and has been temporally removed from package.json
     - Please refer to the previous log version
     - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
 
