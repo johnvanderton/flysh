@@ -8,7 +8,7 @@
 
 ## Mid-minor release version '1.1.1'
 
-    - Updated the flysh 'run()' function that now returns a 'Promise' with the 'OutputMessage'
+    - Updated the flysh 'run()' function that now returns a 'Promise' with the 'OutputMessage' class instance
     - Added API documentation (docs)
     - Added 'Build & Run' NPM command script
     - Added 'Build Doc' NPM command script

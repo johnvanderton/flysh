@@ -4,7 +4,7 @@
 
 # **README**
 
-- Document last update : 19/06/2023
+- Document last update : 20/06/2023
 - Author : **John Van Derton** — **john@cserv.be** 
 
 ## **What is it ?**
@@ -308,8 +308,7 @@ All the commands are available from the `tasks.json` file.
 - **deploy (all)**, `rimraf dist/ && tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json && node dist/cjs/example/index.js` 
 - **build**, `tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json`
 - **build doc**, `npx typedoc --internalModule model --plugin typedoc-plugin-missing-exports --out docs ./src` 
-- **clean binaries**, `rimraf dist/`
-- **compile**, `tsc -p .\tsconfig.json`
+- **clean**, `rimraf dist/`
 - **test [windows]**, `mocha -r ts-node/register test/**/*.test.ts`
 - **test [*nix*]**, `mocha -r ts-node/register test/**/*.test.ts test/**/**/*.test.ts test/src/**/*.test.ts`
 - **run**, `node dist/cjs/example/index.js`
