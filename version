@@ -1,5 +1,31 @@
 ==================================================
-= 'Anchor' (version v1.1.1), Summer release 2023 =
+= 'Anchor' (version 1.1.2), Summer release 2023 =
+==================================================
+
+## Preamble
+
+    This is the "Anchor" minor release version which includes several changes and fixes
+
+## Minor release version '1.1.2'
+
+    - xxx
+
+## Feature(s)
+
+    - xxx
+
+## Limitation(s)
+
+    - Please refer to the previous log version
+
+## Well-Known bug(s)
+
+    - The npx package is having security issues and has been temporally removed from package.json
+    - Please refer to the previous log version
+    - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
+
+==================================================
+= 'Anchor' (version 1.1.1), Summer release 2023 =
 ==================================================
 
 ## Preamble
@@ -28,7 +54,7 @@
     - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
 
 ==================================================
-= 'Anchor' (version v1.1.0), Spring release 2023 =
+= 'Anchor' (version 1.1.0), Spring release 2023 =
 ==================================================
 
 ## Preamble
@@ -58,7 +84,7 @@
     - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
 
 ==================================================
-= 'Anchor' (version v1.0.0), Spring release 2023 =
+= 'Anchor' (version 1.0.0), Spring release 2023 =
 ==================================================
 
 ## Preamble
@@ -90,7 +116,7 @@
     - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
 
 ==========================================================
-= 'Base' (Pre-release version v0.2.2), Fall release 2022 =
+= 'Base' (Pre-release version 0.2.2), Fall release 2022 =
 ==========================================================
 
 ## Preamble
@@ -119,7 +145,7 @@
     - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
 
 ============================================================
-= 'Base' (Pre-release version v0.2.1), Summer release 2022 =
+= 'Base' (Pre-release version 0.2.1), Summer release 2022 =
 ============================================================
 
 ## Preamble
@@ -148,7 +174,7 @@
     - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
 
 =======================================================
-= 'Base' (Hotfix version v0.1.8), Spring release 2022 =
+= 'Base' (Hotfix version 0.1.8), Spring release 2022 =
 =======================================================
 
 ## Preamble

@@ -1,11 +1,8 @@
-import { Expose, Type } from 'class-transformer';
 import { FlyshException } from '../exception/FlyshException';
 import { DomElement } from '../model/DomElement';
 import { NavPane } from '../model/NavPane'; 
 import { Sibling } from '../model/Sibling';
 import { SPC } from '../model/SPC';
-
-import "reflect-metadata";
 
 /**
  * 'InputMessage' class model
@@ -31,15 +28,7 @@ export class InputMessage {
      * Class properties
      */
     private _domain: string;
-    @Type(()=> DomElement, {
-        discriminator: {
-            property: '__type',
-            subTypes: [
-              { value: NavPane, name: 'navpane' },
-              { value: SPC, name: 'spc' }
-            ],
-          },
-    })
+
     private _doms : DomElement[] | NavPane[] | SPC[] = new Array<DomElement>();
     private _fs : boolean = true;
     private _id : number;
@@ -94,7 +83,6 @@ export class InputMessage {
      * 
      * @param Class Parameter that contains the class name to validate
      */
-    @Expose()
     private domsValidate(Class : any) {
         switch (true) {
             case Class instanceof NavPane : {
@@ -116,7 +104,6 @@ export class InputMessage {
      * 
      * @return Returns the '_id' class property
      */
-    @Expose()
     public get ID(): number {
         return this._id;
     }
@@ -126,7 +113,6 @@ export class InputMessage {
      * 
      * @return Returns the '_doms' class property
      */
-    @Expose()
     get doms() {
         return this._doms;
     }
@@ -136,7 +122,6 @@ export class InputMessage {
      * 
      * @return Returns the '_navpane' class property
      */
-    @Expose()
     public get hasNavpane() : boolean {
         return this._navpane;
     }
@@ -146,7 +131,6 @@ export class InputMessage {
      * 
      * @return Returns the '_domain' class property 
      */
-    @Expose()
     public get domain() : string {
         return this._domain;
     }
@@ -156,7 +140,6 @@ export class InputMessage {
      * 
      * @return Returns the '_pagepath' class property
      */
-    @Expose()
     public get pagepath() : string {
         return this._pagepath;
     }
@@ -166,7 +149,6 @@ export class InputMessage {
      * 
      * @return Returns the '_filesystem' class property
      */
-    @Expose()
     public get filesystem() : boolean {
         return this._fs;
     }
@@ -176,7 +158,6 @@ export class InputMessage {
      * 
      * @return Returns the current class timeout value
      */
-    @Expose()
     public get timeout() : number {
         return this._timeout;
     }
@@ -186,22 +167,24 @@ export class InputMessage {
      * 
      * @return Returns the complete 'URI' ('_domain' + '_pagePath')
      */ 
-    @Expose()
     public get URI() : string {
         return this._domain + this._pagepath; 
     }
 
     /**
-     * Returns the 'DOM' element(s) list
+     * Returns the 'DOM' element(s) list under JSON format
      * 
      * @return Returns all the 'DOM' element(s) contained within the '_dom' class property
      */
-    @Expose()
-    get getDomsEntries() {
+    public getDomsEntriesToJSON() {
+        console.log("value = " + NavPane.name);
         let retVal = "";
         this._doms.forEach(e => {
-            if (e instanceof NavPane) retVal += ((<NavPane>(e)).getEntry + '\n');
-            if (e instanceof SPC) retVal += ((<SPC>(e)).getEntry + '\n');
+            /**
+             * replace subClasses getEntry to toJSONt() (with type and regex clean)
+             */
+            if ((e instanceof NavPane)) retVal += ((<NavPane>(e)).getEntry + '\n');
+            if ((e instanceof SPC)) retVal += ((<SPC>(e)).getEntry + '\n');
         });
         return retVal;
     }
@@ -211,15 +194,44 @@ export class InputMessage {
      * 
      * @return Returns a string that shows up all all the class properties
      */
-    @Expose()
     get toString() {
         return  'ID : ' + this._id + '\n' + 
                 'URI : ' + this.URI + '\n' + 
                 'FS : ' + this._fs + '\n' +
                 'NavPane : ' + this._navpane + '\n' +
                 'TimeOut : ' + this._timeout + '\n' +
-                'Doms : ' + '\n' + this.getDomsEntries;
+                'Doms : ' + '\n' + this.getDomsEntriesToJSON();
     }
+
+    /**
+     * TODO : sibling should be sorted by his FS, NavPane and SPC's
+     *        Implement method from SPC to order it all + regular expression
+     *          -`< implement a soecifi funct that extract SPC times instance and
+     *             Jonsify them with type -> to rebuild into inputmessage class instance
+     */
+    get toJSON() {
+        return  {
+                type: "InputMessage",
+                id: this._id,
+                uri: this.URI,
+                fs: this._fs,
+                navpane: this._navpane,
+                timeout: this._timeout,
+                siblings: this.getDomsEntriesToJSON()
+            };
+    }
+
+    /**
+     * 
+     * @param json 
+     * @returns 
+     */
+    static fromJSON(json : any) {
+            /**
+             * loop on json to fill SPC + Fields
+             */
+          return new InputMessage(json.name, json.age);
+      }
 
     /**
      * Set the '_navpane' property value
@@ -274,7 +286,6 @@ export class InputMessage {
      * @param filterselector Contains the current class filter selector 
      * @returns Returns the 'SPC' class instance itself
      */
-    @Expose()
     public addSPC(filterSelector : string) : SPC {
         let newSPC = new SPC(filterSelector, new Array<Sibling>());
         newSPC.validate();
@@ -292,7 +303,6 @@ export class InputMessage {
      * @param filterselector Contains the current class filter selector 
      * @returns Returns the 'Filter Selector' ('SPC') class instance itself
      */
-    @Expose()
     public addFilterSelector(filterSelector : string) : SPC {
         let newFilterSelector = new SPC(filterSelector, new Array<Sibling>());
         newFilterSelector.validate();
@@ -308,7 +318,6 @@ export class InputMessage {
      * @param Class Contains the class name to retrieve
      * @return Returns an array of 'DomElement' that contains the found occurrence(s) 
      */
-    @Expose()
     public findDOMElement(Class : any) : DomElement [] {
             return this._doms.filter(e => e instanceof Class);
     }

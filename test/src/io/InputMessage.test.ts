@@ -186,6 +186,26 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
                 expect((<FlyshException>err).message).to.equal(InputMessage.EXCEPTION_ID_6500001200_MESSAGE_VALUE+"\nCause : ");
             });
         });
+
+        /**
+         * Class Serialization/Deserialization (Class-Transformer)
+         */
+        describe('>>> During class serialization do : ', () => {
+
+            it('[001] Verifying property fields', () => {
+                const IM = new InputMessage('https://testdomain.abc','/testpage');
+                IM.addFilterSelector("Scope Parent Child")
+                  .addField('testField','testTag','testClassName');
+
+                  IM.addFilterSelector("Scope2 Parent2 Child2")
+                  .addField('testField','testTag','testClassName','[0-9]+[\,]*[0-9]*');
+
+                  console.log(IM.toJSON);
+
+                //expect(IM.URI).equal('https://testdomain.abc/testpage');
+            });
+
+        });
     });
 
 });

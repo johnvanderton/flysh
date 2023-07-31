@@ -1,7 +1,3 @@
-import { Expose } from 'class-transformer';
-
-import "reflect-metadata";
-
 /**
  * 'FlyshException' class model
  * 
@@ -43,7 +39,6 @@ export class FlyshException extends Error {
      * 
      * @returns Returns a 'string' that constains the '_error_id' class property
      */
-    @Expose()
     public get errorIDNumber() : number {
         return this._error_id;
     }
@@ -53,7 +48,6 @@ export class FlyshException extends Error {
      * 
      * @returns Returns a 'string' that contains the '_instance_ID' number class property or 'undefined'
      */
-    @Expose()
     public get instanceID() : number | undefined {
         return this._instance_id;
     }
@@ -63,7 +57,6 @@ export class FlyshException extends Error {
      * 
      * @returns Returns a 'string' that contains the '_name' class property
      */
-    @Expose()
     public get name() : string {
         return this._name;
     }
@@ -73,7 +66,6 @@ export class FlyshException extends Error {
     * 
     * @returns Returns a 'string' that displays all the class instance's properties
     */
-     @Expose()
      public toString = () : string => {
         return 'Exception ID: ' + this._error_id + ' (Flysh ID: ' + this._instance_id + ')' + '\n' + 'Stack : ' + (<string>this.stack); 
     }

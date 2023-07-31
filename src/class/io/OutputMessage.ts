@@ -1,7 +1,4 @@
-import { Expose } from 'class-transformer';
 import { PageRecords } from '../model/PageRecords';
-
-import "reflect-metadata";
 
 /**
  * 'OutputMessage' class model
@@ -35,7 +32,6 @@ export class OutputMessage {
      * 
      * @param pageRec Contains the records collected from the current page 
      */
-    @Expose()
     public addPageRecords(pageRec : PageRecords) : void {
         this._pageRecordList.push(pageRec);
     }
@@ -45,7 +41,6 @@ export class OutputMessage {
      * 
      * @returns Returns a 'string' that contains the '_domain' class property
      */
-    @Expose()
     public get domain() : string {
         return this._domain;
     }
@@ -56,7 +51,6 @@ export class OutputMessage {
      * 
      * @returns Returns a 'boolean' value after 'PageRecords 'Integrity Check'
      */
-    @Expose()
     public get integrityCheck() : boolean {
         let _retVal = true;
         for (let pr of this.pageRecordList) 
@@ -69,7 +63,6 @@ export class OutputMessage {
      * 
      * @returns Returns the instance 'ID' number
      */
-    @Expose()
     public get ID() : number {
         return this._id;
     }
@@ -79,7 +72,6 @@ export class OutputMessage {
      * 
      * @returns Returns the counts number of 'PageRecords' from the 'pagerecordList' class property
      */
-    @Expose()
     public get numberOfPages() : number {
         return this.pageRecordList.length;
     }
@@ -89,7 +81,6 @@ export class OutputMessage {
      * 
      * @returns Returns a 'number' that contains the total of records from all the 'PageRecords' ('pageRecordList')
      */
-     @Expose()
     public get numberOfRecords() : number {
         let _retVal = 0
         for (let pr of this.pageRecordList)
@@ -102,7 +93,6 @@ export class OutputMessage {
      * 
      * @returns Returns a 'string' that contains the '_pageRecordList' class property
      */
-    @Expose()
     public get pageRecordList() : Array<PageRecords> {
         return this._pageRecordList;
     }
@@ -112,7 +102,6 @@ export class OutputMessage {
      * 
      * @returns Returns a 'string' that contains all the class properties
      */
-    @Expose()
     get toString() {
         return  'ID : ' + this._id + '\n';
     }
