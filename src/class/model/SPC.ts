@@ -103,6 +103,37 @@ export class SPC extends DomElement {
         return retVal;
     }
 
+
+
+    /**
+     * Returns the 'Silbing' element(s) list under JSON format
+     * 
+     * @return Returns all the 'Sibling' element(s) list under JSON format
+     */
+    public getSiblingEntriesToJSON() : string[] {
+        let retVal = new Array<string>();
+        this._siblings.forEach((e) => {
+            retVal.push(JSON.stringify(e.toJSON));
+        });
+        return retVal;
+    }
+
+
+
+
+    /**
+     * TODO implement toJSON from Silbing array
+     */
+    get toJSON() {
+        return  {
+                type: "SPC",
+                filterselector: this.getFilterSelector,
+                siblings: this.getSiblingEntriesToJSON()
+            };
+    }
+
+
+
     /**
      * Gets the object properties (overridden) 
      * 

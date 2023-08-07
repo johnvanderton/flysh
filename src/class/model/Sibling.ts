@@ -60,6 +60,22 @@ export class Sibling extends DomElement {
                 "Field : " + this._field + "\n";
     } 
 
+
+    /**
+     * 
+     */
+    get toJSON() {
+        return  {
+                type: "Silbing",
+                tag : super._element,
+                classtag : super._signature,
+                fieldname : this._field,
+                regex : this._regex
+            };
+    }
+
+
+
     /**
      * Validates the current 'DOM' element type
      */

@@ -176,15 +176,26 @@ export class InputMessage {
      * 
      * @return Returns all the 'DOM' element(s) contained within the '_dom' class property
      */
-    public getDomsEntriesToJSON() {
-        console.log("value = " + NavPane.name);
+    public getDomsEntries() {
         let retVal = "";
-        this._doms.forEach(e => {
-            /**
-             * replace subClasses getEntry to toJSONt() (with type and regex clean)
-             */
+        this._doms.forEach((e) => {
             if ((e instanceof NavPane)) retVal += ((<NavPane>(e)).getEntry + '\n');
             if ((e instanceof SPC)) retVal += ((<SPC>(e)).getEntry + '\n');
+        });
+        return retVal;
+    }
+
+    /**
+     * Returns the 'DOM' element(s) list under JSON format
+     * 
+     * @return Returns all the 'DOM' element(s) contained within the '_dom' class property
+     */
+    public getDomsEntriesToJSON() : string[] {
+        let retVal : string[];
+        retVal = new Array<string>();
+        this._doms.forEach((e) => {
+            //if ((e instanceof NavPane)) retVal += ((<NavPane>(e)).getEntry + '\n');
+            if ((e instanceof SPC)) retVal.push(JSON.stringify((<SPC>(e)).toJSON));
         });
         return retVal;
     }
@@ -200,7 +211,7 @@ export class InputMessage {
                 'FS : ' + this._fs + '\n' +
                 'NavPane : ' + this._navpane + '\n' +
                 'TimeOut : ' + this._timeout + '\n' +
-                'Doms : ' + '\n' + this.getDomsEntriesToJSON();
+                'Doms : ' + '\n' + this.getDomsEntries();
     }
 
     /**

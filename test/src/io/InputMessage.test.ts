@@ -195,12 +195,13 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
             it('[001] Verifying property fields', () => {
                 const IM = new InputMessage('https://testdomain.abc','/testpage');
                 IM.addFilterSelector("Scope Parent Child")
-                  .addField('testField','testTag','testClassName');
+                  .addField('testField1','testTag','testClassName')
+                  .addField('testField2','testTag','testClassName');
 
-                  IM.addFilterSelector("Scope2 Parent2 Child2")
-                  .addField('testField','testTag','testClassName','[0-9]+[\,]*[0-9]*');
+                IM.addFilterSelector("Scope2 Parent2 Child2")
+                .addField('testField','testTag','testClassName','[0-9]+[\,]*[0-9]*');
 
-                  console.log(IM.toJSON);
+                console.log(IM.toJSON);
 
                 //expect(IM.URI).equal('https://testdomain.abc/testpage');
             });
