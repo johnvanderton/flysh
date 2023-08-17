@@ -195,7 +195,8 @@ export class InputMessage {
         retVal = new Array<string>();
         this._doms.forEach((e) => {
             //if ((e instanceof NavPane)) retVal += ((<NavPane>(e)).getEntry + '\n');
-            if ((e instanceof SPC)) retVal.push(JSON.stringify((<SPC>(e)).toJSON));
+            //if ((e instanceof SPC)) retVal.push(JSON.stringify((<SPC>(e)).toJSON));
+            if ((e instanceof SPC)) retVal.push(JSON.stringify((<SPC>(e))));
         });
         return retVal;
     }
@@ -215,33 +216,24 @@ export class InputMessage {
     }
 
     /**
-     * TODO : sibling should be sorted by his FS, NavPane and SPC's
-     *        Implement method from SPC to order it all + regular expression
-     *          -`< implement a soecifi funct that extract SPC times instance and
-     *             Jonsify them with type -> to rebuild into inputmessage class instance
+     * 'Stringify' the `InputMessage` class instance
+     * 
+     * TODO : invoke the inner mapper
      */
-    get toJSON() {
-        return  {
-                type: "InputMessage",
-                id: this._id,
-                uri: this.URI,
-                fs: this._fs,
-                navpane: this._navpane,
-                timeout: this._timeout,
-                siblings: this.getDomsEntriesToJSON()
-            };
+    public static toJSON(instance : InputMessage) {
+        return JSON.stringify(instance);
     }
 
     /**
+     * Returns a JavaScript Object Notation (JSON) string into an object
      * 
-     * @param json 
+     * TODO : invoke the inner mapper in order to send back a plain 'InputMessage' class instance
+     * 
+     * @param inJson 
      * @returns 
      */
-    static fromJSON(json : any) {
-            /**
-             * loop on json to fill SPC + Fields
-             */
-          return new InputMessage(json.name, json.age);
+    public static fromJSON(inJson : string) {
+        return JSON.parse(inJson);
       }
 
     /**

@@ -2,6 +2,7 @@ import { FlyshException } from '../../../src/class/exception/FlyshException';
 import { InputMessage } from '../../../src/class/io/InputMessage';
 import { NavPane } from '../../../src/class/model/NavPane';
 import { SPC } from '../../../src/class/model/SPC';
+import { Sibling } from '../../../src/class/model/Sibling';
 
 const chai = require('chai');
 const expect = chai.expect;
@@ -188,22 +189,33 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
         });
 
         /**
-         * Class Serialization/Deserialization (Class-Transformer)
+         * `InputMessage` class Serialization/Deserialization
+         * TODO : test with navpane, MF feature, etc... wait for the inner mapper
          */
-        describe('>>> During class serialization do : ', () => {
+        describe('>>> After deserialization of the serialized "InputMessage" do : ', () => {
 
-            it('[001] Verifying property fields', () => {
+            it('[001] Verifying the "_element" name and "_regex" properties from the first "_doms" "_sibling" class property', () => {
                 const IM = new InputMessage('https://testdomain.abc','/testpage');
                 IM.addFilterSelector("Scope Parent Child")
-                  .addField('testField1','testTag','testClassName')
+                  .addField('testField1','testTag','testClassName','[0-9]+[\,]*[0-9]*')
                   .addField('testField2','testTag','testClassName');
 
                 IM.addFilterSelector("Scope2 Parent2 Child2")
                 .addField('testField','testTag','testClassName','[0-9]+[\,]*[0-9]*');
 
-                console.log(IM.toJSON);
+                /**
+                 * Serializing the 'InputMessage' class instance into string format
+                 */
+                let jsonIM = InputMessage.toJSON(IM);
 
-                //expect(IM.URI).equal('https://testdomain.abc/testpage');
+                /**
+                 * Deserializing the stringified 'InputMessage' class instance into an 'any' object type class instance
+                 */
+                let IMM = InputMessage.fromJSON(jsonIM);
+
+                expect(IMM._doms[0]._siblings[0]._element === "testField1");
+                expect(IMM._doms[0]._siblings[0]._regex === "[0-9]+[\,]*[0-9]*");
+
             });
 
         });
