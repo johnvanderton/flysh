@@ -27,6 +27,7 @@ export class SPC extends DomElement {
     /**
      * Private class constants
      */
+    private static readonly DOM_ELEMENT_PRIMITIVE_IDENTIFICATION_NAME_VALUE = "spc"
     private readonly DOM_VALIDATION_FILTER_SELECTOR_MIN_PARAMETERS_VALUE = 2;
  
     /**
@@ -55,7 +56,7 @@ export class SPC extends DomElement {
      * @param siblings Array of 'Sibling' (field) instances that contains the current instance
      */
     constructor(filterselectorsignature : string, siblings: Sibling[]) {
-        super('','');
+        super(SPC.DOM_ELEMENT_PRIMITIVE_IDENTIFICATION_NAME_VALUE,'');
         this._filterselectorsignature = filterselectorsignature.trim();
         this._siblings = siblings;
     }

@@ -234,7 +234,7 @@ export class InputMessage {
      */
     public static fromJSON(inJson : string) {
         return JSON.parse(inJson);
-      }
+    }
 
     /**
      * Set the '_navpane' property value
