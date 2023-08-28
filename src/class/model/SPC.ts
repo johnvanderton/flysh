@@ -85,7 +85,7 @@ export class SPC extends DomElement {
     /**
      * Getter 'sibling(s)' array property
      * 
-     * @returns Returns a 'String' that contains the '_siblings' class property
+     * @returns Returns an array that contains all the children 'Sibling' (fields) class instances
      */
     get getSiblings() : Sibling[] {
         return this._siblings;
