@@ -24,7 +24,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">InputMessage</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L13">src/class/io/InputMessage.ts:13</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L10">src/class/io/InputMessage.ts:10</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -58,7 +58,6 @@
 <a href="InputMessage.html#domain" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>domain</span></a>
 <a href="InputMessage.html#doms" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>doms</span></a>
 <a href="InputMessage.html#filesystem" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>filesystem</span></a>
-<a href="InputMessage.html#getDomsEntries" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>get<wbr/>Doms<wbr/>Entries</span></a>
 <a href="InputMessage.html#hasNavpane" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>has<wbr/>Navpane</span></a>
 <a href="InputMessage.html#navPane" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>nav<wbr/>Pane</span></a>
 <a href="InputMessage.html#pagepath" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>pagepath</span></a>
@@ -74,6 +73,10 @@
 <a href="InputMessage.html#addSPC" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>addSPC</span></a>
 <a href="InputMessage.html#domsValidate" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>doms<wbr/>Validate</span></a>
 <a href="InputMessage.html#findDOMElement" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>findDOMElement</span></a>
+<a href="InputMessage.html#getDomsEntries" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Doms<wbr/>Entries</span></a>
+<a href="InputMessage.html#getDomsEntriesToJSON" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Doms<wbr/>Entries<wbr/>ToJSON</span></a>
+<a href="InputMessage.html#fromJSON" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>fromJSON</span></a>
+<a href="InputMessage.html#toJSON" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>toJSON</span></a>
 </div></section></div></details></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Constructors</h2>
@@ -90,22 +93,19 @@
 <li>
 <h5><span class="tsd-kind-parameter">domain</span>: <span class="tsd-signature-type">string</span></h5>
 <div class="tsd-comment tsd-typography"><p>Defines the &#39;URI&#39; domain</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li>
+</div></li>
 <li>
 <h5><span class="tsd-kind-parameter">pagepath</span>: <span class="tsd-signature-type">string</span></h5>
 <div class="tsd-comment tsd-typography"><p>Contains the &#39;URI&#39; path</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li>
+</div></li>
 <li>
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">timeout</span>: <span class="tsd-signature-type">number</span></h5>
 <div class="tsd-comment tsd-typography"><p>Optional parameter that defines the timeout value</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li></ul></div>
+</div><code class="tsd-tag ts-flagOptional">Optional</code> </li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="InputMessage.html" class="tsd-signature-type tsd-kind-class">InputMessage</a></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L58">src/class/io/InputMessage.ts:58</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L47">src/class/io/InputMessage.ts:47</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="DEFAULT_INSTANCE_TIMEOUT_VALUE" class="tsd-anchor"></a>
@@ -115,22 +115,22 @@
 </div>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L25">src/class/io/InputMessage.ts:25</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L22">src/class/io/InputMessage.ts:22</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="DOM_VALIDATION_NAVPANE_MIN_OCCURS_VALUE" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>DOM_<wbr/>VALIDATION_<wbr/>NAVPANE_<wbr/>MIN_<wbr/>OCCURS_<wbr/>VALUE</span><a href="#DOM_VALIDATION_NAVPANE_MIN_OCCURS_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">DOM_<wbr/>VALIDATION_<wbr/>NAVPANE_<wbr/>MIN_<wbr/>OCCURS_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> = 0</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L26">src/class/io/InputMessage.ts:26</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L23">src/class/io/InputMessage.ts:23</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="ID_GENERATED_FLOOR_FUNC_COMPLEXITY_VALUE" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>ID_<wbr/>GENERATED_<wbr/>FLOOR_<wbr/>FUNC_<wbr/>COMPLEXITY_<wbr/>VALUE</span><a href="#ID_GENERATED_FLOOR_FUNC_COMPLEXITY_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">ID_<wbr/>GENERATED_<wbr/>FLOOR_<wbr/>FUNC_<wbr/>COMPLEXITY_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">100000000000</span><span class="tsd-signature-symbol"> = 100000000000</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L27">src/class/io/InputMessage.ts:27</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L24">src/class/io/InputMessage.ts:24</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="REGEX_FS_URI_VALIDATION_VALUE" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>REGEX_<wbr/>FS_<wbr/>URI_<wbr/>VALIDATION_<wbr/>VALUE</span><a href="#REGEX_FS_URI_VALIDATION_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">REGEX_<wbr/>FS_<wbr/>URI_<wbr/>VALIDATION_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">RegExp</span><span class="tsd-signature-symbol"> = ...</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L28">src/class/io/InputMessage.ts:28</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L25">src/class/io/InputMessage.ts:25</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_domain" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_domain</span><a href="#_domain" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_domain</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
@@ -138,37 +138,37 @@
 </div>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L33">src/class/io/InputMessage.ts:33</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L30">src/class/io/InputMessage.ts:30</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_doms" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_doms</span><a href="#_doms" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_doms</span><span class="tsd-signature-symbol">:</span> <a href="model.DomElement.html" class="tsd-signature-type tsd-kind-class">DomElement</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><a href="model.NavPane.html" class="tsd-signature-type tsd-kind-class">NavPane</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><a href="model.SPC.html" class="tsd-signature-type tsd-kind-class">SPC</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = ...</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L43">src/class/io/InputMessage.ts:43</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L32">src/class/io/InputMessage.ts:32</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_fs" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_fs</span><a href="#_fs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_fs</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L44">src/class/io/InputMessage.ts:44</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L33">src/class/io/InputMessage.ts:33</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_id" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_id</span><a href="#_id" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L45">src/class/io/InputMessage.ts:45</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L34">src/class/io/InputMessage.ts:34</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_navpane" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_navpane</span><a href="#_navpane" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_navpane</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L46">src/class/io/InputMessage.ts:46</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L35">src/class/io/InputMessage.ts:35</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_pagepath" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_pagepath</span><a href="#_pagepath" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_pagepath</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L47">src/class/io/InputMessage.ts:47</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L36">src/class/io/InputMessage.ts:36</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_timeout" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_timeout</span><a href="#_timeout" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_timeout</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L48">src/class/io/InputMessage.ts:48</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L37">src/class/io/InputMessage.ts:37</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="EXCEPTION_ID_6500001100_MESSAGE_VALUE" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>EXCEPTION_<wbr/>ID_<wbr/>6500001100_<wbr/>MESSAGE_<wbr/>VALUE</span><a href="#EXCEPTION_ID_6500001100_MESSAGE_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">EXCEPTION_<wbr/>ID_<wbr/>6500001100_<wbr/>MESSAGE_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;Another filter selector object has the same signature&quot;</span><span class="tsd-signature-symbol"> = &quot;Another filter selector object has the same signature&quot;</span></div>
@@ -176,17 +176,17 @@
 </div>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L18">src/class/io/InputMessage.ts:18</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L15">src/class/io/InputMessage.ts:15</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="EXCEPTION_ID_6500001200_MESSAGE_VALUE" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>EXCEPTION_<wbr/>ID_<wbr/>6500001200_<wbr/>MESSAGE_<wbr/>VALUE</span><a href="#EXCEPTION_ID_6500001200_MESSAGE_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">EXCEPTION_<wbr/>ID_<wbr/>6500001200_<wbr/>MESSAGE_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;A &#39;Paginator&#39; has already been set&quot;</span><span class="tsd-signature-symbol"> = &quot;A &#39;Paginator&#39; has already been set&quot;</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L19">src/class/io/InputMessage.ts:19</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L16">src/class/io/InputMessage.ts:16</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="EXCEPTION_ID_6500005100_MESSAGE_VALUE" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>EXCEPTION_<wbr/>ID_<wbr/>6500005100_<wbr/>MESSAGE_<wbr/>VALUE</span><a href="#EXCEPTION_ID_6500005100_MESSAGE_VALUE" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">EXCEPTION_<wbr/>ID_<wbr/>6500005100_<wbr/>MESSAGE_<wbr/>VALUE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;Invalid domain value&quot;</span><span class="tsd-signature-symbol"> = &quot;Invalid domain value&quot;</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L20">src/class/io/InputMessage.ts:20</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L17">src/class/io/InputMessage.ts:17</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Accessors</h2>
 <section class="tsd-panel tsd-member"><a id="ID" class="tsd-anchor"></a>
@@ -200,7 +200,7 @@
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L119">src/class/io/InputMessage.ts:119</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L107">src/class/io/InputMessage.ts:107</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="URI" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>URI</span><a href="#URI" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -212,7 +212,7 @@
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L189">src/class/io/InputMessage.ts:189</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L170">src/class/io/InputMessage.ts:170</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="domain" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>domain</span><a href="#domain" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -224,7 +224,7 @@
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L149">src/class/io/InputMessage.ts:149</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L134">src/class/io/InputMessage.ts:134</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="doms" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>doms</span><a href="#doms" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -236,7 +236,7 @@
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L129">src/class/io/InputMessage.ts:129</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L116">src/class/io/InputMessage.ts:116</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="filesystem" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>filesystem</span><a href="#filesystem" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -248,19 +248,7 @@
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L169">src/class/io/InputMessage.ts:169</a></li></ul></aside></li></ul></section>
-<section class="tsd-panel tsd-member"><a id="getDomsEntries" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>get<wbr/>Doms<wbr/>Entries</span><a href="#getDomsEntries" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures">
-<li class="tsd-signature" id="getDomsEntries.getDomsEntries-1"><span class="tsd-signature-symbol">get</span> getDomsEntries<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-<li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Returns the &#39;DOM&#39; element(s) list</p>
-</div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>Returns all the &#39;DOM&#39; element(s) contained within the &#39;_dom&#39; class property</p>
-
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
-<ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L199">src/class/io/InputMessage.ts:199</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L152">src/class/io/InputMessage.ts:152</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="hasNavpane" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>has<wbr/>Navpane</span><a href="#hasNavpane" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -272,7 +260,7 @@
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L139">src/class/io/InputMessage.ts:139</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L125">src/class/io/InputMessage.ts:125</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="navPane" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>nav<wbr/>Pane</span><a href="#navPane" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -286,12 +274,11 @@
 <li>
 <h5><span class="tsd-kind-parameter">flag</span>: <span class="tsd-signature-type">boolean</span></h5>
 <div class="tsd-comment tsd-typography"><p>Contains the boolean value that sets the &#39;_navpane&#39; class property</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li></ul></div>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L229">src/class/io/InputMessage.ts:229</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L244">src/class/io/InputMessage.ts:244</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="pagepath" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>pagepath</span><a href="#pagepath" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -303,7 +290,7 @@
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L159">src/class/io/InputMessage.ts:159</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L143">src/class/io/InputMessage.ts:143</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="timeout" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>timeout</span><a href="#timeout" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -315,7 +302,7 @@
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L179">src/class/io/InputMessage.ts:179</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L161">src/class/io/InputMessage.ts:161</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="toString" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>to<wbr/>String</span><a href="#toString" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -327,7 +314,7 @@
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L214">src/class/io/InputMessage.ts:214</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L209">src/class/io/InputMessage.ts:209</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_domainValidator" class="tsd-anchor"></a>
@@ -344,13 +331,12 @@ then the private filesystem property is set to &#39;false&#39;</p>
 <li>
 <h5><span class="tsd-kind-parameter">domain</span>: <span class="tsd-signature-type">string</span></h5>
 <div class="tsd-comment tsd-typography"><p>Input &#39;string&#39; parameter that contains the domain value</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li></ul></div>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>A &#39;string&#39; formatted value that contains the passed parameter</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L75">src/class/io/InputMessage.ts:75</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L64">src/class/io/InputMessage.ts:64</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="addFilterSelector" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>add<wbr/>Filter<wbr/>Selector</span><a href="#addFilterSelector" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -369,7 +355,7 @@ then the private filesystem property is set to &#39;false&#39;</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L295">src/class/io/InputMessage.ts:295</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L309">src/class/io/InputMessage.ts:309</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="addNavPane" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>add<wbr/>Nav<wbr/>Pane</span><a href="#addNavPane" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -383,20 +369,18 @@ then the private filesystem property is set to &#39;false&#39;</p>
 <li>
 <h5><span class="tsd-kind-parameter">filterSelector</span>: <span class="tsd-signature-type">string</span></h5>
 <div class="tsd-comment tsd-typography"><p>Defines the &#39;NavPane&#39; filter selector</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li>
+</div></li>
 <li>
 <h5><span class="tsd-kind-parameter">attrib</span>: <span class="tsd-signature-type">string</span></h5>
 <div class="tsd-comment tsd-typography"><p>Contains the attrib(ute) of the element/tag (i.e : &#39;href&#39;)</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li></ul></div>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><p>Returns the &#39;NavPane&#39; class instance itself</p>
 
 <div class="tsd-comment tsd-typography">
 <h4>Deprecated</h4><p>this method is now deprecated, please use &#39;addPaginator()&#39; method instead</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L242">src/class/io/InputMessage.ts:242</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L257">src/class/io/InputMessage.ts:257</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="addPaginator" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>add<wbr/>Paginator</span><a href="#addPaginator" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -411,18 +395,16 @@ then the private filesystem property is set to &#39;false&#39;</p>
 <li>
 <h5><span class="tsd-kind-parameter">filterSelector</span>: <span class="tsd-signature-type">string</span></h5>
 <div class="tsd-comment tsd-typography"><p>Defines the &#39;Paginator&#39; filter selector</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li>
+</div></li>
 <li>
 <h5><span class="tsd-kind-parameter">attrib</span>: <span class="tsd-signature-type">string</span></h5>
 <div class="tsd-comment tsd-typography"><p>Contains the attrib(ute) of the element/tag (i.e : &#39;href&#39;)</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li></ul></div>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><p>Returns the &#39;Paginator&#39; (&#39;NavPane&#39;) class instance itself</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L259">src/class/io/InputMessage.ts:259</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L274">src/class/io/InputMessage.ts:274</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="addSPC" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>addSPC</span><a href="#addSPC" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -442,7 +424,7 @@ then the private filesystem property is set to &#39;false&#39;</p>
 <h4>Deprecated</h4><p>this method is now deprecated, please use &#39;addFilterSelector()&#39; method instead</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L277">src/class/io/InputMessage.ts:277</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L292">src/class/io/InputMessage.ts:292</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="domsValidate" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>doms<wbr/>Validate</span><a href="#domsValidate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private">
@@ -460,12 +442,11 @@ then the private filesystem property is set to &#39;false&#39;</p>
 <li>
 <h5><span class="tsd-kind-parameter">Class</span>: <span class="tsd-signature-type">any</span></h5>
 <div class="tsd-comment tsd-typography"><p>Parameter that contains the class name to validate</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li></ul></div>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L97">src/class/io/InputMessage.ts:97</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L86">src/class/io/InputMessage.ts:86</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="findDOMElement" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>findDOMElement</span><a href="#findDOMElement" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -480,13 +461,70 @@ then the private filesystem property is set to &#39;false&#39;</p>
 <li>
 <h5><span class="tsd-kind-parameter">Class</span>: <span class="tsd-signature-type">any</span></h5>
 <div class="tsd-comment tsd-typography"><p>Contains the class name to retrieve</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li></ul></div>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="model.DomElement.html" class="tsd-signature-type tsd-kind-class">DomElement</a><span class="tsd-signature-symbol">[]</span></h4><p>Returns an array of &#39;DomElement&#39; that contains the found occurrence(s)</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/dea8a8a/src/class/io/InputMessage.ts#L311">src/class/io/InputMessage.ts:311</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L324">src/class/io/InputMessage.ts:324</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="getDomsEntries" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Doms<wbr/>Entries</span><a href="#getDomsEntries" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="getDomsEntries.getDomsEntries-1"><span class="tsd-kind-call-signature">get<wbr/>Doms<wbr/>Entries</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#getDomsEntries.getDomsEntries-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns the &#39;DOM&#39; element(s) list under JSON format</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>Returns all the &#39;DOM&#39; element(s) contained within the &#39;_dom&#39; class property</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L179">src/class/io/InputMessage.ts:179</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="getDomsEntriesToJSON" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Doms<wbr/>Entries<wbr/>ToJSON</span><a href="#getDomsEntriesToJSON" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="getDomsEntriesToJSON.getDomsEntriesToJSON-1"><span class="tsd-kind-call-signature">get<wbr/>Doms<wbr/>Entries<wbr/>ToJSON</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><a href="#getDomsEntriesToJSON.getDomsEntriesToJSON-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns the &#39;DOM&#39; element(s) list under JSON format</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4><p>Returns all the &#39;DOM&#39; element(s) contained within the &#39;_dom&#39; class property</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L193">src/class/io/InputMessage.ts:193</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="fromJSON" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>fromJSON</span><a href="#fromJSON" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="fromJSON.fromJSON-1"><span class="tsd-kind-call-signature">fromJSON</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">inJson</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#fromJSON.fromJSON-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns a JavaScript Object Notation (JSON) string into an object</p>
+<p>TODO : invoke the inner mapper in order to send back a plain &#39;InputMessage&#39; class instance</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">inJson</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L235">src/class/io/InputMessage.ts:235</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="toJSON" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>toJSON</span><a href="#toJSON" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="toJSON.toJSON-1"><span class="tsd-kind-call-signature">toJSON</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">instance</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#toJSON.toJSON-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>&#39;Stringify&#39; the <code>InputMessage</code> class instance</p>
+<p>TODO : invoke the inner mapper</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">instance</span>: <a href="InputMessage.html" class="tsd-signature-type tsd-kind-class">InputMessage</a></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/johnvanderton/flysh/blob/650ab8d/src/class/io/InputMessage.ts#L223">src/class/io/InputMessage.ts:223</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -526,7 +564,6 @@ then the private filesystem property is set to &#39;false&#39;</p>
 <li><a href="#domain" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>domain</span></a></li>
 <li><a href="#doms" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>doms</span></a></li>
 <li><a href="#filesystem" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>filesystem</span></a></li>
-<li><a href="#getDomsEntries" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>get<wbr/>Doms<wbr/>Entries</span></a></li>
 <li><a href="#hasNavpane" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>has<wbr/>Navpane</span></a></li>
 <li><a href="#navPane" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>nav<wbr/>Pane</span></a></li>
 <li><a href="#pagepath" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>pagepath</span></a></li>
@@ -538,7 +575,11 @@ then the private filesystem property is set to &#39;false&#39;</p>
 <li><a href="#addPaginator" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>add<wbr/>Paginator</span></a></li>
 <li><a href="#addSPC" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>addSPC</span></a></li>
 <li><a href="#domsValidate" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>doms<wbr/>Validate</span></a></li>
-<li><a href="#findDOMElement" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>findDOMElement</span></a></li></ul></div></details></div>
+<li><a href="#findDOMElement" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>findDOMElement</span></a></li>
+<li><a href="#getDomsEntries" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Doms<wbr/>Entries</span></a></li>
+<li><a href="#getDomsEntriesToJSON" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Doms<wbr/>Entries<wbr/>ToJSON</span></a></li>
+<li><a href="#fromJSON" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>fromJSON</span></a></li>
+<li><a href="#toJSON" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>toJSON</span></a></li></ul></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../modules.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-4"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-namespace)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6"></rect><path d="M9.33 16V7.24H10.77L13.446 14.74C13.43 14.54 13.41 14.296 13.386 14.008C13.37 13.712 13.354 13.404 13.338 13.084C13.33 12.756 13.326 12.448 13.326 12.16V7.24H14.37V16H12.93L10.266 8.5C10.282 8.692 10.298 8.936 10.314 9.232C10.33 9.52 10.342 9.828 10.35 10.156C10.366 10.476 10.374 10.784 10.374 11.08V16H9.33Z" fill="var(--color-text)"></path></g></svg><span>flysh</span></a>
 <ul class="tsd-small-nested-navigation">
@@ -549,5 +590,5 @@ then the private filesystem property is set to &#39;false&#39;</p>
 <li><a href="OutputMessage.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-128"></use></svg><span>Output<wbr/>Message</span></a></li>
 <li><a href="PageRecords.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-128"></use></svg><span>Page<wbr/>Records</span></a></li></ul></nav></div></div></div>
 <div class="tsd-generator">
-<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
+<p>Generated using <a href="https://typedoc.org/" rel="noopener" target="_blank">TypeDoc</a></p></div>
 <div class="overlay"></div></body></html>

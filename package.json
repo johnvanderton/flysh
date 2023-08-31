@@ -32,12 +32,11 @@
   },
   "dependencies": {
     "@types/node": "^20.1.2",
-    "jquery": "^3.7.0",
-    "jsdom": "^22.0.0",
+    "jquery": "^3.7.1",
+    "jsdom": "^22.1.0",
     "properties-reader": "^2.2.0",
     "tslog": "^4.7.1",
-    "typedjson": "^1.7.0",
-    "typedoc-plugin-missing-exports": "^2.0.0"
+    "typedjson": "^1.7.0"
   },
   "devDependencies": {
     "@types/chai": "^4.2.15",
@@ -48,6 +47,7 @@
     "rimraf": "^5.0.0",
     "ts-node": "^10.5.0",
     "typedoc": "^0.25.0",
+    "typedoc-plugin-missing-exports": "^2.0.0",
     "typescript": "^5.1.6"
   },
   "keywords": [

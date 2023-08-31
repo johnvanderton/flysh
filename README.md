@@ -4,7 +4,7 @@
 
 # **README**
 
-- Document last update : 20/06/2023
+- Document last update : 31/08/2023
 - Author : **John Van Derton** — **john@cserv.be** 
 
 ## **What is it ?**
@@ -282,6 +282,22 @@ or even,
 
 You will notice that it is possible to do it in different ways. Generally a precise definition of the data structure will providing you a better quality during their collection. Beforehand, this data identification can be done manually only. However, the user can benefit from tools to help to identify the data scope area such as "DevTools" (**Chrome**), "FireBugs" (**Mozilla**) and many more.
 
+#### **Class Serialization - Deserialization**
+
+In order to support the object **`serialization`** and **`deserialization`**, the **`IOMessageMapper`** abstract class allows to convert a class under the `string` format, to transform this same `string` value into an JSON object and to (re)map this into his original format. To allow these operations, 3 static methods are publicly available from the abstract **`IOMessageMapper`** class. See below for the available methods,
+
+- Conversion of an **`InputMessage`** class instance type into a `sting` format,
+
+    `IOMessageMapper.toJSON(strClass : InputMessage | OutputMessage) : string`
+- Conversion of a `string` value into a `JSON` object type,
+
+    `IOMessageMapper.fromJSON(JSONinst : string) : any`
+- Mapping of a `JSON` type instance to a **`InputMessage`** type instance,
+
+    `IOMessageMapper.inputMessageMapper(jsonInstance : any) : InputMessage`
+
+**Note :** The mapping of the **`OutputMessage`** is not yet implemented and stills under investigation for further implementations
+
 ## **Project contribution**
 
 If you wish to contribute to the **Flysh** project, you can invoke some useful commands to keep the project up to date. 
@@ -317,7 +333,7 @@ All the commands are available from the `tasks.json` file.
 
 EcmaScript versions,
 
-- **EcmaScript** = `ES2019`
+- **EcmaScript** = `ES2018`
 - **EcmaScript** (ESM Module) = `ESNEXT`
 - **EcmaScript** (Types Module) = `ESNEXT`
 

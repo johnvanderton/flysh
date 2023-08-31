@@ -1,5 +1,5 @@
 import { InputMessage } from "../../../src/class/io/InputMessage";
-import { IOMessagesMapper } from "../../../src/class/helpers/IOMessagesMapper";
+import { IOMessageMapper } from "../../../src/class/helpers/IOMessageMapper";
 import { NavPane } from "../../../src/class/model/NavPane";
 import { SPC } from "../../../src/class/model/SPC";
 
@@ -18,7 +18,7 @@ chai.use(require('chai-as-promised'));
          */
         describe('>>> During Serialization/Deserialization do : ', () => {
 
-            it('[001] Verifies the content of the stringified `InputMessage` class instance', () => {
+            it('[001] Verifying the content of the stringified `InputMessage` class instance', () => {
                 const IM = new InputMessage('https://testdomain.abc','/testpage');
 
                 IM.addFilterSelector("Scope_1 Parent_1 Child_1")
@@ -59,12 +59,12 @@ chai.use(require('chai-as-promised'));
                 /**
                  * Serializing the 'InputMessage' class instance into string format
                  */
-                const jsonIM = IOMessagesMapper.toJSON(IM);
+                const jsonIM = IOMessageMapper.toJSON(IM);
 
                 /**
                  * Deserializing the stringified 'InputMessage' class instance into an 'any' object type class instance
                  */
-                const IMM = IOMessagesMapper.fromJSON(jsonIM);
+                const IMM = IOMessageMapper.fromJSON(jsonIM);
 
                 expect(IMM.DEFAULT_INSTANCE_TIMEOUT_VALUE).equals(1500);
                 expect(IMM._domain).equals('https://testdomain.abc');
@@ -77,7 +77,7 @@ chai.use(require('chai-as-promised'));
 
             });
 
-            it('[003] Verifies the content of the mapped JSON `InputMessage` class instance', () => {
+            it('[003] Verifying the content of the mapped JSON `InputMessage` class instance', () => {
                 const IM = new InputMessage('https://testdomain.abc','/testpage');
 
                 IM.addFilterSelector("Scope_1 Parent_1 Child_1")
@@ -92,17 +92,17 @@ chai.use(require('chai-as-promised'));
                 /**
                  * Serializing the 'InputMessage' class instance into string format
                  */
-                const jsonIM = IOMessagesMapper.toJSON(IM);
+                const jsonIM = IOMessageMapper.toJSON(IM);
     
                 /**
                  * Deserializing the stringified 'InputMessage' class instance into an 'any' object type class instance
                  */
-                const IOM = IOMessagesMapper.fromJSON(jsonIM);
+                const IOM = IOMessageMapper.fromJSON(jsonIM);
 
                 /**
                  * Mapping the JSON class instance with the `inputMessageMapper` static method
                  */
-                const IOMM = IOMessagesMapper.inputMessageMapper(IOM) as InputMessage;
+                const IOMM = IOMessageMapper.inputMessageMapper(IOM) as InputMessage;
 
                 expect((<Array<SPC>>IOMM.doms)[0].getFilterSelector).equals("Scope_1 Parent_1 Child_1");
                 expect((<Array<SPC>>IOMM.doms)[0].getSiblings[0].field).equals("testField_1");

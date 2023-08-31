@@ -142,6 +142,19 @@
 <pre><code><span class="hl-8">addFilterSelector</span><span class="hl-2">(‘</span><span class="hl-5">table</span><span class="hl-2"> </span><span class="hl-5">tr</span><span class="hl-2"> </span><span class="hl-5">td</span><span class="hl-2">’);</span>
 </code><button>Copy</button></pre>
 <p>You will notice that it is possible to do it in different ways. Generally a precise definition of the data structure will providing you a better quality during their collection. Beforehand, this data identification can be done manually only. However, the user can benefit from tools to help to identify the data scope area such as &quot;DevTools&quot; (<strong>Chrome</strong>), &quot;FireBugs&quot; (<strong>Mozilla</strong>) and many more.</p>
+<a id="md:class-serialization---deserialization" class="tsd-anchor"></a><h4><a href="#md:class-serialization---deserialization"><strong>Class Serialization - Deserialization</strong></a></h4><p>In order to support the object <strong><code>serialization</code></strong> and <strong><code>deserialization</code></strong>, the <strong><code>IOMessageMapper</code></strong> abstract class allows to convert a class under the <code>string</code> format, to transform this same <code>string</code> value into an JSON object and to (re)map this into his original format. To allow these operations, 3 static methods are publicly available from the abstract <strong><code>IOMessageMapper</code></strong> class. See below for the available methods,</p>
+<ul>
+<li><p>Conversion of an <strong><code>InputMessage</code></strong> class instance type into a <code>sting</code> format,</p>
+<p>  <code>IOMessageMapper.toJSON(strClass : InputMessage | OutputMessage) : string</code></p>
+</li>
+<li><p>Conversion of a <code>string</code> value into a <code>JSON</code> object type,</p>
+<p>  <code>IOMessageMapper.fromJSON(JSONinst : string) : any</code></p>
+</li>
+<li><p>Mapping of a <code>JSON</code> type instance to a <strong><code>InputMessage</code></strong> type instance,</p>
+<p>  <code>IOMessageMapper.inputMessageMapper(jsonInstance : any) : InputMessage</code></p>
+</li>
+</ul>
+<p><strong>Note :</strong> The mapping of the <strong><code>OutputMessage</code></strong> is not yet implemented and stills under investigation for further implementations</p>
 <a id="md:project-contribution" class="tsd-anchor"></a><h2><a href="#md:project-contribution"><strong>Project contribution</strong></a></h2><p>If you wish to contribute to the <strong>Flysh</strong> project, you can invoke some useful commands to keep the project up to date. </p>
 <pre><code><span class="hl-5">npm</span><span class="hl-2"> </span><span class="hl-5">update</span><br/><span class="hl-5">npm</span><span class="hl-2"> </span><span class="hl-5">outdated</span>
 </code><button>Copy</button></pre>
@@ -227,7 +240,8 @@
 <li>
 <ul>
 <li><a href="#md:what-is-a-filter-selector-"><span>What is a filter selector ?</span></a></li>
-<li><a href="#md:what-39data-scope39-does-mean-"><span>What &#39;data scope&#39; does mean ?</span></a></li></ul></li></ul></li>
+<li><a href="#md:what-39data-scope39-does-mean-"><span>What &#39;data scope&#39; does mean ?</span></a></li>
+<li><a href="#md:class-serialization---deserialization"><span>Class <wbr/>Serialization -<wbr/> <wbr/>Deserialization</span></a></li></ul></li></ul></li>
 <li><a href="#md:project-contribution"><span>Project contribution</span></a></li>
 <li>
 <ul>
@@ -248,5 +262,5 @@
 <li><a href="classes/OutputMessage.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-128"></use></svg><span>Output<wbr/>Message</span></a></li>
 <li><a href="classes/PageRecords.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-128"></use></svg><span>Page<wbr/>Records</span></a></li></ul></nav></div></div></div>
 <div class="tsd-generator">
-<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
+<p>Generated using <a href="https://typedoc.org/" rel="noopener" target="_blank">TypeDoc</a></p></div>
 <div class="overlay"></div></body></html>

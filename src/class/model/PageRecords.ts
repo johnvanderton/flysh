@@ -88,4 +88,5 @@ export class PageRecords {
                 'Error : ' + this._error + '\n' +
                 'List of records : ' + this._recordList + '\n';
     }
+
 }

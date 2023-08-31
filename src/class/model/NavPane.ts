@@ -77,4 +77,5 @@ export class NavPane extends DomElement {
         if (this.attribute == '')
             throw new FlyshException(5100000300, new Error, NavPane.EXCEPTION_ID_5100000300_MESSAGE_VALUE);
     }
+
 }
