@@ -266,27 +266,35 @@ For example:
 ```
 This **HTML** code can be processed by **Flysh** as follow,
 
+```typescript
     addFilterSelector(‘table tr’)
         .addField(‘product’,’td’,’class_product’,’<REGEX_VALUE>’)
         .addField(‘description’,’td’,’class_description’,’’);
-
+```
 or,
 
+```typescript
     addFilterSelector(‘table tr’)
         .addField(‘product’,’td’,’’,’’)
         .addField(‘description’,’td’,'’,’’);
-
+```
 or even,
 
+```typescript
     addFilterSelector(‘table tr td’);
+```
 
 You will notice that it is possible to do it in different ways. Generally a precise definition of the data structure will providing you a better quality during their collection. Beforehand, this data identification can be done manually only. However, the user can benefit from tools to help to identify the data scope area such as "DevTools" (**Chrome**), "FireBugs" (**Mozilla**) and many more.
 
 #### **Class Serialization - Deserialization**
 
-In order to support the object **`serialization`** and **`deserialization`**, the **`IOMessageMapper`** abstract class allows to convert a class under the `string` format, to transform this same `string` value into an JSON object and to (re)map this into his original format. To allow these operations, 3 static methods are publicly available from the abstract **`IOMessageMapper`** class. See below for the available methods,
+The `Flysh` lib is now supporting the object **`serialization`** and **`deserialization`**. The **`IOMessageMapper`** abstract class allows to convert a class under the `string` format, to transform this same `string` value into an JSON object and to (re)map it into its original format. To allow these operations, 3 static methods are publicly available from the abstract **`IOMessageMapper`** class. See below for the available methods,
 
-- Conversion of an **`InputMessage`** class instance type into a `sting` format,
+- Declare the available exported **`IOMessageMapper`** class
+
+    `import { IOMessageMapper } from 'Flysh'`
+
+- Conversion of an **`InputMessage`** class instance type into a `string` format,
 
     `IOMessageMapper.toJSON(strClass : InputMessage | OutputMessage) : string`
 - Conversion of a `string` value into a `JSON` object type,
@@ -296,7 +304,7 @@ In order to support the object **`serialization`** and **`deserialization`**, th
 
     `IOMessageMapper.inputMessageMapper(jsonInstance : any) : InputMessage`
 
-**Note :** The mapping of the **`OutputMessage`** is not yet implemented and stills under investigation for further implementations
+**Note :** The mapping of the **`OutputMessage`** is not yet implemented and stills under investigation for the next possible further releases
 
 ## **Project contribution**
 

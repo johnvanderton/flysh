@@ -1,4 +1,30 @@
 ==================================================
+= 'Anchor' (version 1.1.3), Fall release 2023    =
+==================================================
+
+## Preamble
+
+    This is a minor release version which includes several fixes and changes
+
+## Minor 'hotfix' release version '1.1.3'
+
+    - Added `exported` line code from `src/index.ts` file
+    - Minor fixes/typos
+
+## Feature(s)
+
+    - Serializing and deserializing the `InputMessage` class instance
+
+## Limitation(s)
+
+    - Please refer to the previous log version
+
+## Well-Known bug(s)
+
+    - Please refer to the previous log version
+    - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
+
+==================================================
 = 'Anchor' (version 1.1.2), Summer release 2023  =
 ==================================================
 
