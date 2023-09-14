@@ -24,6 +24,20 @@ export abstract class DomElement {
     }
 
     /**
+     * Getter that returns the `_element` property
+     */
+    get getElement() {
+        return this._element;
+    }
+
+    /**
+     * Getter that returns the `_signature` property
+     */
+    get getSignature() {
+        return this._signature;
+    }
+
+    /**
      * Concatenates the '_element' with the '_signature'. If no '_signature' found then the '_element is only returned 
      * 
      * @returns Returns a 'string' that contains the '_element' with or without a signature

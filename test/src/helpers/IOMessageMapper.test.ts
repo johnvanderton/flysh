@@ -2,6 +2,7 @@ import { InputMessage } from "../../../src/class/io/InputMessage";
 import { IOMessageMapper } from "../../../src/class/helpers/IOMessageMapper";
 import { NavPane } from "../../../src/class/model/NavPane";
 import { SPC } from "../../../src/class/model/SPC";
+import { FlyshException } from "../../../src/class/exception/FlyshException";
 
 const chai = require('chai');
 const expect = chai.expect;
@@ -62,18 +63,18 @@ chai.use(require('chai-as-promised'));
                 const jsonIM = IOMessageMapper.toJSON(IM);
 
                 /**
-                 * Deserializing the stringified 'InputMessage' class instance into an 'any' object type class instance
+                 * Deserializing the stringified 'InputMessage' class instance and map it into `InputMessage` class instance
                  */
-                const IMM = IOMessageMapper.fromJSON(jsonIM);
+                const IMM = IOMessageMapper.fromJSON(jsonIM) as InputMessage;
 
-                expect(IMM.DEFAULT_INSTANCE_TIMEOUT_VALUE).equals(1500);
-                expect(IMM._domain).equals('https://testdomain.abc');
-                expect(IMM._doms[0]._siblings[0]._element).equals("testTag_1");
-                expect(IMM._doms[0]._siblings[0]._regex).equals("[0-9]+[\,]*[0-9]*");
-                expect(IMM._doms[1]._filterselectorsignature).equals("Scope_2 Parent_2 Child_2");
-                expect(IMM._doms[1]._siblings[0]._regex).equals("[0-9]+[\,]*[0-9]*");
-                expect(IMM._doms[0]._siblings[0]._element).equals("testTag_1");
-                expect(IMM._navpane).equals(true);
+                expect(IMM.timeout).equals(1500);
+                expect(IMM.domain).equals('https://testdomain.abc');
+                expect((IMM.doms[0] as SPC).getSiblings[0].field).equals('testField_1');
+                expect((IMM.doms[0] as SPC).getSiblings[0].getElement).equals('testTag_1');
+                expect((IMM.doms[0] as SPC).getSiblings[0].regex).equals('[0-9]+[\,]*[0-9]*');
+                expect((IMM.doms[1] as SPC).getSiblings[0].regex).equals('[0-9]+[\,]*[0-9]*');
+                expect((IMM.doms[1] as SPC).getFilterSelector).equals('Scope_2 Parent_2 Child_2');
+                expect(IMM.hasNavpane).equals(true);
 
             });
 
@@ -95,14 +96,11 @@ chai.use(require('chai-as-promised'));
                 const jsonIM = IOMessageMapper.toJSON(IM);
     
                 /**
-                 * Deserializing the stringified 'InputMessage' class instance into an 'any' object type class instance
+                 * Mapping the JSON class instance thanks to the `inputMessageMapper()` static method
+                 * 
+                 * NOTE : As the method has been privately settled this method is then dynamically reached 
                  */
-                const IOM = IOMessageMapper.fromJSON(jsonIM);
-
-                /**
-                 * Mapping the JSON class instance with the `inputMessageMapper` static method
-                 */
-                const IOMM = IOMessageMapper.inputMessageMapper(IOM) as InputMessage;
+                const IOMM = IOMessageMapper['inputMessageMapper'](JSON.parse(jsonIM)) as InputMessage;
 
                 expect((<Array<SPC>>IOMM.doms)[0].getFilterSelector).equals("Scope_1 Parent_1 Child_1");
                 expect((<Array<SPC>>IOMM.doms)[0].getSiblings[0].field).equals("testField_1");
@@ -111,6 +109,34 @@ chai.use(require('chai-as-promised'));
                 expect((<Array<NavPane>>IOMM.doms)[2].getFilterSelectorSignature).equals("table tr td");
                 expect((<Array<NavPane>>IOMM.doms)[2].attribute).equals("href");
     
+            });
+
+            it('[004] Catching an exception while passing an null value from parameter', () => {
+                let err = new FlyshException(0,new Error(),"");
+                const IM = new InputMessage('https://testdomain.abc','/testpage');
+
+                IM.addFilterSelector("Scope_1 Parent_1 Child_1")
+                    .addField('testField_1','testTag_1','testClassName_1','[0-9]+[\,]*[0-9]*')
+                    .addField('testField_2','testTag_2','testClassName_2');
+    
+                IM.addFilterSelector("Scope_2 Parent_2 Child_2")
+                    .addField('testField_11','testTag_11','testClassName_11','[0-9]+[\,]*[0-9]*');
+    
+                IM.addPaginator('table tr td','href');
+    
+                /**
+                 * Mapping the JSON class instance thanks to the `inputMessageMapper()` static method
+                 * 
+                 * NOTE : As the method has been privately settled this method is then dynamically reached 
+                 */
+                try {
+                    const IOMM = IOMessageMapper['inputMessageMapper'](null) as InputMessage;
+                } catch(exception) {
+                    err = <FlyshException>exception;
+                }
+                expect((<FlyshException>err).errorID).to.equal(8500001000);
+                expect((<FlyshException>err).message).to.equal(IOMessageMapper.EXCEPTION_ID_8500001000_MESSAGE_VALUE+"\nCause : ");
+
             });
 
         });
