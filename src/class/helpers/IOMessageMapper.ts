@@ -4,10 +4,6 @@ import { OutputMessage } from "../io/OutputMessage";
 
 /**
  * The `IOMessageMapper` is an abstract class designed for serializing and deserializing specific IO classes such as `InputMessage`
- * 
- * TODO : - add complementary tests to mapper (as private func)
- *        - add tests to new fromJSON() method
- *        - change doc
  */
 export abstract class IOMessageMapper {
 
@@ -19,17 +15,17 @@ export abstract class IOMessageMapper {
     /**
      * Constants, exception codes
      */
-    public static readonly EXCEPTION_ID_8500001000_MESSAGE_VALUE = "Exception during `InputMessage` serializing process (`IOMessageMapping`)";
+    public static readonly EXCEPTION_ID_8500001000_MESSAGE_VALUE = "Exception during `InputMessage` serializing process (`IOMessaEgeMapping`)";
 
     /**
      *  No boilerplates, just optimized code !
      *  Method that helps to map the input `JSON` object parameter into an `InputMessage` class instance
      * 
-     * @param IMM `any` type input parameter as `JSON` object
+     * @param IMM `any` type input parameter known as `JSON` object
      * @returns an `InputMessage`class isntance
      */
     private static inputMessageMapper(IMM : any) : InputMessage {
-        if (IMM === null || undefined ) 
+        if (IMM === null || IMM === undefined )
             throw new FlyshException(8500001000, new Error, IOMessageMapper.EXCEPTION_ID_8500001000_MESSAGE_VALUE, -1);
 
         let _retVal = new InputMessage(IMM._domain,IMM._pagepath,IMM.DEFAULT_INSTANCE_TIMEOUT_VALUE);
@@ -52,7 +48,7 @@ export abstract class IOMessageMapper {
     /**
      * Static method that returns the result of the JSON `stringify()` function
      * 
-     * @param inObjInstance `InputMessage` input type parameter
+     * @param strClass `InputMessage` input type parameter (`OutputMessage` is not yet implemented)
      * @returns 'string' value from initial parameter(s)
      */
     public static toJSON(strClass : InputMessage | OutputMessage)  {
@@ -61,7 +57,6 @@ export abstract class IOMessageMapper {
 
     /**
      * Static method that returns the mapping of the output of the JSON `parse()` function
-     * TODO : To test
      * 
      * @param JSONinst `string` input type parameter
      * @returns 'any' class instance or the `JSON` object of the initial string sent from parameter

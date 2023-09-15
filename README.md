@@ -4,7 +4,7 @@
 
 # **README**
 
-- Document last update : 31/08/2023
+- Document last update : 15/09/2023
 - Author : **John Van Derton** — **john@cserv.be** 
 
 ## **What is it ?**
@@ -288,7 +288,7 @@ You will notice that it is possible to do it in different ways. Generally a prec
 
 #### **Class Serialization - Deserialization**
 
-The `Flysh` lib is now supporting the object **`serialization`** and **`deserialization`**. The **`IOMessageMapper`** abstract class allows to convert a class under the `string` format, to transform this same `string` value into an JSON object and to (re)map it into its original format. To allow these operations, 3 static methods are publicly available from the abstract **`IOMessageMapper`** class. See below for the available methods,
+The `Flysh` lib is now supporting the object **`serialization`** and **`deserialization`**. The **`IOMessageMapper`** abstract class allows to convert a class under the `string` format, to transform this same `string` value into a JSON object and to (re)map it into its original format. To allow these operations, 2 static methods are publicly available from the abstract **`IOMessageMapper`** class. See below for the available methods,
 
 - Declare the available exported **`IOMessageMapper`** class
 
@@ -297,12 +297,10 @@ The `Flysh` lib is now supporting the object **`serialization`** and **`deserial
 - Conversion of an **`InputMessage`** class instance type into a `string` format,
 
     `IOMessageMapper.toJSON(strClass : InputMessage | OutputMessage) : string`
+
 - Conversion of a `string` value into a `JSON` object type,
 
     `IOMessageMapper.fromJSON(JSONinst : string) : any`
-- Mapping of a `JSON` type instance to a **`InputMessage`** type instance,
-
-    `IOMessageMapper.inputMessageMapper(jsonInstance : any) : InputMessage`
 
 **Note :** The mapping of the **`OutputMessage`** is not yet implemented and stills under investigation for the next possible further releases
 
@@ -363,6 +361,7 @@ The below list is showing all the current exceptions handled by **Flysh**,
     ID '5300000100', 'Sibling' (Field) Class, "A field name must be defined"
     ID '6500001100', 'InputMessage' Class, "Another filter selector object has the same signature"
     ID '6500001200', 'InputMessage' Class, "A 'Paginator' has already been set"
+    ID '8500001000', 'Exception during `InputMessage` serializing process (`IOMessaEgeMapping`)'
 
 ### **Appendices**
 
