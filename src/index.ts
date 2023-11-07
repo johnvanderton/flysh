@@ -1,5 +1,5 @@
 /**
- * Exportated 'Flysh' class modules
+ * Exported 'Flysh' class modules
  * 
  * This files is declaring all the exported classes in order to properly use the library 
  * 
@@ -16,6 +16,6 @@ export { Flysh } from "./class/Flysh";
  */
 export { FlyshException } from "./class/exception/FlyshException";
 export { InputMessage } from "./class/io/InputMessage";
-export { IOMessageMapper } from './class/helpers/IOMessageMapper';
+export { IOMessageMapper } from "./class/helpers/IOMessageMapper";
 export { OutputMessage } from "./class/io/OutputMessage";
-export { PageRecords } from './class/model/PageRecords';
+export { PageRecords } from "./class/model/PageRecords";

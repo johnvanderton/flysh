@@ -1,5 +1,5 @@
-import { FlyshException } from "./exception/FlyshException";
 import { DomElement } from "./model/DomElement";
+import { FlyshException } from "./exception/FlyshException";
 import { InputMessage } from "./io/InputMessage"; 
 import { NavPane } from "./model/NavPane";
 import { OutputMessage } from "./io/OutputMessage";
@@ -12,12 +12,10 @@ const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
 /**
- * 'Flysh' class definition
+ * 'Flysh' Class definition
  * 
- * This class called 'Flysh' is the main element of the library. It allows the extraction of data thanks to the 
- * interpretation of the DOM structure from HTML type documents. This is currently invoking specific libraries 
- * such as'JQuery' and 'JSDOM'.
- * 
+ * This class called 'Flysh' is the main element of the library. It allows the extraction of data thanks to the interpretation of 
+ * the DOM structure from HTML type documents. This is currently invoking specific libraries such as'JQuery' and 'JSDOM'.
  */
 export class Flysh  {
 
@@ -88,7 +86,7 @@ export class Flysh  {
     /**
      * JSDOM options
      * 
-     * Note: Behavior should be different either by using 'fromFile()' and 'fromURL()' methods
+     * NOTE: Behavior should be different either by using 'fromFile()' and 'fromURL()' methods
      */
     private readonly JSDOMOptions = {
         resources : this.resourceLoader,

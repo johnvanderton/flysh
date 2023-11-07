@@ -4,7 +4,7 @@
 
 # **README**
 
-- Document last update : 15/09/2023
+- Document last update : 31/10/2023
 - Author : **John Van Derton** — **john@cserv.be** 
 
 ## **What is it ?**
@@ -60,7 +60,7 @@ This is showing a simple **HTML** structure that includes an element called `tab
 import { Flysh, InputMessage, OutputMessage, PageRecords, FlyshException } from 'Flysh';
 
 // Instantiate the 'InputMessage' class
-// Note : A third optional parameter can preset 6a timeout value (default 1500ms)
+// Note : A third optional parameter can preset a timeout value (default 1500ms)
 let inputMessage = new InputMessage('.','/somepath/somefilename.htm');
 // Add the 'SPC' (Scope/Parent/Child) class instance with a fully defined filter selector i.e : 'table tr td'
 // Note : the 'addSPC()' method is now deprecated -> 'addFilterSelector()'
@@ -288,25 +288,23 @@ You will notice that it is possible to do it in different ways. Generally a prec
 
 #### **Class Serialization - Deserialization**
 
-The `Flysh` lib is now supporting the object **`serialization`** and **`deserialization`**. The **`IOMessageMapper`** abstract class allows to convert a class under the `string` format, to transform this same `string` value into a JSON object and to (re)map it into its original format. To allow these operations, 2 static methods are publicly available from the abstract **`IOMessageMapper`** class. See below for the available methods,
+The **`Flysh`** library supports the **`serialization`** and **`deserialization`** of I/O classes such as **`InputMessage`** and **`OutputMessage`**. The **`IOMessageMapper`** abstract class allows objects conversion to `string` format and to transform this same `string` value to its original format. In order to perform these operations, 2 static methods are publicly available from **`IOMessageMapper`**,
 
-- Declare the available exported **`IOMessageMapper`** class
+- Import the **`IOMessageMapper`** class
 
     `import { IOMessageMapper } from 'Flysh'`
 
-- Conversion of an **`InputMessage`** class instance type into a `string` format,
+- Conversion of an **`InputMessage`** or **`OutputMessage`** class instance type into a `string` format,
 
     `IOMessageMapper.toJSON(strClass : InputMessage | OutputMessage) : string`
 
-- Conversion of a `string` value into a `JSON` object type,
+- Conversion of a "stringified" class instance into either an `InputMessage` or `OutputMessage` class instance,
 
-    `IOMessageMapper.fromJSON(JSONinst : string) : any`
-
-**Note :** The mapping of the **`OutputMessage`** is not yet implemented and stills under investigation for the next possible further releases
+    `IOMessageMapper.fromJSON(JSONinst : string) : InputMessage | OutputMessage`
 
 ## **Project contribution**
 
-If you wish to contribute to the **Flysh** project, you can invoke some useful commands to keep the project up to date. 
+If you wish to contribute to the **Flysh** project, you can invoke some useful commands to keep it up to date !
 
     npm update
     npm outdated
@@ -361,7 +359,8 @@ The below list is showing all the current exceptions handled by **Flysh**,
     ID '5300000100', 'Sibling' (Field) Class, "A field name must be defined"
     ID '6500001100', 'InputMessage' Class, "Another filter selector object has the same signature"
     ID '6500001200', 'InputMessage' Class, "A 'Paginator' has already been set"
-    ID '8500001000', 'Exception during `InputMessage` serializing process (`IOMessaEgeMapping`)'
+    ID '8500001000', 'Exception during `InputMessage` serializing process (`IOMessageMapping`)'
+    ID '8500002000', 'Exception during `OutputMessage` serializing process (`IOMessageMapping`)'
 
 ### **Appendices**
 
