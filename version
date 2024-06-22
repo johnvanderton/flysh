@@ -1,3 +1,28 @@
+=======================================================
+= 'Anchor' (version 1.1.6), Minor Summer release 2024 =
+=======================================================
+
+## Preamble
+
+    This is a minor release version which mainly includes `devDependencies` updates and security fixes
+
+## Minor release version '1.1.6'
+
+    - Potentially security breaches have been resolved, see merged #140 and #138
+    - chai-as-promised, typedoc and typescript `devDependencies` upgraded
+
+## Feature(s)
+
+## Limitation(s)
+
+    - Please refer to the previous log version
+
+## Well-Known bug(s)
+
+    - Please refer to the previous log version
+    - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
+
+
 ===============================================
 = 'Anchor' (version 1.1.5), Fall release 2023 =
 ===============================================
