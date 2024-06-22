@@ -8,7 +8,7 @@
 
 ## Minor release version '1.1.6'
 
-    - Potentially security breaches have been resolved, see merged #140 and #138
+    - Potentially security breaches have been resolved, see merged PR #140 and #138
     - chai-as-promised, typedoc and typescript `devDependencies` upgraded
 
 ## Feature(s)
