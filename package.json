@@ -31,24 +31,24 @@
     "url": "https://github.com/johnvanderton/flysh.git"
   },
   "dependencies": {
-    "@types/node": "^22.1.0",
+    "@types/node": "^24.1.0",
     "jquery": "^3.7.1",
-    "jsdom": "^24.0.0",
+    "jsdom": "^26.1.0",
     "properties-reader": "^2.2.0",
     "tslog": "^4.7.1",
     "typedjson": "^1.7.0"
   },
   "devDependencies": {
-    "@types/chai": "^4.2.15",
+    "@types/chai": "^5.2.2",
     "@types/mocha": "^10.0.4",
     "chai": "^4.4.1",
     "chai-as-promised": "^7.1.2",
-    "mocha": "^10.0.0",
+    "mocha": "^11.7.1",
     "rimraf": "^6.0.1",
     "ts-node": "^10.5.0",
-    "typedoc": "^0.25.13",
-    "typedoc-plugin-missing-exports": "^2.0.0",
-    "typescript": "^5.4.5"
+    "typedoc": "^0.28.8",
+    "typedoc-plugin-missing-exports": "^4.0.0",
+    "typescript": "^5.8.3"
   },
   "keywords": [
     "crawler",
