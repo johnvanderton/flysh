@@ -1,3 +1,27 @@
+=================================================
+= 'Anchor' ver 1.1.7, Minor Summer release 2025 =
+=================================================
+
+## Preamble
+
+    This is a minor release version that mainly include dependencies update and security fixes
+
+## Minor release version '1.1.7'
+
+    - Potentially security breaches have been resolved, see merged PR `#144` and PR `#145` 
+    - Some of `Dependencies` and `DevDependencies` libraries were upgraded
+
+## Feature(s)
+
+## Limitation(s)
+
+    - Please refer to the previous log version
+
+## Well-Known bug(s)
+
+    - Please refer to the previous log version
+    - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
+
 =======================================================
 = 'Anchor' (version 1.1.6), Minor Summer release 2024 =
 =======================================================
