@@ -1,5 +1,5 @@
 /**
- * Exported 'Flysh' class modules
+ * Exported 'Flysh' Class modules
  * 
  * This files is declaring all the exported classes in order to properly use the library 
  * 

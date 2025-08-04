@@ -12,7 +12,7 @@ const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
 /**
- * 'Flysh' Class definition
+ * 'Flysh' Class Definition
  * 
  * This class called 'Flysh' is the main element of the library. It allows the extraction of data thanks to the interpretation of 
  * the DOM structure from HTML type documents. This is currently invoking specific libraries such as'JQuery' and 'JSDOM'.
@@ -138,21 +138,15 @@ export class Flysh  {
      * 
      * @returns Returns a 'Promise' that contains the 'OutputMessage' class instance
      */
-    public async run() : Promise<OutputMessage> {
-
+    public async run(): Promise<OutputMessage> {
         try {
-            this.init()
-            await this.processing()
-                      .catch((err) => {
-                        console.log(err);
-                      });
+            this.init();
+            await this.processing();
         } catch (err) {
             console.log(err);
-        }
-        finally {
+        } finally {
             this.done = true;
         }
-        
         return this.getOutputMessage();
     }
 
@@ -555,7 +549,7 @@ export class Flysh  {
                         dom.window.close();// Closes the document with all the running timers and any event listeners on the window and document
                     })
                     .catch((exception) => {// Rejected (settled)
-                       throw new FlyshException(1500003100,exception,this.EXCEPTION_ID_1500003100_MESSAGE_VALUE,this.id);
+                       throw new FlyshException(1500003100, exception, this.EXCEPTION_ID_1500003100_MESSAGE_VALUE,this.id);
                     })
                     .finally();
     }
@@ -563,17 +557,17 @@ export class Flysh  {
     /**
      * Processing the page(s) preseted within the 'navmap'/'paginator' property
      * 
-     * NOTE : 'forEach()' method seems not handling a 'Promise' callback
+     * NOTE : 'forEach()' method seems not handling 'Promise' callback !
      * NOTE : Each back 'Promise' are stored from properties and available from getter functions
      */
     private async processing() {
+
         // Resolve the first page (reaching the domain and potentially creating the 'navmap' ('Paginator'))
-        await this.harvesting(this.URI)
-                  .then(async () => {
-                    // In case of any other URI page to parse
-                    for (const e of this.navmap)
-                        await this.harvesting(e);
-                    })
+        await this.harvesting(this.URI);
+
+        // In case of any other URI page to parse
+        for (const e of this.navmap) await this.harvesting(e);
+    
     }
 
 }

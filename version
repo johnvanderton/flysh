@@ -1,3 +1,28 @@
+==============================================
+= 'QuickSilver' ver 1.2.0, Base Release 2025 =
+==============================================
+
+## Preamble
+
+    Base release version that includes optimized and refactored code
+
+## Feature(s)
+    
+    - Updated `Dependencies` and `DevDependencies` libraries
+    - Code refactoring
+    - Removed unused dependency libs
+    - Removed 'not yet' implemented configuration reader feature
+    - Updated documentation
+
+## Limitation(s)
+
+    - Please refer to the previous log version
+
+## Well-Known bug(s)
+
+    - Please refer to the previous log version
+    - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
+
 =================================================
 = 'Anchor' ver 1.1.7, Minor Summer release 2025 =
 =================================================
