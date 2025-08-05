@@ -22,17 +22,17 @@ export class Base {
     /**
      * Launch the class loader and simple class loader
      */
-    private launch() {
-        this.classLoader.run();
-        this.simpleCL.run();
+    private async launch() {
+        await this.classLoader.run();
+        await this.simpleCL.run();
     }
 
     /**
      * Run the class loader and simple class loader
      */
-    public run() {
+    public async run() {
         this.init();
-        this.launch();
+        await this.launch();
     }
 
 };

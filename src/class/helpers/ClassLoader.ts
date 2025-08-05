@@ -4,11 +4,12 @@ import { OutputMessage } from "../io/OutputMessage";
 import { PageRecords } from '../model/PageRecords';
 
 /**
- * 'ClassLoader' class helper 
+ * 'ClassLoader' Class Helper Definition
  * 
  * Loads and runs 'flysh' class instance(s)
  */
 export class ClassLoader {
+        
         private mappedInputMessagesObjects : InputMessage[];
         private preloadedFlyshInstances : Flysh[];
 

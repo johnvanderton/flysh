@@ -1,7 +1,7 @@
 import { PageRecords } from '../model/PageRecords';
 
 /**
- * 'OutputMessage' class model
+ * 'OutputMessage' Class Model Definition
  * 
  * Includes all the 'PageRecords' generated from a same domain. 
  * Once filled, this class instance is sent back asynchronously
@@ -102,7 +102,8 @@ export class OutputMessage {
      * 
      * @returns Returns a 'string' that contains all the class properties
      */
-    get toString() {
+    public get toString() {
         return  'ID : ' + this._id + '\n';
     }
+    
 }

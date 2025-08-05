@@ -1,5 +1,5 @@
 /**
- * 'FlyshException' class model
+ * 'FlyshException' Class Model Definition
  * 
  * This class is instanciated and thrown in case of error. Inherits from the native TypeScript framework 'Error' class
  * 

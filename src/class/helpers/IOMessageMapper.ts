@@ -4,7 +4,9 @@ import { OutputMessage } from "../io/OutputMessage";
 import { PageRecords } from "../model/PageRecords";
 
 /**
- * The `IOMessageMapper` is an abstract class designed for serializing and deserializing I/O classes such as `InputMessage` and `OutputMessage`
+ * `IOMessageMapper` Class Helper Definition
+ * 
+ * Abstract class helping for serializing and deserializing I/O classes such as `InputMessage` and `OutputMessage`
  */
 export abstract class IOMessageMapper {
 

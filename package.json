@@ -4,6 +4,7 @@
   "description": "DOM Document Object Artifact Collector",
   "license": "MIT",
   "version": "1.2.0",
+  "homepage": "https://github.com/johnvanderton/flysh#readme",
   "main": "./dist/cjs/index.js",
   "modules": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
@@ -18,10 +19,11 @@
     "version"
   ],
   "scripts": {
-    "deploy (all)": "rimraf dist/ && tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json && node dist/cjs/example/index.js",
+    "deploy (all)": "npm run clean && npm run build && npm run run",
     "build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
-    "build doc": "npx typedoc --internalModule model --plugin typedoc-plugin-missing-exports --out docs ./src",
+    "clean": "rimraf dist",
     "run": "node dist/cjs/example/index.js",
+    "build doc": "npx typedoc --internalModule model --plugin typedoc-plugin-missing-exports --out docs ./src",
     "test [windows]": "mocha -r ts-node/register test/**/*.test.ts",
     "test [*nix]": "mocha -r ts-node/register test/**/*.test.ts test/**/**/*.test.ts test/src/**/*.test.ts"
   },
