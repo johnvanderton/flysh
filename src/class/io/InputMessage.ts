@@ -5,7 +5,7 @@ import { Sibling } from '../model/Sibling';
 import { SPC } from '../model/SPC';
 
 /**
- * 'InputMessage' class model
+ * 'InputMessage' Class I/O Definition
  */
 export class InputMessage {
 

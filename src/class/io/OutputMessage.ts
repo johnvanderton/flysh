@@ -1,7 +1,7 @@
 import { PageRecords } from '../model/PageRecords';
 
 /**
- * 'OutputMessage' Class Model Definition
+ * 'OutputMessage' Class I/O Definition
  * 
  * Includes all the 'PageRecords' generated from a same domain. 
  * Once filled, this class instance is sent back asynchronously
