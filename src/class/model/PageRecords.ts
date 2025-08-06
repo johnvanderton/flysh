@@ -1,5 +1,5 @@
 /**
- * 'PageRecords' class model
+ * 'PageRecords' Model Class Definition
  * 
  * The class is instanciated and filled by the 'Flysh' class during page(s) parsing. The data collection is structured 
  * as an array of 'Map'. In case of exception during process, the 'error' flag is set to true (i.e: timeout, crash,...).

@@ -1,5 +1,5 @@
 /**
- * 'DomElement' abstract class model
+ * 'DomElement' Abstract Model Class Definition
  * 
  * Defines the basic 'DOM' element properties and functions overridden by the extended subclasses
  * 

@@ -3,7 +3,7 @@ import { InputMessage } from "../io/InputMessage";
 import { PageRecords } from '../model/PageRecords';
 
 /**
- * 'SimpleClassLoader' Class Helper Definition
+ * 'SimpleClassLoader' Helper Class Definition
  * 
  * Loads and runs a 'Flysh' class instance
  */

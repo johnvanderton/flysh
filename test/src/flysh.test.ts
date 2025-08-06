@@ -9,7 +9,7 @@ const expect = chai.expect;
 chai.use(require('chai-as-promised'));
 
 /**
- * 'Flysh' main class test
+ * 'Flysh' Main Test Class 
  * 
  * The following tests are using the 'Chai'/'Chai as Promised' libraries
  * 
@@ -25,7 +25,7 @@ chai.use(require('chai-as-promised'));
  */
 
 /**
- * Flysh Class 'Dynamic Tests'
+ * Flysh 'Dynamic Tests' Class 
  * 
  * 'Flysh' class functions are also invoked dynamically during Test Suites. Most of the class methods are set to private which is 
  * making the tests a bit more difficult. Because of their access specifiers, some are thinking that there is no 'quality audit' 

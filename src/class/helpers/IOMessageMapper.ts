@@ -4,7 +4,7 @@ import { OutputMessage } from "../io/OutputMessage";
 import { PageRecords } from "../model/PageRecords";
 
 /**
- * `IOMessageMapper` Class Helper Definition
+ * `IOMessageMapper` Helper Class Definition
  * 
  * Abstract class helping for serializing and deserializing I/O classes such as `InputMessage` and `OutputMessage`
  */

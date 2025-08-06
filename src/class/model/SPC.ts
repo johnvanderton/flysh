@@ -3,7 +3,7 @@ import { DomElement } from "./DomElement";
 import { Sibling } from "./Sibling";
 
 /**
- * 'SPC' class model
+ * 'SPC' Model Class Definition
  * 
  * Handles the 'Scope', 'Parent' and 'Children' DOM objects. This element is direclty involved with the
  * 'Filter Selector' functionality. 

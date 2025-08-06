@@ -2,7 +2,9 @@ import { DomElement } from "./DomElement";
 import { FlyshException } from "../exception/FlyshException";
 
 /**
- * 'Sibling' class model (Also qualified as 'field')
+ * 'Sibling' Model Class Definition
+ * 
+ * Also qualified as 'field'
  */
 export class Sibling extends DomElement {
 

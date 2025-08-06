@@ -2,7 +2,9 @@ import { FlyshException } from "../exception/FlyshException";
 import { DomElement } from "./DomElement";
 
 /**
- * 'NavPane' ('Paginator') class model
+ * 'NavPane' Model Class Definition
+ * 
+ * Aka Paginator
  */
 export class NavPane extends DomElement {
 

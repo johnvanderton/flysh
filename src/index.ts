@@ -1,5 +1,5 @@
 /**
- * Exported 'Flysh' Class modules
+ * Exported 'Flysh' Class Modules
  * 
  * This files is declaring all the exported classes in order to properly use the library 
  * 
@@ -7,12 +7,12 @@
  */
 
 /**
- * Main 'Flysh' class
+ * Main 'Flysh' Class
  */
 export { Flysh } from "./class/Flysh";
 
 /**
- * IO Messages, Helper and Exception classes
+ * I/O Messages, Helper and Exception Classes
  */
 export { FlyshException } from "./class/exception/FlyshException";
 export { InputMessage } from "./class/io/InputMessage";
