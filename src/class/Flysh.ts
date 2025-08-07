@@ -80,7 +80,9 @@ export class Flysh  {
      private resourceLoader = new jsdom.ResourceLoader({
         proxy : this.DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_STRICT_SSL_VALUE, 
         strictSSL : this.DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_PROXY_VALUE,
-        userAgent : this.DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_USER_AGENT_VALUE
+        userAgent : this.DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_USER_AGENT_VALUE,
+        //referrer : this.DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_REFERRER_VALUE,
+        //contentType : this.DEFAULT_INSTANCE_JSDOM_OPTIONS_RESSOURCELOADER_CONTENTTYPE_VALUE
      });
 
     /**
@@ -142,6 +144,7 @@ export class Flysh  {
         try {
             this.init();
             await this.processing();
+            this.done = true;
         } catch (err) {
             console.log(err);
         } finally {
@@ -415,6 +418,7 @@ export class Flysh  {
         // Check parsing a navigation panel ('navpane'/'Paginator')
         if (attribute) $(filterselector).each((index : number, element : Element) => {_retVal.push(element.getAttribute(attribute));});
         else {// page parsing
+            // Split the filter selector into 3 parts (scope, parent, child) to be able to query the DOM
             let fs_split = filterselector.split(" ",this.CORE_PARSER_FILTER_SELECTOR_SPLITTER_SIZE_VALUE); 
             $(fs_split[this.CORE_PARSER_FILTER_SELECTOR_SPLITTER_SCOPE_POSITION_VALUE] + ' ' + fs_split[this.CORE_PARSER_FILTER_SELECTOR_SPLITTER_PARENT_POSITION_VALUE]).each((index : any, element : Element) => {
                 let nodeList = element.querySelectorAll(fs_split[this.CORE_PARSER_FILTER_SELECTOR_SPLITTER_CHILD_POSITION_VALUE]);

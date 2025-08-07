@@ -1,5 +1,5 @@
-import { FlyshException } from "../exception/FlyshException";
 import { DomElement } from "./DomElement";
+import { FlyshException } from "../exception/FlyshException";
 import { Sibling } from "./Sibling";
 
 /**
@@ -66,7 +66,7 @@ export class SPC extends DomElement {
      * 
      * @returns Returns a 'String' that contains all the class properties
      */
-    get getFields() : string[] {
+    public get getFields() : string[] {
         let _retVal : string[] =[];
         for (let sibling of this._siblings)
             _retVal.push(sibling.field);
@@ -78,7 +78,7 @@ export class SPC extends DomElement {
      * 
      * @returns Returns a 'String' that contains the '_filterselectorsignature' class property
      */
-    get getFilterSelector() {
+    public get getFilterSelector() {
         return this._filterselectorsignature;
     }
 
@@ -87,7 +87,7 @@ export class SPC extends DomElement {
      * 
      * @returns Returns an array that contains all the children 'Sibling' (fields) class instances
      */
-    get getSiblings() : Sibling[] {
+    public get getSiblings() : Sibling[] {
         return this._siblings;
     }
 
@@ -96,7 +96,7 @@ export class SPC extends DomElement {
      * 
      * @returns Returns a 'String' that contains all the 'Sibling' entrie(s)
      */
-    get getListAllSiblingEntries() : string {
+    public get getListAllSiblingEntries() : string {
         let retVal = "";
         this._siblings.forEach((e) => {
             retVal += e.getEntry + "\n";
@@ -109,7 +109,7 @@ export class SPC extends DomElement {
      * 
      * @returns Returns a 'String' that contains the class filter selector with all the 'Sibling' entrie(s) (field(s))
      */
-    get getEntry() {
+    public get getEntry() {
         return  "Filter Selector : " + this._filterselectorsignature + "\n" +
                 "Siblings: " + "\n\n" + this.getListAllSiblingEntries + "\n";
     }
@@ -169,17 +169,18 @@ export class SPC extends DomElement {
      * Validates the current 'DOM' element type
      */
     public override validate() : void {
+        super.validate();
         if (this.getFilterSelector == '') 
             throw new FlyshException(5200000100, new Error, SPC.EXCEPTION_ID_5200000100_MESSAGE_VALUE);
         if (this.getFilterSelector.split(" ").length < this.DOM_VALIDATION_FILTER_SELECTOR_MIN_PARAMETERS_VALUE)
-            throw new FlyshException(5200000200, new Error, SPC.EXCEPTION_ID_5200000200_MESSAGE_VALUE);  
+            throw new FlyshException(5200000200, new Error, SPC.EXCEPTION_ID_5200000200_MESSAGE_VALUE);
     }
 
     /**
      * Validates the 'Sibling' (field) stack content
      */
      private validateSiblings(sibFieldName: string) : void {
-        for (let elem  of this._siblings)
+        for (let elem of this._siblings)
             if (elem.field == sibFieldName) 
                 throw new FlyshException(5200000300, new Error, SPC.EXCEPTION_ID_5200000300_MESSAGE_VALUE);
      }

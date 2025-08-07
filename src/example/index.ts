@@ -1,5 +1,5 @@
 /**
- * 'Flysh' example loader
+ * 'Flysh' Example Class Loader
  * 
  * @packageDocumentation
  */

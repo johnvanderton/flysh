@@ -2,9 +2,7 @@ import { FlyshException } from "../exception/FlyshException";
 import { DomElement } from "./DomElement";
 
 /**
- * 'NavPane' Model Class Definition
- * 
- * Aka Paginator
+ * 'NavPane' Model Class Definition (`Paginator`)
  */
 export class NavPane extends DomElement {
 
@@ -54,7 +52,7 @@ export class NavPane extends DomElement {
      * @returns Returns a 'string' that contains all the class properties
      */
     get getEntry() {
-        return  super.getEntry +
+        return super.getEntry +
                 "Filter Selector Signature : " + this._filterselectorsignature + "\n" + 
                 "Attribute : " + this._attribute + "\n" ;
     }
@@ -72,6 +70,7 @@ export class NavPane extends DomElement {
      * Validates the current class instance
      */
     public override validate(): void {
+        super.validate();
         if (this.getFilterSelectorSignature == '') 
             throw new FlyshException(5100000100, new Error, NavPane.EXCEPTION_ID_5100000100_MESSAGE_VALUE);
         if (this.getFilterSelectorSignature.split(" ").length < NavPane.DOM_VALIDATION_FILTER_SELECTOR_MIN_PARAMETERS_VALUE)

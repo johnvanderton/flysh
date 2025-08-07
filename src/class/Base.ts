@@ -8,9 +8,9 @@ import { SimpleClassLoader } from "./helpers/SimpleClassLoader";
 export class Base {
 
     classLoader !: ClassLoader;
-    simpleCL !: SimpleClassLoader;
     flysh !: Flysh;
-
+    simpleCL !: SimpleClassLoader;
+    
     /**
      * Initialization
      */
@@ -28,7 +28,7 @@ export class Base {
     }
 
     /**
-     * Run the class loader and simple class loader
+     * Run both loader and simple class loader
      */
     public async run() {
         this.init();

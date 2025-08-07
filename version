@@ -16,7 +16,7 @@
 
 ## Limitation(s)
 
-    - Please refer to the previous log version
+    - The library `chai-as-promised` hasn't been (yet) updated since hias last ES Module support
 
 ## Well-Known bug(s)
 

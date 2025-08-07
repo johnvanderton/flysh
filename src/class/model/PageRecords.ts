@@ -17,7 +17,7 @@ export class PageRecords {
      * Class properties
      */
     private _error : boolean = false;
-    private _recordList : Array<Map<String,String>> = new Array<Map<String,String>>();
+    private _recordList : Array<Map<String,String>>;
     private _uri : string;
 
     /**
@@ -28,6 +28,7 @@ export class PageRecords {
      */
     constructor(uri : string, error : boolean) {
         this._error = error;
+        this._recordList = new Array<Map<String,String>>();
         this._uri = uri;
     }
 
@@ -83,7 +84,7 @@ export class PageRecords {
      * 
      * @returns Returns a 'string' that contains all the class properties
      */
-    get toString() {
+    public get toString() {
         return  'URI : ' + this._uri + '\n' +
                 'Error : ' + this._error + '\n' +
                 'List of records : ' + this._recordList + '\n';

@@ -60,6 +60,6 @@ export abstract class DomElement {
     /**
      * Validates the current 'DOM' type element (overridden)
      */
-    public validate() : void {
-    }
+    public validate() : void {}
+
 }

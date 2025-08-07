@@ -6,7 +6,7 @@ import { PageRecords } from '../model/PageRecords';
 /**
  * 'ClassLoader' Helper Class Definition
  * 
- * Loads and runs 'flysh' class instance(s)
+ * Loads and runs 'Flysh' class instance(s)
  */
 export class ClassLoader {
         

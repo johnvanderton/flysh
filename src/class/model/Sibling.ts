@@ -2,9 +2,7 @@ import { DomElement } from "./DomElement";
 import { FlyshException } from "../exception/FlyshException";
 
 /**
- * 'Sibling' Model Class Definition
- * 
- * Also qualified as 'field'
+ * 'Sibling' Model Class Definition ('Field')
  */
 export class Sibling extends DomElement {
 
@@ -38,7 +36,7 @@ export class Sibling extends DomElement {
      * 
      * @returns Returns the '_field' class property
      */
-    get field() {
+    public get field() {
         return this._field;
     }
 
@@ -47,7 +45,7 @@ export class Sibling extends DomElement {
      * 
      * @returns Returns the '_regex' class property
      */
-    get regex() {
+    public get regex() {
         return this._regex;
     }
 
@@ -56,7 +54,7 @@ export class Sibling extends DomElement {
      * 
      * @returns Returns a 'String' with all the class properties 
      */
-    get getEntry() {
+    public get getEntry() {
         return super.getEntry +
                 "Regex : " + this._regex + "\n" + 
                 "Field : " + this._field + "\n";
@@ -66,6 +64,7 @@ export class Sibling extends DomElement {
      * Validates the current 'DOM' element type
      */
     public override validate(): void {
+        super.validate();
         if (this.field == '') 
             throw new FlyshException(5300000100, new Error, Sibling.EXCEPTION_ID_5300000100_MESSAGE_VALUE);
     }
