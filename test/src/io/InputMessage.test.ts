@@ -145,8 +145,8 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
             });
 
             /**
-            * Verifies that the 'addFilterSelector()' method is returning the new added 'SPC' class instance itself
-            */
+             * Verifies if the 'addFilterSelector()' method is returning the new added 'SPC' class instance itself
+             */
             it('[003] Verifies that the new added "SPC" class instance is having the same filter selector signature and 0 "Sibling" element', () => {
                 let IM = new InputMessage('https://testdomain.abc','',10);
                 let addedSPC_1 = IM.addFilterSelector("somevalue_1 somevalue_2");
@@ -155,8 +155,8 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
             });
 
             /**
-            * Verifies that the 'addFilterSelector()' method is throwing an exception due to a redundant 'SPC' class instance with the same filter selector value
-            */
+             * Verifies if 'addFilterSelector()' method is throwing an exception due to a redundant 'SPC' class instance with the same filter selector value
+             */
             it('[004] Verifies that the "addFilterSelector()" method is throwing an exception due to a redundant "SPC" class instance with the same filter selector value', () => {
                 let err = new FlyshException(0,new Error(),"");
                 let IM = new InputMessage('https://testdomain.abc','',10);
@@ -171,8 +171,8 @@ describe('_________("InputMessage" Class Model Tests)_________', () => {
             });
 
             /**
-            * Verifies that the 'addPaginator()' is throwing an exception due to an already existing 'NavPane' (Paginator) instance
-            */
+             * Verifies if 'addPaginator()' method is throwing an exception due to an already existing 'NavPane' instance (Paginator)
+             */
             it('[005] Verifies that the "addPaginator()" method is throwing an exception due to a already existing "NavPane" instance', () => {
                 let err = new FlyshException(0,new Error(),"");
                 let IM = new InputMessage('https://testdomain.abc','',10);

@@ -4,19 +4,18 @@
 
 ## Preamble
 
-    Base release version that includes optimized and refactored code
+    Base release version which includes major update
 
 ## Feature(s)
     
     - Updated `Dependencies` and `DevDependencies` libraries
     - Code refactoring
-    - Removed unused dependency libs
-    - Removed 'not yet' implemented configuration reader feature
+    - Removed unfinhsed feature and replaced into further dedicated 'feature' branches
     - Updated documentation
 
 ## Limitation(s)
 
-    - The library `chai-as-promised` hasn't been (yet) updated since hias last ES Module support
+    - `chai-as-promised` library hasn't (yet) been updated since hias last ES Module support
 
 ## Well-Known bug(s)
 

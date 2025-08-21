@@ -28,7 +28,6 @@ export class InputMessage {
      * Class properties
      */
     private _domain: string;
-
     private _doms : DomElement[] | NavPane[] | SPC[] = new Array<DomElement>();
     private _fs : boolean = true;
     private _id : number;
@@ -48,27 +47,31 @@ export class InputMessage {
                 pagepath : string, 
                 timeout ?: number
                 ) {
-        this._domain = this._domainValidator(domain);
+        this._domain = this.domainValidator(domain);
         this._id = Math.floor(Math.random() * Math.floor(this.ID_GENERATED_FLOOR_FUNC_COMPLEXITY_VALUE));
         this._pagepath = pagepath;
         this._timeout = timeout || this.DEFAULT_INSTANCE_TIMEOUT_VALUE;
     }
  
     /**
+     * `domainValidator()` Method Validation
+     * 
+     * Domain Validator Method Definition
+     * 
      * Validates if the domain is only locally based (filesytem) or from the network. If the domain is under an URL format 
      * then the private filesystem property is set to 'false'
      * 
      * @param domain Input 'string' parameter that contains the domain value
      * @returns A 'string' formatted value that contains the passed parameter
      */
-    private _domainValidator(domain : string) : string {
+    private domainValidator(domain : string) : string {
         let _retVal = domain;
 
-        // Evaluates if the domain/path is empty
+        // Check if the domain/path is empty
         if ((domain.length === 0))
             throw new FlyshException(6500005100, new TypeError(), InputMessage.EXCEPTION_ID_6500005100_MESSAGE_VALUE);
         
-        // Evaluates if the domain is a well formatted URL
+        // Check if the domain is a well formatted URL
         let regEx = new RegExp(this.REGEX_FS_URI_VALIDATION_VALUE);
         if (domain.match(regEx) !== null) this._fs = false;
 
@@ -76,6 +79,8 @@ export class InputMessage {
     }
 
     /**
+     * `domsValidate()` Method Definition
+     * 
      * Validates the content of the '_doms' class property
      * 
      *  - 'SPC' class instance, verifies that is no other instance(s) having the same 'filter selector'
@@ -172,6 +177,8 @@ export class InputMessage {
     }
 
     /**
+     * 'getDomsEntries()' Method Definition
+     * 
      * Returns the 'DOM' element(s) list under JSON format
      * 
      * @return Returns all the 'DOM' element(s) contained within the '_dom' class property
@@ -186,6 +193,8 @@ export class InputMessage {
     }
 
     /**
+     * `getDomsEntriesToJSON()` Method Definition
+     * 
      * Returns the 'DOM' element(s) list under JSON format
      * 
      * @return Returns all the 'DOM' element(s) contained within the '_dom' class property
@@ -202,6 +211,8 @@ export class InputMessage {
     }
 
     /**
+     * `toString()` Method Definition
+     * 
      * 'Stringify' the object properties
      * 
      * @return Returns a string that shows up all all the class properties
@@ -216,6 +227,8 @@ export class InputMessage {
     }
 
     /**
+     * `toJSON()` Method Definition
+     * 
      * 'Stringify' the `InputMessage` class instance
      * 
      * TODO : invoke the inner mapper
@@ -225,7 +238,9 @@ export class InputMessage {
     }
 
     /**
-     * Returns a JavaScript Object Notation (JSON) string into an object
+     * `fromJSON()` Method Definition
+     * 
+     * Converts a JavaScript Object Notation (JSON) string into an object
      * 
      * TODO : invoke the inner mapper in order to send back a plain 'InputMessage' class instance
      * 
@@ -237,6 +252,10 @@ export class InputMessage {
     }
 
     /**
+     * `fromJSON()` Method Definition
+     * 
+     * Converts a JavaScript Object Notation (JSON) string into an object
+     * 
      * Set the '_navpane' property value
      * 
      * @param flag Contains the boolean value that sets the '_navpane' class property 
@@ -246,6 +265,8 @@ export class InputMessage {
     }
 
     /**
+     * `addNavPane()` Method Definition 
+     * 
      * Returns the newly added 'NavPane' element [deprecated]
      * 
      * @deprecated this method is now deprecated, please use 'addPaginator()' method instead
@@ -263,6 +284,8 @@ export class InputMessage {
     }
 
     /**
+     * `addPaginator()` Method Definition
+     * 
      * Adds a Paginator and returns the newly added 'NavPane' element
      * 
      * Note : For the sake of good reading and interpretation, this function has been publicly renamed ('addNavPane()')
@@ -280,6 +303,8 @@ export class InputMessage {
     }
 
     /**
+     * `addSPC()` Method Definition
+     * 
      * Returns the newly added 'SPC' type element [deprecated]
      * 
      * TODO : (new SPC(filterSelector, new Array<Sibling>())).validate() : returns SPC (this)
@@ -297,6 +322,8 @@ export class InputMessage {
     }
 
     /**
+     * `addFilterSelector()` Method Definition
+     * 
      * Returns the newly added Filter Selector ('SPC' type element)
      * 
      * Note : For the sake of good reading and interpretation, this function has been publicly renamed ('addSPC()')
@@ -314,6 +341,8 @@ export class InputMessage {
     }
 
     /**
+     * `findDOMElement()` Method Definition
+     * 
      * Returns all the inherited 'DOMElement' instance(s) from the '_doms' stack property that match the 'Class' parameter
      * 
      * NOTE : The returned value in case of 'navpane'/'paginator' should always be 1 element
@@ -324,4 +353,5 @@ export class InputMessage {
     public findDOMElement(Class : any) : DomElement [] {
             return this._doms.filter(e => e instanceof Class);
     }
+
 }

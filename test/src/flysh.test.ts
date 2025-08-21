@@ -77,7 +77,7 @@ describe('_________(Flysh Class "Dynamic Tests")_________', () => {
 });
 
 /**
- * Flysh Class 'Non Dynamic Tests' scenarios
+ * Flysh Class 'Non Dynamic Tests' scenario
  * 
  * Cases are organised from public methods only
  * 

@@ -68,7 +68,7 @@ describe('_________("SPC" Class "Non-Dynamic" Tests)_________', () => {
 
         /**
          * Complementary tests about the optional 'regex' field
-        */
+         */
         describe('>>> Class "addField()" method extended "regex" tests, do : ', () => {
 
             /**
@@ -148,6 +148,9 @@ describe('_________("SPC" Class "Non-Dynamic" Tests)_________', () => {
 
         });
 
+        /**
+         * Test in case of a fully set filter selector
+         */
         describe('>>> Class "hasFullFilter()" method testing, do : ', () => {
 
             /**
@@ -168,7 +171,7 @@ describe('_________("SPC" Class "Non-Dynamic" Tests)_________', () => {
                 expect(dom1.hasFullFilter()).to.be.true;
             });
 
-        });   
+        });
 
     });
 });

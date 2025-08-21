@@ -27,6 +27,8 @@ export class OutputMessage {
     }
 
     /**
+     * `addPageRecords()` Method Definition
+     * 
      * Add a 'PageRecords' class instance
      * 
      * @param pageRec Contains the records collected from the current page 
@@ -36,6 +38,8 @@ export class OutputMessage {
     }
 
     /**
+     * `addPageRecords()` Method Definition
+     * 
      * Getter 'Domain'
      * 
      * @returns Returns a 'string' that contains the '_domain' class property
@@ -45,6 +49,8 @@ export class OutputMessage {
     }
 
     /**
+     * `integrityCheck()` Method Definition
+     * 
      * Performs an 'Integrity Check' from the 'pageRecordList' class property. 
      * If any error(s) are found into the record lists then a 'false' value is returned
      * 
@@ -58,6 +64,8 @@ export class OutputMessage {
     }
 
     /**
+     * `ID` Method Definition
+     * 
      * Getter 'ID'
      * 
      * @returns Returns the instance 'ID' number
@@ -67,6 +75,8 @@ export class OutputMessage {
     }
 
     /**
+     * `numberOfPages` Method Definition
+     * 
      * Getter number of pages
      * 
      * @returns Returns the counts number of 'PageRecords' from the 'pagerecordList' class property
@@ -76,6 +86,8 @@ export class OutputMessage {
     }
 
     /**
+     * `numberOfRecords` Method Definition
+     * 
      * Getter number of records
      * 
      * @returns Returns a 'number' that contains the total of records from all the 'PageRecords' ('pageRecordList')
@@ -88,6 +100,8 @@ export class OutputMessage {
     }
 
     /**
+     * `pageRecordList` Method Definition
+     * 
      * Getter 'pageRecordList'
      * 
      * @returns Returns a 'string' that contains the '_pageRecordList' class property
@@ -97,6 +111,8 @@ export class OutputMessage {
     }
 
     /**
+     * `toString()` Method Definition
+     * 
      * 'Stringify' the class instance 
      * 
      * @returns Returns a 'string' that contains all the class properties
