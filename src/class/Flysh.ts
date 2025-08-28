@@ -191,7 +191,7 @@ export class Flysh  {
      * @param dom Object that contains the 'DOM' structure of the document
      * @returns Returns the 'JQuery' selector
      */
-    private createWindowSelector(dom : any) : typeof jsdom {
+    private createWindowSelector(dom : any) : typeof jsdom  {
         return jquery(dom.window);
     }
 

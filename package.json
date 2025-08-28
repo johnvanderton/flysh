@@ -46,7 +46,7 @@
     "mocha": "^11.7.1",
     "rimraf": "^6.0.1",
     "ts-node": "^10.5.0",
-    "typedoc": "^0.28.8",
+    "typedoc": "^0.28.11",
     "typedoc-plugin-missing-exports": "^4.0.0",
     "typescript": "^5.8.3"
   },

@@ -1,5 +1,5 @@
-import { FlyshException } from '../exception/FlyshException';
 import { DomElement } from '../model/DomElement';
+import { FlyshException } from '../exception/FlyshException';
 import { NavPane } from '../model/NavPane'; 
 import { Sibling } from '../model/Sibling';
 import { SPC } from '../model/SPC';
@@ -10,8 +10,8 @@ import { SPC } from '../model/SPC';
 export class InputMessage {
 
     /**
-    * Public class constants
-    */
+     * Public class constants
+     */
     public static readonly EXCEPTION_ID_6500001100_MESSAGE_VALUE = "Another filter selector object has the same signature";
     public static readonly EXCEPTION_ID_6500001200_MESSAGE_VALUE = "A 'Paginator' has already been set";
     public static readonly EXCEPTION_ID_6500005100_MESSAGE_VALUE = "Invalid domain value";
