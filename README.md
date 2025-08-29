@@ -4,7 +4,7 @@
 
 # **README**
 
-- Document last update : 31/10/2023
+- Document last update : 29/08/2025
 - Author : **John Van Derton** — **john@cserv.be** 
 
 ## **What is it ?**
@@ -323,21 +323,11 @@ You can manually install the library from **NPM** by doing the next command,
 
 All the commands are available from the `tasks.json` file.
 
-**Console commands [Windows\Linux]**
-
-- **deploy (all)**, `rimraf dist/ && tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json && node dist/cjs/example/index.js` 
-- **build**, `tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json`
-- **build doc**, `npx typedoc --internalModule model --plugin typedoc-plugin-missing-exports --out docs ./src` 
-- **clean**, `rimraf dist/`
-- **test [windows]**, `mocha -r ts-node/register test/**/*.test.ts`
-- **test [*nix*]**, `mocha -r ts-node/register test/**/*.test.ts test/**/**/*.test.ts test/src/**/*.test.ts`
-- **run**, `node dist/cjs/example/index.js`
-
 ### Framework dependencies
 
 EcmaScript versions,
 
-- **EcmaScript** = `ES2018`
+- **EcmaScript** = `ESNEXT`
 - **EcmaScript** (ESM Module) = `ESNEXT`
 - **EcmaScript** (Types Module) = `ESNEXT`
 
@@ -368,12 +358,11 @@ The below files are parts of the project library,
 
 - **`.vscode/launch.json`** contains the script used when debugging
 - **`.vscode/tasks.json`** defines tasks such as `clean`, `build` and `tests`
-- **`properties.cnf`** is the property file that help to set all the configurable values
 - **`test/listing.csv`** lists all the **HTML** file dataset used by set of tests classes 
 
 ## **License**
 
-Copyright (C) 2020 — 2023, **John Van Derton**
+Copyright (C) 2020 — 2025, **John Van Derton**
 
 Please read the ['LICENCE'](./LICENSE) file for more information.
 

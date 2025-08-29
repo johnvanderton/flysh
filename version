@@ -8,14 +8,14 @@
 
 ## Feature(s)
     
-    - Source Code refactoring
+    - Source code refactored
     - Removed unfinished features and replaced them into further featured branches
     - Major update on both 'runtime' and 'dev' libraries
-    - Updated documentation
+    - Modules updated to `Esnext`
 
 ## Limitation(s)
 
-    - `chai` and `chai-as-promised` testing library weren't yet upgraded
+    - `chai` and `chai-as-promised` testing library were not upgraded
 
 ## Well-Known bug(s)
 
