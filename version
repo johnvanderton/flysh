@@ -1,4 +1,26 @@
 ==============================================
+= 'QuickSilver' ver 1.2.1, Base Release 2025 =
+==============================================
+
+## Preamble
+
+    Post-Base minor release version
+
+## Feature(s)
+    
+    - Security fix (glob CLI)
+    - Library updates
+
+## Limitation(s)
+
+    - see previous release
+
+## Well-Known bug(s)
+
+    - Please refer to the previous log version
+    - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
+
+==============================================
 = 'QuickSilver' ver 1.2.0, Base Release 2025 =
 ==============================================
 
