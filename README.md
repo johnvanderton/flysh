@@ -362,7 +362,7 @@ The below files are parts of the project library,
 
 ## **License**
 
-Copyright (C) 2020 — 2025, **John Van Derton**
+Copyright (C) 2020 — 2026, **John Van Derton**
 
 Please read the ['LICENCE'](./LICENSE) file for more information.
 
