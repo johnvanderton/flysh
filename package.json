@@ -3,7 +3,7 @@
   "name": "flysh",
   "description": "DOM Document Object Artifact Collector",
   "license": "MIT",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "homepage": "https://github.com/johnvanderton/flysh#readme",
   "main": "./dist/cjs/index.js",
   "modules": "./dist/esm/index.js",
