@@ -62,8 +62,8 @@ import { Flysh, InputMessage, OutputMessage, PageRecords, FlyshException } from 
 // Instantiate the 'InputMessage' class (local doucment)
 // Note : A third optional parameter can preset a timeout value (default 1500ms)
 
-// Reach a local document (./)
-// Note : for a LAN/WAN based document, please update the first argument as an URL, ie : new InputMessage('https://anyurl.com','/somepath/somefilename.htm');
+// Reach a local document ('.')
+// Note : For LAN/WAN please update the argument as an URL, ie : new InputMessage('https://anyurl.com','/somepath/somefilename.htm');
 let inputMessage = new InputMessage('.','/somepath/somefilename.htm');
 
 // Add the 'SPC' (Scope/Parent/Child) class instance with a fully defined filter selector i.e : 'table tr td'
