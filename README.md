@@ -4,7 +4,7 @@
 
 # **README**
 
-- Document last update : 29/08/2025
+- Document last update : 29/07/2026
 - Author : **John Van Derton** — **john@cserv.be** 
 
 ## **What is it ?**
@@ -53,18 +53,26 @@ This is showing a simple **HTML** structure that includes an element called `tab
 </html>
 ```
 
-2) The below code shows how to invoke the **Flysh** library and how to set it up properly, 
+2) The below code shows how to invoke the **Flysh** library and how to set it up properly,
 
 ```typescript
 // Invoke useful libraries
 import { Flysh, InputMessage, OutputMessage, PageRecords, FlyshException } from 'Flysh';
 
-// Instantiate the 'InputMessage' class
+// Instantiate the 'InputMessage' class (local doucment)
 // Note : A third optional parameter can preset a timeout value (default 1500ms)
+
+// From arguments, you can either specify a local (.) or distant domain name ('https://adns.com')
+// The second argument describes the path to the document, i.e ('/somepath/somefilename.htm')
+
 let inputMessage = new InputMessage('.','/somepath/somefilename.htm');
+// OR
+let inputMessage = new InputMessage('https://adns.com','/somepath/somefilename.htm');
+
 // Add the 'SPC' (Scope/Parent/Child) class instance with a fully defined filter selector i.e : 'table tr td'
 // Note : the 'addSPC()' method is now deprecated -> 'addFilterSelector()'
 inputMessage.addFilterSelector('table tr td');
+
 // Instantiate the 'Flysh' class by passing the 'InputMessage' object from parameter
 let f = new Flysh(inputMessage);
 
