@@ -1,9 +1,9 @@
 {
   "author": "John Van Derton",
   "name": "flysh",
-  "description": "DOM Document Object Artifact Collector",
+  "description": "Web parser library for TypeScript and Node.js.",
   "license": "MIT",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "homepage": "https://github.com/johnvanderton/flysh#readme",
   "main": "./dist/cjs/index.js",
   "modules": "./dist/esm/index.js",
