@@ -1,3 +1,27 @@
+
+==============================================
+= 'QuickSilver' ver 1.2.3                    =
+==============================================
+
+## Preamble
+
+    Minor release version 
+
+## Feature(s)
+
+    - Fixed reported securiy issues
+    - Updated library dependencies 
+    - Updated REAMDE examples about how to define distant documents URL during class initialization 
+
+## Limitation(s)
+
+    - see previous release
+
+## Well-Known bug(s)
+
+    - Please refer to the previous log version
+    - If you're encountering any problem(s), bug(s), please don't hesitate to report! Thanks!
+
 ==============================================
 = 'QuickSilver' ver 1.2.2                    =
 ==============================================

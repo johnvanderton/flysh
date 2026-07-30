@@ -1,7 +1,7 @@
 {
   "author": "John Van Derton",
   "name": "flysh",
-  "description": "Web parser library for TypeScript and Node.js.",
+  "description": "Web parser library for Typescript and Node.js",
   "license": "MIT",
   "version": "1.2.3",
   "homepage": "https://github.com/johnvanderton/flysh#readme",
