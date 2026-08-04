@@ -35,7 +35,7 @@
     "url": "https://github.com/johnvanderton/flysh.git"
   },
   "dependencies": {
-    "@types/node": "^25.5.0",
+    "@types/node": "^26.1.2",
     "jquery": "^3.7.1",
     "jsdom": "^27.4.0",
     "typedjson": "^1.7.0"
